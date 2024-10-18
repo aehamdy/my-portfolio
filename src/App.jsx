@@ -1,7 +1,7 @@
 function App() {
   return (
     <section className="dark">
-      <h1 className="text-heading">Hello there!</h1>
+      <h1 className="text-section-heading font-md">Hello there!</h1>
       <p className="text-icon">ICON</p>
       <p className="text-paragraph">
         <strong className="text-heading block">Lorem ipsum dolor</strong>
