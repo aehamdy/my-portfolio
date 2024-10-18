@@ -18,6 +18,11 @@ module.exports = {
         'neutral-gray': '#9A9A9A', // Neutral gray
         'soft-white': '#EEEEEE', // Soft white
         charcoal: '#3E4148', // Charcoal gray
+
+        'body-light': 'rgb(246, 246, 246)',
+        'body-dark': 'rgb(22, 22, 22)',
+        'section-light': 'rgb(255, 255, 255)',
+        'section-dark': 'rgb(34, 34, 34)',  
       },
     },
   },
