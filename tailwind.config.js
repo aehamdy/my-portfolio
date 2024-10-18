@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
   darkMode: "selector",
   content: [
@@ -10,7 +11,7 @@ module.exports = {
       colors: {
         accent: '#f6b846',
         'white-55': 'rgba(255,255,255,0.55)',
-        'white-85': 'rgba(255,255,255,0.85)',
+        'white-85': 'rgba(255,255,255,0.85)', //#D9
         'white-90': 'rgba(255,255,255,0.9)',
         'dark-gray': '#323232', // Dark gray
         'medium-gray': '#646464', // Medium gray
@@ -23,6 +24,7 @@ module.exports = {
         'body-dark': 'rgb(22, 22, 22)',
         'section-light': 'rgb(255, 255, 255)',
         'section-dark': 'rgb(34, 34, 34)',  
+
       },
     },
   },
