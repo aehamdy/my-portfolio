@@ -7,7 +7,7 @@ function MiniProfile() {
   return (
     <section className="flex justify-between items-center py-2 px-4">
       <div className="flex flex-col items-start w-1/2">
-        <MyName textSize="sm" />
+        <MyName textStyle="text-sm font-medium text-dark-gray dark:text-white-90" />
         <div className="h-[15px]">
           <TypeWriter textSize="xs" />
         </div>

@@ -17,7 +17,6 @@ function ThemeSwitcher() {
     }
   };
 
-  // On component mount, ensure the body has the correct theme based on user preference
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {

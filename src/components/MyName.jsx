@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 import { personalInfo } from "../data/personalInfo";
 
-function MyName({ textSize }) {
+function MyName({ textStyle }) {
   return (
-    <p
-      className={`w-fit text-${textSize} font-bold text-dark-gray dark:text-white-85`}
-    >
+    <p className={`w-fit ${textStyle} duration-short`}>
       {`${personalInfo.firstName} ${personalInfo.lastName}`}
     </p>
   );
