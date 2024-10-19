@@ -3,9 +3,9 @@ import { navItems } from "../data/navbar";
 function Navbar() {
   return (
     <nav
-      className={`relative text-dark-gray dark:text-white-90 ${`before:absolute before:start-0 before:top-0 before:w-full before:h-[1px] before:bg-custom-gradient-to-r`}`}
+      className={`relative text-dark-gray dark:text-white-90 bg-section-light dark:bg-section-dark ${`before:absolute before:start-0 before:top-0 before:w-full before:h-[1px] before:bg-custom-gradient-to-r md:rounded-lg`}`}
     >
-      <ul className="flex mx-auto">
+      <ul className="flex md:flex-col md:gap-1.5 md:py-5 mx-auto">
         {navItems.map((item, i) => (
           <li
             key={i}

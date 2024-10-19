@@ -2,7 +2,7 @@ function HireAvailability() {
   const availability = true;
 
   return (
-    <div className="flex items-center gap-2 mx-auto">
+    <div className="flex md:flex-col items-center gap-2 mx-auto">
       <span
         className={`w-2 h-2 ${
           availability
@@ -10,7 +10,20 @@ function HireAvailability() {
             : "bg-red-500 shadow-not-available-shadow"
         } rounded-[50%] ${availability && "animate-pulse"}`}
       ></span>
-      <p>{availability ? "Available" : "Not available"}</p>
+      <p className="md:text-xs">
+        {availability ? (
+          "Available"
+        ) : (
+          <>
+            <span className="block md:hidden">Not available</span>
+            <span className="hidden md:block">
+              Not
+              <br />
+              available
+            </span>
+          </>
+        )}
+      </p>
     </div>
   );
 }
