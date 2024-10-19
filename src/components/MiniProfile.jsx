@@ -1,5 +1,6 @@
 import HireAvailability from "./HireAvailability";
 import MyName from "./MyName";
+import ThemeSwitcher from "./ThemeSwitcher";
 import TypeWriter from "./TypeWriter";
 
 function MiniProfile() {
@@ -11,8 +12,9 @@ function MiniProfile() {
           <TypeWriter textSize="xs" />
         </div>
       </div>
-      <div>
+      <div className="flex items-center gap-4">
         <HireAvailability />
+        <ThemeSwitcher />
       </div>
     </section>
   );
