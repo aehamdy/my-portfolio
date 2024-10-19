@@ -1,11 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 function ThemeSwitcher() {
   const [isDark, setIsDark] = useState(true);
 
+  const changeTheme = () => {
+    setIsDark((prevValue) => !prevValue);
+
+    const bodyElement = document.body;
+    if (isDark) {
+      bodyElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      bodyElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
+  // On component mount, ensure the body has the correct theme based on user preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.body.classList.remove("dark");
+      setIsDark(false);
+    } else {
+      document.body.classList.add("dark");
+      setIsDark(true);
+    }
+  }, []);
+
   return (
-    <div className="text-2xl hover:text-accent duration-short cursor-pointer">
+    <div
+      onClick={changeTheme}
+      className="text-2xl hover:text-accent duration-short cursor-pointer"
+    >
       {isDark ? <IoSunnyOutline /> : <IoMoonOutline />}
     </div>
   );
