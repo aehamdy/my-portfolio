@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useTypewriter } from "react-simple-typewriter";
 
-function TypeWriter() {
+function TypeWriter({ textSize }) {
   const [typeEffect] = useTypewriter({
     words: ["Frontend Developer", "Programmer", "Freelancer"],
     loop: {},
@@ -8,7 +9,9 @@ function TypeWriter() {
     deleteSpeed: 50,
   });
 
-  return <p className="h-7 font-normal text-xl text-accent">{typeEffect}</p>;
+  return (
+    <p className={`font-normal text-${textSize} text-accent`}>{typeEffect}</p>
+  );
 }
 
 export default TypeWriter;
