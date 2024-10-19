@@ -1,4 +1,5 @@
 import MyName from "./MyName";
+import SocialMediaIcons from "./SocialMediaIcons";
 import TypeWriter from "./TypeWriter";
 
 function Info() {
@@ -9,13 +10,14 @@ function Info() {
         <TypeWriter />
       </div>
       <div>
-        <ul className="flex gap-4">
+        {/* <ul className="flex gap-4">
           <li>In</li>
           <li>FB</li>
           <li>GIT</li>
           <li>X</li>
           <li>IG</li>
-        </ul>
+        </ul> */}
+        <SocialMediaIcons />
       </div>
       <div className="relative w-full">
         <span className="absolute top-0 left-0 w-full h-[1px] bg-custom-gradient-to-r"></span>
