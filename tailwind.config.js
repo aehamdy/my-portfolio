@@ -30,6 +30,9 @@ module.exports = {
         'custom-gradient-to-r': 'linear-gradient(to right, #6e6e6e, transparent)',
         'custom-gradient-to-b': 'linear-gradient(to bottom, #6e6e6e, transparent)',
       },
+      transitionDuration: {
+        short: '200ms',
+      }
     },
   },
   plugins: [],

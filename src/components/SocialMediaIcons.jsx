@@ -15,7 +15,10 @@ function SocialMediaIcons() {
   return (
     <ul className="flex gap-4">
       {icons.map((item, i) => (
-        <li key={i} className="text-white hover:text-accent text-xl">
+        <li
+          key={i}
+          className="text-white-90 hover:text-accent text-xl duration-short"
+        >
           <a href={item.link} target="_blank" rel="noopener noreferrer">
             <item.icon />
           </a>
