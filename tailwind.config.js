@@ -26,6 +26,10 @@ module.exports = {
         'section-dark': 'rgb(34, 34, 34)',  
 
       },
+      backgroundImage: {
+        'custom-gradient-to-r': 'linear-gradient(to right, #6e6e6e, transparent)',
+        'custom-gradient-to-b': 'linear-gradient(to bottom, #6e6e6e, transparent)',
+      },
     },
   },
   plugins: [],
