@@ -4,10 +4,10 @@ import TypeWriter from "./TypeWriter";
 
 function MiniProfile() {
   return (
-    <section className="flex justify-between items-center">
+    <section className="flex justify-between items-center py-2 px-4">
       <div className="flex flex-col items-start w-1/2">
         <MyName textSize="sm" />
-        <div className="h-[16px]">
+        <div className="h-[15px]">
           <TypeWriter textSize="xs" />
         </div>
       </div>
