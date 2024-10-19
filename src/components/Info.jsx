@@ -3,7 +3,7 @@ import TypeWriter from "./TypeWriter";
 
 function Info() {
   return (
-    <div className="absolute  flex flex-col items-center gap-7 before:content-[''] w-full left-0 bottom-0 bg-transparent backdrop-blur-md">
+    <div className="absolute flex flex-col items-center gap-7 before:content-[''] w-full left-0 bottom-0 bg-transparent backdrop-blur-md">
       <MyName />
       <div>
         <TypeWriter />
