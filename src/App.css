@@ -2,6 +2,11 @@
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding-inline: 1rem;
   text-align: center;
+}
+
+@media (min-width: 481px) {
+  #root {
+    padding-inline: 1rem;
+  }
 }
