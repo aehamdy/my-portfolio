@@ -1,5 +1,6 @@
 export const personalInfo = {
-    name: 'Ahmed Essam',
+    firstName: 'Ahmed',
+    lastName: 'Essam',
     title: 'Frontend Developer',
     email: 'ae.hamdy91@gmail.com',
     location: 'Cairo, Egypt',
