@@ -2,6 +2,7 @@ import "./App.css";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
+import MyServices from "./components/MyServices";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
         <Header />
         <HeroSection />
       </div>
-      <AboutMe />
+      <div className="p-main-section-padding bg-section-light dark:bg-section-dark rounded-default-section">
+        <AboutMe />
+        <MyServices />
+      </div>
     </div>
   );
 }
