@@ -5,9 +5,11 @@ import AboutMe from "./components/AboutMe";
 
 function App() {
   return (
-    <div className="container mx-auto">
-      <Header />
-      <HeroSection />
+    <div className="container mx-auto flex flex-col gap-4">
+      <div>
+        <Header />
+        <HeroSection />
+      </div>
       <AboutMe />
     </div>
   );

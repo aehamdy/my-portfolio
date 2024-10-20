@@ -12,6 +12,9 @@ module.exports = {
         '30': '30px',
         'main-section-padding': '30px 30px 0',
       },
+      borderRadius: {
+        'default-section': '32px',
+      },
       colors: {
         accent: '#f6b846',
         'white-55': 'rgba(255,255,255,0.55)',  //#8C
@@ -35,6 +38,7 @@ module.exports = {
         'custom-gradient-to-r': 'linear-gradient(to right, #6e6e6e, transparent)',
         'custom-gradient-to-b': 'linear-gradient(to bottom, #6e6e6e, transparent)',
         'transparent-circle': 'linear-gradient(135deg,rgba(246,184,70,.4) 0%,rgba(246,184,70,.01) 100%)',
+        'transparent-bg': 'linear-gradient(135deg,rgba(246,184,70,.2) 0%,rgba(246,184,70,.01) 100%)',
       },
       boxShadow: {
         'available-shadow': '0px 0px 6px 2px rgba(75, 255, 114, 0.88)',
