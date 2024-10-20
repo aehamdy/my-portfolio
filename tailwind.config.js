@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        'section-padding': '30px',
+      },
       colors: {
         accent: '#f6b846',
         'white-55': 'rgba(255,255,255,0.55)',
@@ -30,6 +33,7 @@ module.exports = {
         'blurred-bg': 'linear-gradient(180deg, rgba(4, 25, 29, 0) 0%, rgb(1 9 15 / 90%) 100%)',
         'custom-gradient-to-r': 'linear-gradient(to right, #6e6e6e, transparent)',
         'custom-gradient-to-b': 'linear-gradient(to bottom, #6e6e6e, transparent)',
+        'transparent-circle': 'linear-gradient(135deg,rgba(246,184,70,.4) 0%,rgba(246,184,70,.01) 100%)',
       },
       boxShadow: {
         'available-shadow': '0px 0px 6px 2px rgba(75, 255, 114, 0.88)',
