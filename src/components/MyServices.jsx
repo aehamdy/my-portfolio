@@ -14,6 +14,13 @@ function MyServices() {
             <p className="md:w-4/5 text-[16px] text-medium-gray dark:text-white-55">
               {service.content}
             </p>
+            {i != myServices.length - 1 && (
+              <span
+                className={`${
+                  i === 2 ? "md:hidden" : ""
+                } absolute bottom-0 start-0 w-full h-[1px] bg-custom-gradient-to-r`}
+              ></span>
+            )}
           </article>
         ))}
       </div>
