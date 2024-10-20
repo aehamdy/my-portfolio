@@ -36,7 +36,7 @@ module.exports = {
         'not-available-shadow': '0px 0px 6px 2px rgba(252, 38, 2, 0.88)',
       },
       transitionDuration: {
-        short: '200ms',
+        short: '500ms',
       }
     },
   },

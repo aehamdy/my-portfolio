@@ -2,7 +2,7 @@ function HireAvailability() {
   const availability = true;
 
   return (
-    <div className="flex md:flex-col items-center gap-2 mx-auto">
+    <div className="flex md:flex-col items-center gap-2 mx-auto duration-short">
       <span
         className={`w-2 h-2 ${
           availability

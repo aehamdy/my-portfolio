@@ -17,7 +17,7 @@ function SocialMediaIcons() {
       {icons.map((item, i) => (
         <li
           key={i}
-          className="text-white-90 hover:text-accent text-xl duration-short"
+          className="text-white-90 hover:text-accent hover:scale-110 text-xl duration-short"
         >
           <a href={item.link} target="_blank" rel="noopener noreferrer">
             <item.icon />

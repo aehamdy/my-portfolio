@@ -24,5 +24,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: rgb(246, 246, 246);
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: rgb(22, 22, 22);
 }
