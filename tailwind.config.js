@@ -9,11 +9,12 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'section-padding': '30px',
+        '30': '30px',
+        'main-section-padding': '30px 30px 0',
       },
       colors: {
         accent: '#f6b846',
-        'white-55': 'rgba(255,255,255,0.55)',
+        'white-55': 'rgba(255,255,255,0.55)',  //#8C
         'white-85': 'rgba(255,255,255,0.85)', //#D9
         'white-90': 'rgba(255,255,255,0.9)',  //#E6
         'dark-gray': '#323232', // Dark gray

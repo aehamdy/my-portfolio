@@ -1,14 +1,14 @@
-import HeroSection from "./components/HeroSection";
 import "./App.css";
+import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
-import SectionTitle from "./components/SectionTitle";
+import AboutMe from "./components/AboutMe";
 
 function App() {
   return (
     <div className="container mx-auto">
       <Header />
       <HeroSection />
-      <SectionTitle title="about me" />
+      <AboutMe />
     </div>
   );
 }
