@@ -1,10 +1,23 @@
-function SectionTitle() {
+/* eslint-disable react/prop-types */
+function SectionTitle({ title }) {
+  let formattedTitle = "";
+
+  const formatTitle = () => {
+    const splitted = title.split(" ");
+    const transformed = splitted.map(
+      (word) => word.charAt(0).toUpperCase() + word.slice(1)
+    );
+    const final = transformed.join(" ");
+    formattedTitle = final;
+  };
+
+  formatTitle();
   return (
     <h3 className="text-xl font-semibold text-dark-gray dark:text-white-85 duration-short">
       <span className="relative text-accent before:absolute before:w-7 before:h-7 before:top-1 before:-start-3 before:bg-transparent-circle before:rounded-[50%]">
-        A
+        {formattedTitle.charAt(0)}
       </span>
-      bout Me
+      {formattedTitle.slice(1)}
     </h3>
   );
 }
