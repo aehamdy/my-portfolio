@@ -1,11 +1,8 @@
 import "./App.css";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
-import AboutMe from "./components/AboutMe";
-import MyServices from "./components/MyServices";
-import Pricing from "./components/Pricing";
 import ThemeSwitcher from "./components/ThemeSwitcher";
-import Testimonials from "./components/Testimonials";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,12 +12,7 @@ function App() {
           <Header />
           <HeroSection />
         </div>
-        <div className="p-main-section-padding bg-section-light dark:bg-section-dark rounded-default-section">
-          <AboutMe />
-          <MyServices />
-          <Pricing />
-          <Testimonials />
-        </div>
+        <About />
       </div>
       <div className="p-1 sticky bottom-2 bg-accent w-fit rounded-full text-black">
         <ThemeSwitcher />

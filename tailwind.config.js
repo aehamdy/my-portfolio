@@ -9,11 +9,12 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        '30': '30px',
-        'main-section-padding': '30px 30px 0',
+        'section-margin': '45px',  //inner section margin top
+        'section-padding': '25px',  //inner section padding inline
+        'main-section-padding': '30px',  //main section padding Y axis
       },
       borderRadius: {
-        'default-section': '32px',
+        'main-section': '32px',  //main section rounded corners
       },
       colors: {
         accent: '#f6b846',

@@ -4,9 +4,9 @@ import SectionTitle from "./SectionTitle";
 
 function Pricing() {
   return (
-    <section>
+    <article className="mt-section-margin">
       <SectionTitle title="pricing" />
-      <div className="flex flex-col sm:flex-row">
+      <div className="flex flex-col sm:flex-row px-section-padding">
         {plans.map((plan, i) => (
           <div
             key={i}
@@ -64,7 +64,7 @@ function Pricing() {
           </div>
         ))}
       </div>
-    </section>
+    </article>
   );
 }
 

@@ -21,9 +21,9 @@ function Testimonials() {
   }, []);
 
   return (
-    <section>
+    <article className="flex flex-col gap-7 mt-section-margin">
       <SectionTitle title="testimonials" />
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 px-section-padding">
         <div className="flex w-full overflow-hidden select-none">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
@@ -71,7 +71,7 @@ function Testimonials() {
           ))}
         </div>
       </div>
-    </section>
+    </article>
   );
 }
 

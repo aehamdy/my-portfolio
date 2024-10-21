@@ -3,9 +3,9 @@ import SectionTitle from "./SectionTitle";
 
 function MyServices() {
   return (
-    <section>
+    <article className="flex flex-col gap-5 mt-section-margin">
       <SectionTitle title="my services" />
-      <div className="flex flex-col md:flex-row md:flex-wrap">
+      <div className="flex flex-col md:flex-row md:flex-wrap px-section-padding">
         {myServices.map((service, i) => (
           <article key={i} className="relative w-full md:w-1/2 p-3 text-left">
             <h3 className="my-2 font-semibold text-[17px] text-dark-gray dark:text-white-85">
@@ -24,7 +24,7 @@ function MyServices() {
           </article>
         ))}
       </div>
-    </section>
+    </article>
   );
 }
 

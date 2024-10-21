@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <section
       style={{ backgroundImage: `url(${myImage})` }}
-      className={`relative flex justify-center w-full md:w-4/5 h-[calc(100dvh-109px)] md:h-[100dvh] mx-auto bg-[url(${myImage})] bg-cover bg-no-repeat bg-center rounded-b-default-section overflow-hidden`}
+      className={`relative flex justify-center w-full md:w-4/5 h-[calc(100dvh-109px)] md:h-[100dvh] mx-auto bg-[url(${myImage})] bg-cover bg-no-repeat bg-center rounded-b-main-section overflow-hidden`}
     >
       <ProfileInfoSection />
     </section>
