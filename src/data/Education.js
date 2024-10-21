@@ -21,11 +21,12 @@ export const education = [
         heading: 'Frontend Development',
         subheading: 'Self-taught ',
         content: [
-            // 'Gained proficiency in HTML, CSS, JavaScript, SASS, and React JS through self-directed learning and building projects',
-            // 'Applied frontend development best practices by developing responsive, user-friendly websites and single-page applications (SPAs).',
-            // 'Completed various online courses and tutorials to deepen knowledge in web technologies and modern JavaScript frameworks.',
-            'Learned HTML, CSS, JavaScript, SASS, and React through self-study and projects.',
-            'Built responsive, user-friendly websites and SPAs using best practices.',
+            'Learned HTML, CSS, JavaScript, SASS, React, and Tailwind CSS through self-study, online tutorials, and hands-on projects.',
+            'Built responsive, user-friendly websites and single-page applications (SPAs) using best practices to ensure optimal user experiences across devices.',
+            'Gained proficiency in using Tailwind CSS to create custom designs with utility-first principles, allowing for rapid prototyping and consistent styling.',
+            'Developed interactive components and state management solutions in React, enhancing user engagement and functionality.',
+            'Implemented accessibility standards to ensure web applications are usable for all individuals, regardless of disabilities.',
+            'Familiarized with version control systems like Git to manage project changes and collaborate effectively with other developers.',
             'Took online courses to expand knowledge in web technologies and JavaScript frameworks.',
         ],
 

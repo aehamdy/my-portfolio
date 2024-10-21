@@ -1,6 +1,6 @@
 import { FaGraduationCap } from "react-icons/fa";
 import SpecialHeading from "./SpecialHeading";
-import { education } from "../data/Education";
+import { education } from "../data/education";
 
 const icon = <FaGraduationCap />;
 
