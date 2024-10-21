@@ -8,7 +8,7 @@ function Experience() {
   return (
     <article className="mt-[30px] px-section-padding">
       <SpecialHeading heading="experience" icon={icon} />
-      <div className="border-s border-[rgba(197,202,213,.15)]">
+      <div className="border-s border-light-gray-197 dark:border-[rgba(197,202,213,.15)] duration-short">
         <div className="">
           {experiences.map((item, i) => (
             <div
@@ -16,13 +16,17 @@ function Experience() {
               className={`relative flex flex-col items-start gap-3 mt-8 pb-4 ps-4 ${
                 i !== experiences.length - 1 &&
                 "before:absolute before:w-full before:h-[1px] before:start-0 before:bottom-0 before:bg-custom-gradient-to-r"
-              } after:absolute after:w-2.5 after:h-2.5 after:rounded-full after:bg-accent after:start-0 after:translate-x-[-50%]`}
+              } after:absolute after:w-2.5 after:h-2.5 after:rounded-full ${
+                item.dateTo.toLowerCase() === "present"
+                  ? "after:bg-accent"
+                  : "after:bg-light-gray-dd after:dark:bg-gray-666"
+              } after:start-0 after:translate-x-[-50%] duration-short`}
             >
               <span
-                className={`w-fit px-[3px] text-xs ${
+                className={`capitalize w-fit px-[3px] text-xs ${
                   item.dateTo.toLowerCase() === "present"
                     ? "text-accent border-accent"
-                    : "text-[#666666] border-[#666666]"
+                    : "text-gray-666 border-gray-666"
                 } border rounded-md`}
               >{`${item.dateFrom} - ${item.dateTo}`}</span>
 

@@ -24,9 +24,13 @@ module.exports = {
         'dark-gray': '#323232', // Dark gray
         'medium-gray': '#646464', // Medium gray
         'light-gray': '#999999', // Light gray
+        'gray-197': 'rgba(197,202,213,0.3)', // #C5CAD54D
+        'light-gray-dd': '#DDDDDD',
         'neutral-gray': '#9A9A9A', // Neutral gray
         'soft-white': '#EEEEEE', // Soft white
+        'gray-666': '#666666',
         charcoal: '#3E4148', // Charcoal gray
+
 
         'body-light': 'rgb(246, 246, 246)',
         'body-dark': 'rgb(22, 22, 22)',
