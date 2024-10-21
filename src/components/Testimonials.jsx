@@ -1,7 +1,7 @@
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { testimonials } from "../data/testimonials";
 import SectionTitle from "./SectionTitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,6 +9,16 @@ function Testimonials() {
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <section>
