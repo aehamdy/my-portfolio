@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import About from "./components/About";
+import Resume from "./components/Resume";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <HeroSection />
         </div>
         <About />
+        <Resume />
       </div>
       <div className="p-1 sticky bottom-2 bg-accent w-fit rounded-full text-black">
         <ThemeSwitcher />
