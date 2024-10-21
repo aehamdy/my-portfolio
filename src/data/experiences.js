@@ -12,18 +12,8 @@ export const experiences = [
     },
     {
         heading: 'Personal Projects',
-        dateFrom: '2020',
+        dateFrom: '2024',
         dateTo: 'present',
-        content: [
-            'Built a Todo App with filters and categories using React and localStorage.',
-            'Created a Pomodoro Timer with customizable cycles for productivity.',
-            'Developed a Weather App showing real-time data via API.'
-        ]
-    },
-    {
-        heading: 'Personal Projects',
-        dateFrom: '2020',
-        dateTo: '2023',
         content: [
             'Built a Todo App with filters and categories using React and localStorage.',
             'Created a Pomodoro Timer with customizable cycles for productivity.',

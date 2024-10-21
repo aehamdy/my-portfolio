@@ -1,3 +1,4 @@
+import Education from "./Education";
 import Experience from "./Experience";
 import SectionTitle from "./SectionTitle";
 
@@ -6,6 +7,7 @@ function History() {
     <section>
       <SectionTitle title="resume" />
       <Experience />
+      <Education />
     </section>
   );
 }

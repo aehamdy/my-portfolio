@@ -25,6 +25,7 @@ module.exports = {
         'medium-gray': '#646464', // Medium gray
         'light-gray': '#999999', // Light gray
         'gray-197': 'rgba(197,202,213,0.3)', // #C5CAD54D
+        'gray-197-15': 'rgba(197,202,213,.15)',
         'light-gray-dd': '#DDDDDD',
         'neutral-gray': '#9A9A9A', // Neutral gray
         'soft-white': '#EEEEEE', // Soft white

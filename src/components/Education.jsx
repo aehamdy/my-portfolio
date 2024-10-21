@@ -1,20 +1,20 @@
-import { FaBriefcase } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 import SpecialHeading from "./SpecialHeading";
-import { experiences } from "../data/experiences";
+import { education } from "../data/Education";
 
-const icon = <FaBriefcase />;
+const icon = <FaGraduationCap />;
 
-function Experience() {
+function Education() {
   return (
     <article className="mt-[30px] px-section-padding">
-      <SpecialHeading heading="experience" icon={icon} />
+      <SpecialHeading heading="education" icon={icon} />
       <div className="border-s border-light-gray-197 dark:border-gray-197-15 duration-short">
         <div>
-          {experiences.map((item, i) => (
+          {education.map((item, i) => (
             <div
               key={i}
               className={`relative flex flex-col items-start gap-3 mt-8 pb-4 ps-4 ${
-                i !== experiences.length - 1 &&
+                i !== education.length - 1 &&
                 "before:absolute before:w-full before:h-[1px] before:start-0 before:bottom-0 before:bg-custom-gradient-to-r"
               } after:absolute after:w-2.5 after:h-2.5 after:rounded-full ${
                 item.dateTo.toLowerCase() === "present"
@@ -28,11 +28,17 @@ function Experience() {
                     ? "text-accent border-accent"
                     : "text-neutral-gray dark:text-gray-666 border-light-gray-dd dark:border-gray-666"
                 } border rounded-md duration-short`}
-              >{`${item.dateFrom} - ${item.dateTo}`}</span>
+              >{`${item.dateFrom}${item.dateTo}`}</span>
 
-              <h4 className="font-semibold text-dark-gray dark:text-white-90 duration-short">
-                {item.heading}
-              </h4>
+              <div className="flex flex-col items-start">
+                <h4 className="font-semibold text-dark-gray dark:text-white-90 duration-short">
+                  {item.heading}
+                </h4>
+
+                <span className="font-medium text-sm text-light-gray">
+                  {item.subheading}
+                </span>
+              </div>
 
               <ul className="">
                 {item.content.map((item, i) => (
@@ -52,4 +58,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Education;
