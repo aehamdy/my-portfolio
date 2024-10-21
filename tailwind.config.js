@@ -32,6 +32,8 @@ module.exports = {
         'section-light': 'rgb(255, 255, 255)',
         'section-dark': 'rgb(34, 34, 34)',  
 
+        'new-badge': 'rgba(246,184,70,.15)',
+
       },
       backgroundImage: {
         'blurred-bg': 'linear-gradient(180deg, rgba(4, 25, 29, 0) 0%, rgb(1 9 15 / 90%) 100%)',
