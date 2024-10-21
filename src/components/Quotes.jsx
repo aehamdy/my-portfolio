@@ -1,7 +1,7 @@
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { quotes } from "../data/quotes";
 import SectionTitle from "./SectionTitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Quotes() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,6 +9,16 @@ function Quotes() {
   const goToQuote = (index) => {
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === quotes.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <section className="mt-8">
