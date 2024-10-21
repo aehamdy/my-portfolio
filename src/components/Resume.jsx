@@ -1,4 +1,5 @@
 import History from "./History";
+import Quotes from "./Quotes";
 
 function Resume() {
   return (
@@ -7,6 +8,7 @@ function Resume() {
       className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
     >
       <History />
+      <Quotes />
     </section>
   );
 }
