@@ -30,13 +30,9 @@ function Testimonials() {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {testimonials.map((item, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-full flex flex-col gap-3"
-                style={{ minWidth: "100%" }}
-              >
-                <div>
-                  <p className="relative p-2.5 italic text-medium-gray dark:text-neutral-gray duration-short">
+              <div key={i} className="flex-shrink-0 w-full flex flex-col gap-3">
+                <div className="w-fit mx-auto">
+                  <p className="relative w-full sm:w-4/5 md:w-3/4 lg:w-3/5 mx-auto p-2.5 italic text-medium-gray dark:text-neutral-gray duration-short">
                     <span className="absolute top-0 left-0">
                       <BiSolidQuoteAltLeft />
                     </span>
