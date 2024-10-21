@@ -6,11 +6,11 @@ function Pricing() {
   return (
     <article className="mt-section-margin">
       <SectionTitle title="pricing" />
-      <div className="flex flex-col sm:flex-row px-section-padding">
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 px-section-padding">
         {plans.map((plan, i) => (
           <div
             key={i}
-            className={`relative flex flex-col items-center gap-6 w-full sm:w-1/2 p-30 ${
+            className={`relative flex flex-col items-center gap-6 w-full sm:w-1/2 mt-10 px-8 ${
               i >= 1 &&
               "sm:before:absolute before:top-0 before:start-0 before:w-[1px] before:h-full before:bg-custom-gradient-to-b"
             }`}
