@@ -15,7 +15,7 @@ function Quotes() {
       setCurrentIndex((prevIndex) =>
         prevIndex === quotes.length - 1 ? 0 : prevIndex + 1
       );
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -34,7 +34,7 @@ function Quotes() {
                 key={i}
                 className={`flex flex-col gap-5 flex-shrink-0 w-full `}
               >
-                <div className="relative text-medium-gray dark:text-white-55 duration-short">
+                <div className="relative w-full sm:w-4/5 md:w-3/4 lg:w-3/5 mx-auto p-2.5 text-medium-gray dark:text-white-55 duration-short">
                   <span className="absolute top-0 start-0">
                     <BiSolidQuoteAltLeft />
                   </span>

@@ -7,12 +7,12 @@ export const quotes = [
     {
         img: '',
         author: 'Dr. Christopher Dayagdag',
-        content: 'To become successful online, you only need to remember the following : Good Heart + Passion + Web Design + SEO + Digital Marketing + Dedication + Positiveness + Patience = Success',
+        content: 'Getting a quality website is not an expenses but rather an investment.',
     },
     {
         img: '',
         author: 'Dr. Christopher Dayagdag',
-        content: 'Getting a quality website is not an expenses but rather an investment.',
+        content: 'To become successful online, you only need to remember the following : Good Heart + Passion + Web Design + SEO + Digital Marketing + Dedication + Positiveness + Patience = Success',
     },
     // {
     //     img: '',
