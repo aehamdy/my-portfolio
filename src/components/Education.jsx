@@ -30,7 +30,7 @@ function Education() {
                 } border rounded-md duration-short`}
               >{`${item.dateFrom}${item.dateTo}`}</span>
 
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start text-left">
                 <h4 className="font-semibold text-dark-gray dark:text-white-90 duration-short">
                   {item.heading}
                 </h4>

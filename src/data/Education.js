@@ -5,13 +5,13 @@ export const education = [
         heading: 'Communication & Electronics Engineering',
         subheading: 'Thebes Higher Institute of Engineering',
         content: [
-            'Developed a strong understanding of circuit design, signal processing, and telecommunications systems.',
-            'Studied microcontroller programming and digital systems, applying concepts in practical projec',
-            'Gained experience with electrical circuit analysis, including AC/DC circuits and power systems.',
-            'Participated in hands-on labs, working with electronic devices and testing real-world applications.',
-            'Strengthened analytical and mathematical skills by solving complex engineering problems.',
-            'Collaborated with peers on team-based projects, improving communication and teamwork abilities.',
-            'Applied engineering principles in practical settings, including project planning and execution.',
+            'Gained understanding of circuit design, signal processing, and telecommunications.',
+            'Studied microcontroller programming and digital systems in practical projects.',
+            'Acquired experience in electrical circuit analysis, including AC/DC circuits.',
+            'Participated in hands-on labs with electronic devices and applications.',
+            'Strengthened analytical and math skills by solving engineering problems.',
+            'Collaborated on team projects, enhancing communication and teamwork.',
+            'Applied engineering principles in practical settings and project planning.',
         ],
 
     },
@@ -20,15 +20,15 @@ export const education = [
         dateTo: '2024',
         heading: 'Frontend Development',
         subheading: 'Self-taught ',
-        content: [
-            'Learned HTML, CSS, JavaScript, SASS, React, and Tailwind CSS through self-study, online tutorials, and hands-on projects.',
-            'Built responsive, user-friendly websites and single-page applications (SPAs) using best practices to ensure optimal user experiences across devices.',
-            'Gained proficiency in using Tailwind CSS to create custom designs with utility-first principles, allowing for rapid prototyping and consistent styling.',
-            'Developed interactive components and state management solutions in React, enhancing user engagement and functionality.',
-            'Implemented accessibility standards to ensure web applications are usable for all individuals, regardless of disabilities.',
-            'Familiarized with version control systems like Git to manage project changes and collaborate effectively with other developers.',
-            'Took online courses to expand knowledge in web technologies and JavaScript frameworks.',
+        content: 
+        [
+            'Learned HTML, CSS, JavaScript, SASS, React, and Tailwind CSS through self-study and projects.',
+            'Built responsive websites and SPAs using best practices for optimal user experiences.',
+            'Gained proficiency in Tailwind CSS for rapid prototyping and consistent styling.',
+            'Developed interactive components and state management in React for enhanced engagement.',
+            'Implemented accessibility standards to ensure usability for all users.',
+            'Familiarized with Git for managing project changes and collaboration.',
+            'Took online courses to expand knowledge in web technologies and JavaScript frameworks.'
         ],
-
     },
 ]
