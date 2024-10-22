@@ -14,6 +14,7 @@ function ProjectCategories() {
             id={item}
             value={item}
             onClick={handleChange}
+            defaultChecked={item === "all"}
             className="hidden peer"
           />
           <label
