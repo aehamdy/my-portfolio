@@ -5,7 +5,7 @@ function ProjectCategories() {
     // console.log(e.target.value);
   };
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 ms-2 pt-[12.5px] px-section-padding">
       {projectCategories.map((item, i) => (
         <div key={i}>
           <input
@@ -19,7 +19,7 @@ function ProjectCategories() {
           />
           <label
             htmlFor={item}
-            className="font-normal text-sm text-dark-gray dark:text-white-85 peer-checked:text-accent duration-short"
+            className="font-normal text-sm text-dark-gray dark:text-white-85 hover:text-accent peer-checked:text-accent cursor-pointer duration-300"
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </label>

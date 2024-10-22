@@ -1,4 +1,5 @@
 import ProjectCategories from "./ProjectCategories";
+import ProjectList from "./ProjectList";
 import SectionTitle from "./SectionTitle";
 
 function Projects() {
@@ -9,9 +10,7 @@ function Projects() {
     >
       <SectionTitle title="projects" />
       <ProjectCategories />
-      <div></div>
-      <div></div>
-      <div></div>
+      <ProjectList />
     </section>
   );
 }
