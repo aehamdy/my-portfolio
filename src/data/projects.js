@@ -48,7 +48,7 @@ export const projects = [
         name: 'SOUNDS Web App',
         description: 'content', //add simple description
         link: '',
-        category: ['content',],
+        category: ['',],
     },
     {
         image: project6,
@@ -64,7 +64,7 @@ export const projects = [
         name: 'Furniture Mobile App',
         description: 'content', //add simple description
         link: '',
-        category: ['content',],
+        category: ['',],
     },
     {
         image: project8,
