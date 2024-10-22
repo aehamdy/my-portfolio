@@ -1,3 +1,4 @@
+import Map from "./Map";
 import SectionTitle from "./SectionTitle";
 
 function Contact() {
@@ -8,7 +9,7 @@ function Contact() {
     >
       <SectionTitle title="get in touch" />
       <div className="flex flex-col items-center mt-section-margin px-section-padding">
-        <Contact />
+        <Map />
       </div>
     </section>
   );
