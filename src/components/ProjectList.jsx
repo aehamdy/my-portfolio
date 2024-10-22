@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { projects } from "../data/projects";
+import NoProjectsFound from "./NoProjectsFound";
 
 function ProjectList({ selectedCategory }) {
   const filteredProjects = projects.filter((project) => {
@@ -43,12 +44,7 @@ function ProjectList({ selectedCategory }) {
           </article>
         ))
       ) : (
-        <p className="text-light-gray">
-          {`No projects added for '${
-            selectedCategory.charAt().toUpperCase() +
-            selectedCategory.slice(1).toLowerCase()
-          }' category yet`}
-        </p>
+        <NoProjectsFound selectedCategory={selectedCategory} />
       )}
     </div>
   );
