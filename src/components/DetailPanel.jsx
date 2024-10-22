@@ -9,7 +9,13 @@ function DetailPanel({ heading, content }) {
         . . . .
       </strong>
       <span className="text-base text-medium-gray dark:text-white-55">
-        {content}
+        {`${
+          heading === "freelance" && content
+            ? "Available"
+            : heading === "freelance" && !content
+            ? "Currently not available"
+            : content
+        }`}
       </span>
     </li>
   );
