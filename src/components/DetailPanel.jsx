@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-function DetailPanel({ key, heading, content }) {
+function DetailPanel({ heading, content }) {
   return (
-    <li key={key} className="flex items-center gap-2">
+    <li className="flex items-center gap-2">
       <span className="capitalize font-medium text-sm text-dark-gray dark:text-white-90">
         {heading}
       </span>
