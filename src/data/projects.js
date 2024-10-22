@@ -12,6 +12,7 @@ export const projectCategories = ['all', 'video', 'link', 'image', 'gallery', 'c
 export const projects = [
     {
         image: project1,
+        altText: "project's image",
         name: 'Weather Mobile App',
         description: 'Gallery',
         link: '',
@@ -19,6 +20,7 @@ export const projects = [
     },
     {
         image: project2,
+        altText: "project's image",
         name: 'OYYI Furniture App',
         description: 'Link',
         link: '',
@@ -26,6 +28,7 @@ export const projects = [
     },
     {
         image: project3,
+        altText: "project's image",
         name: 'Unicode Web APp',
         description: 'Video',
         link: '',
@@ -33,6 +36,7 @@ export const projects = [
     },
     {
         image: project4,
+        altText: "project's image",
         name: 'Sushi parlour App',
         description: 'Gallery',
         link: '',
@@ -40,6 +44,7 @@ export const projects = [
     },
     {
         image: project5,
+        altText: "project's image",
         name: 'SOUNDS Web App',
         description: 'Content',
         link: '',
@@ -47,6 +52,7 @@ export const projects = [
     },
     {
         image: project6,
+        altText: "project's image",
         name: 'Future Web App',
         description: 'Image',
         link: '',
@@ -54,6 +60,7 @@ export const projects = [
     },
     {
         image: project7,
+        altText: "project's image",
         name: 'Furniture Mobile App',
         description: 'Content',
         link: '',
@@ -61,6 +68,7 @@ export const projects = [
     },
     {
         image: project8,
+        altText: "project's image",
         name: 'ChatApp Mobile',
         description: 'Image',
         link: '',
