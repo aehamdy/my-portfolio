@@ -2,7 +2,7 @@ import { projects } from "../data/projects";
 
 function ProjectList() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-section-padding">
+    <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 p-section-padding before:absolute before:hidden before:sm:block before:w-[1px] before:h-full before:top-0 before:start-[50%] before:translate-x-[-50%] before:bg-custom-gradient-to-b">
       {projects.map((project, i) => (
         <article key={i} className="group w-full">
           <a
