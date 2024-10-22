@@ -9,7 +9,7 @@ function AboutMeList() {
           const key = Object.keys(item)[0];
           const value = item[key];
 
-          return;
+          return <DetailPanel key={i} heading={key} content={value} />;
         })}
       </ul>
     </div>
