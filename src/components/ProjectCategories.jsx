@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import { projectCategories } from "../data/projects";
 
-function ProjectCategories() {
+function ProjectCategories({ setSelectedCategory }) {
   const handleChange = (e) => {
-    // console.log(e.target.value);
+    setSelectedCategory(e.target.value);
   };
+
   return (
     <div className="flex gap-2 ms-2 pt-[12.5px] px-section-padding">
       {projectCategories.map((item, i) => (

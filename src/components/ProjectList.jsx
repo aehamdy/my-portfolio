@@ -1,9 +1,18 @@
+/* eslint-disable react/prop-types */
 import { projects } from "../data/projects";
 
-function ProjectList() {
+function ProjectList({ selectedCategory }) {
+  const filterProjects = (project) => {
+    if (selectedCategory.toLowerCase() === "all") {
+      return true;
+    } else {
+      return project.category.includes(selectedCategory.toLowerCase());
+    }
+  };
+
   return (
     <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 p-section-padding before:absolute before:hidden before:sm:block before:w-[1px] before:h-full before:top-0 before:start-[50%] before:translate-x-[-50%] before:bg-custom-gradient-to-b">
-      {projects.map((project, i) => (
+      {projects.filter(filterProjects).map((project, i) => (
         <article key={i} className="group w-full">
           <a
             href={project.link}
@@ -25,8 +34,8 @@ function ProjectList() {
               </h4>
 
               <span className="text-sm text-light-gray">
-                {project.category.charAt(0).toUpperCase() +
-                  project.category.slice(1).toLowerCase()}
+                {project.description.charAt(0).toUpperCase() +
+                  project.description.slice(1).toLowerCase()}
               </span>
             </div>
           </a>

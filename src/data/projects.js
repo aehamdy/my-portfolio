@@ -14,64 +14,64 @@ export const projects = [
         image: project1,
         altText: "project's image",
         name: 'Weather Mobile App',
-        description: 'gallery',
+        description: 'Mobile gallery app', //add simple description
         link: '',
-        category: 'gallery',
+        category: ['gallery', 'image'],
     },
     {
         image: project2,
         altText: "project's image",
         name: 'OYYI Furniture App',
-        description: 'link',
+        description: 'link', //add simple description
         link: '',
-        category: 'link',
+        category: ['link', 'video'],
     },
     {
         image: project3,
         altText: "project's image",
         name: 'Unicode Web App',
-        description: 'video',
+        description: 'video', //add simple description
         link: '',
-        category: 'video',
+        category: ['video', 'link'],
     },
     {
         image: project4,
         altText: "project's image",
         name: 'Sushi Parlour App',
-        description: 'gallery',
+        description: 'gallery', //add simple description
         link: '',
-        category: 'gallery',
+        category: ['gallery',],
     },
     {
         image: project5,
         altText: "project's image",
         name: 'SOUNDS Web App',
-        description: 'content',
+        description: 'content', //add simple description
         link: '',
-        category: 'content',
+        category: ['content',],
     },
     {
         image: project6,
         altText: "project's image",
         name: 'Future Web App',
-        description: 'image',
+        description: 'image', //add simple description
         link: '',
-        category: 'image',
+        category: ['image',],
     },
     {
         image: project7,
         altText: "project's image",
         name: 'Furniture Mobile App',
-        description: 'content',
+        description: 'content', //add simple description
         link: '',
-        category: 'content',
+        category: ['content',],
     },
     {
         image: project8,
         altText: "project's image",
         name: 'Chat App Mobile',
-        description: 'image',
+        description: 'image', //add simple description
         link: '',
-        category: 'image',
+        category: ['image',],
     },
 ]
