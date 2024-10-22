@@ -1,18 +1,17 @@
-import History from "./History";
-import Quotes from "./Quotes";
 import SectionTitle from "./SectionTitle";
 
-function Resume() {
+function Projects() {
   return (
     <section
-      id="resume"
+      id="projects"
       className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
     >
-      <SectionTitle title="resume" />
-      <History />
-      <Quotes />
+      <SectionTitle title="projects" />
+      <div></div>
+      <div></div>
+      <div></div>
     </section>
   );
 }
 
-export default Resume;
+export default Projects;

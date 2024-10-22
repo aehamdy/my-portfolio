@@ -1,11 +1,9 @@
 import Education from "./Education";
 import Experience from "./Experience";
-import SectionTitle from "./SectionTitle";
 
 function History() {
   return (
     <section>
-      <SectionTitle title="resume" />
       <div className="relative flex flex-col md:flex-row h-fit">
         <div className="w-full md:w-1/2">
           <Experience />

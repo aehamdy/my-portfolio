@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import About from "./components/About";
 import Resume from "./components/Resume";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </div>
         <About />
         <Resume />
+        <Projects />
       </div>
       <div className="p-1 sticky bottom-2 bg-accent w-fit rounded-full text-black">
         <ThemeSwitcher />
