@@ -27,7 +27,7 @@ export const ContactForm = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="font-poppins flex flex-col gap-7 pb-section-padding font-medium text-sm text-medium-gray dark:text-white-85"
+      className="font-poppins flex flex-col gap-7 pb-section-padding lg:pb-[80px] font-medium text-sm text-medium-gray dark:text-white-85"
     >
       <div className="flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-0">
         <div className="sm:w-1/2 sm:pe-4">
