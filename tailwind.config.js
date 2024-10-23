@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: 'Poppins, sans-serif',
+      },
       spacing: {
         'section-margin': '45px',  //inner section margin top
         'section-padding': '25px',  //inner section padding inline
