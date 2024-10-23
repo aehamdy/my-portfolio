@@ -28,10 +28,34 @@ function App() {
           </div>
           <div className="vertical-scrollbar col-span-3 lg:h-[100dvh] overflow-y-visible rounded-main-section overflow-x-hidden">
             <div className="flex flex-col gap-6">
-              {activeSection === "about" && <About />}
-              {activeSection === "resume" && <Resume />}
-              {activeSection === "projects" && <Projects />}
-              {activeSection === "contact" && <Contact />}
+              <div
+                className={`lg:${
+                  activeSection === "about" ? "show" : "hidden"
+                }`}
+              >
+                <About />
+              </div>
+              <div
+                className={`lg:${
+                  activeSection === "resume" ? "show" : "hidden"
+                }`}
+              >
+                <Resume />
+              </div>
+              <div
+                className={`lg:${
+                  activeSection === "projects" ? "show" : "hidden"
+                }`}
+              >
+                <Projects />
+              </div>
+              <div
+                className={`lg:${
+                  activeSection === "contact" ? "show" : "hidden"
+                }`}
+              >
+                <Contact />
+              </div>
             </div>
           </div>
         </div>
