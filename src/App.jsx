@@ -6,22 +6,24 @@ import About from "./components/About";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Ahmed's Portfolio | Creative Frontend Developer";
+  }, []);
+
   return (
     <>
-      <div className="container mx-auto flex flex-col gap-4">
-        <div>
-          <Header />
+      <Header />
+      <div className="container flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <HeroSection />
+          <About />
+          <Resume />
+          <Projects />
+          <Contact />
         </div>
-        <About />
-        <Resume />
-        <Projects />
-        <Contact />
-      </div>
-      <div className="p-1 sticky bottom-2 bg-accent w-fit rounded-full text-black">
-        <ThemeSwitcher />
       </div>
     </>
   );
