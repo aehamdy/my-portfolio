@@ -7,7 +7,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
+      className="vertical-scrollbar py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
     >
       <AboutMe />
       <MyServices />
