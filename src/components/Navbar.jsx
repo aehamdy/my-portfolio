@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { navItems } from "../data/navbar";
 
-function Navbar() {
+function Navbar({ onSectionChange }) {
   return (
     <nav
       className={`relative text-dark-gray dark:text-white-90 bg-section-light dark:bg-section-dark before:absolute before:start-0 before:top-0 before:w-full before:h-[1px] before:bg-custom-gradient-to-r md:before:hidden md:rounded-lg duration-short`}
@@ -17,6 +18,7 @@ function Navbar() {
           >
             <a
               href={`#${item.value}`}
+              onClick={() => onSectionChange(item.value)}
               className="group flex flex-col items-center gap-2 p-2"
             >
               <span className="text-lg group-hover:text-accent duration-short">
