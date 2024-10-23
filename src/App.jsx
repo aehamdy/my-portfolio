@@ -44,11 +44,11 @@ function App() {
     <>
       <div className="container flex flex-col md:flex-row gap-4 mx-auto">
         <Header />
-        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-4 lg:h-[100dvh] -mt-[16px] md:mt-0 lg:pt-10">
+        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-4 lg:h-[90dvh] -mt-[16px] md:mt-0 rounded-b-main-section overflow-hidden">
           <div className="herosection-holder col-span-2 lg:ps-[40px]">
             <HeroSection />
           </div>
-          <div className="all-sections-holder col-span-3 ">
+          <div className="all-sections-holder vertical-scrollbar col-span-3 lg:h-[100dvh] overflow-y-auto">
             <About />
             <Resume />
             <Projects />
