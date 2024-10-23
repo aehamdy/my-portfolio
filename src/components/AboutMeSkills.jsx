@@ -3,7 +3,7 @@ import { aboutMeSkills } from "../data/aboutMeSkills";
 function AboutMeSkills() {
   return (
     <div className="flex flex-col items-start gap-3">
-      <p>Skills</p>
+      <p className="text-dark-gray dark:text-white-90 duration-short">Skills</p>
       <ul className="flex flex-wrap gap-3">
         {aboutMeSkills.map((skill, i) => (
           <li key={i} className="group flex flex-col items-center">
