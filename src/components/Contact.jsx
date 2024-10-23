@@ -1,4 +1,4 @@
-import Form from "./Form";
+import ContactForm from "./ContactForm";
 import GetInTouchList from "./GetInTouchList";
 import Map from "./Map";
 import SectionTitle from "./SectionTitle";
@@ -21,7 +21,7 @@ function Contact() {
       </div>
 
       <div className="mt-section-margin px-section-padding">
-        <Form />
+        <ContactForm />
       </div>
     </section>
   );
