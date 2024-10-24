@@ -5,8 +5,38 @@ import About from "./components/About";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("about");
+  const [visibleSection, setVisibleSection] = useState({
+    about: true,
+    resume: false,
+    projects: false,
+    contact: false,
+  });
+
+  const handleSectionChange = (section) => {
+    setActiveSection(section);
+    setVisibleSection({
+      about: section === "about",
+      resume: section === "resume",
+      projects: section === "projects",
+      contact: section === "contact",
+    });
+  };
+
+  useEffect(() => {
+    setVisibleSection((prev) => ({
+      ...prev,
+      [activeSection]: true,
+    }));
+  }, [activeSection]);
+
+  useEffect(() => {
+    document.title = "Ahmed's Portfolio | Creative Frontend Developer";
+  }, []);
+
   return (
     <>
       <div className="grand-parent md:relative md:h-[99dvh] lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
@@ -31,7 +61,7 @@ function App() {
 
         {/* Display starting from larger screen and larger */}
         <div className="parent hidden lg:block relative lg:h-full lg:my-6">
-          <Header />
+          <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid lg:grid-cols-5 lg:gap-4 lg:h-full overflow-hidden">
             <div className="hero col-span-2">
               <HeroSection />
@@ -39,16 +69,48 @@ function App() {
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 lg:overflow-auto lg:rounded-main-section">
-                <About />
-                <Resume />
-                <Projects />
-                <Contact />
+                {visibleSection.about && (
+                  <div
+                    className={`lg:animate-fadeInUp ${
+                      !visibleSection.about ? "hidden" : ""
+                    }`}
+                  >
+                    <About />
+                  </div>
+                )}
+                {visibleSection.resume && (
+                  <div
+                    className={`lg:animate-fadeInUp ${
+                      !visibleSection.resume ? "hidden" : ""
+                    }`}
+                  >
+                    <Resume />
+                  </div>
+                )}
+                {visibleSection.projects && (
+                  <div
+                    className={` ${
+                      !visibleSection.projects
+                        ? "hidden"
+                        : "lg:animate-fadeInUp"
+                    }`}
+                  >
+                    <Projects />
+                  </div>
+                )}
+                {visibleSection.contact && (
+                  <div
+                    className={` ${
+                      !visibleSection.contact ? "hidden" : "lg:animate-fadeInUp"
+                    }`}
+                  >
+                    <Contact />
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
-
-        <div className="vertical-scrollbar col-span-3 lg:h-[100dvh] overflow-y-auto rounded-main-section overflow-x-hidden"></div>
       </div>
     </>
   );
