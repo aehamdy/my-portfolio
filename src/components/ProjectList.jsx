@@ -16,7 +16,7 @@ function ProjectList({ selectedCategory }) {
       className={`relative grid grid-cols-1 ${
         filteredProjects.length > 0 && "sm:grid-cols-2"
       } gap-6 sm:gap-8 p-section-padding before:absolute before:hidden  ${
-        filteredProjects.length > 0 && "before:sm:block"
+        filteredProjects.length > 1 && "before:sm:block"
       } before:w-[1px] before:h-full before:top-0 before:start-[50%] before:translate-x-[-50%] before:bg-custom-gradient-to-b`}
     >
       {filteredProjects.length > 0 ? (

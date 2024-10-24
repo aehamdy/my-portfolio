@@ -24,7 +24,7 @@ export const projects = [
         name: 'OYYI Furniture App',
         description: 'link', //add simple description
         link: '',
-        category: ['link', 'video'],
+        category: ['link'],
     },
     {
         image: project3,

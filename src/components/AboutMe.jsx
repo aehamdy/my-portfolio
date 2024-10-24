@@ -19,7 +19,7 @@ function AboutMe() {
             with you about our unique.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between gap-5">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:justify-between gap-5">
           <AboutMeList />
           <AboutMeSkills />
         </div>

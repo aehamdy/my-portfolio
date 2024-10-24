@@ -6,7 +6,7 @@ function Resume() {
   return (
     <section
       id="resume"
-      className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
+      className="py-main-section-padding lg:mb-section-margin bg-section-light dark:bg-section-dark rounded-main-section"
     >
       <SectionTitle title="resume" />
       <History />
