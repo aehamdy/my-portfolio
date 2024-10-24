@@ -9,10 +9,29 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
+  const [visibleSection, setVisibleSection] = useState({
+    about: true,
+    resume: false,
+    projects: false,
+    contact: false,
+  });
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
+    setVisibleSection({
+      about: section === "about",
+      resume: section === "resume",
+      projects: section === "projects",
+      contact: section === "contact",
+    });
   };
+
+  useEffect(() => {
+    setVisibleSection((prev) => ({
+      ...prev,
+      [activeSection]: true,
+    }));
+  }, [activeSection]);
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
@@ -28,34 +47,42 @@ function App() {
           </div>
           <div className="vertical-scrollbar col-span-3 lg:h-[100dvh] overflow-y-visible rounded-main-section overflow-x-hidden">
             <div className="flex flex-col gap-6">
-              <div
-                className={`lg:${
-                  activeSection === "about" ? "show" : "hidden"
-                }`}
-              >
-                <About />
-              </div>
-              <div
-                className={`lg:${
-                  activeSection === "resume" ? "show" : "hidden"
-                }`}
-              >
-                <Resume />
-              </div>
-              <div
-                className={`lg:${
-                  activeSection === "projects" ? "show" : "hidden"
-                }`}
-              >
-                <Projects />
-              </div>
-              <div
-                className={`lg:${
-                  activeSection === "contact" ? "show" : "hidden"
-                }`}
-              >
-                <Contact />
-              </div>
+              {visibleSection.about && (
+                <div
+                  className={`lg:animate-fadeInUp ${
+                    !visibleSection.about ? "hidden" : ""
+                  }`}
+                >
+                  <About />
+                </div>
+              )}
+              {visibleSection.resume && (
+                <div
+                  className={`lg:animate-fadeInUp ${
+                    !visibleSection.resume ? "hidden" : ""
+                  }`}
+                >
+                  <Resume />
+                </div>
+              )}
+              {visibleSection.projects && (
+                <div
+                  className={` ${
+                    !visibleSection.projects ? "hidden" : "lg:animate-fadeInUp"
+                  }`}
+                >
+                  <Projects />
+                </div>
+              )}
+              {visibleSection.contact && (
+                <div
+                  className={` ${
+                    !visibleSection.contact ? "hidden" : "lg:animate-fadeInUp"
+                  }`}
+                >
+                  <Contact />
+                </div>
+              )}
             </div>
           </div>
         </div>
