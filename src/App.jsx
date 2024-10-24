@@ -8,30 +8,30 @@ import Contact from "./components/Contact";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("about");
-  const [visibleSection, setVisibleSection] = useState({
-    about: true,
-    resume: false,
-    projects: false,
-    contact: false,
-  });
+  // const [activeSection, setActiveSection] = useState("about");
+  // const [visibleSection, setVisibleSection] = useState({
+  //   about: true,
+  //   resume: false,
+  //   projects: false,
+  //   contact: false,
+  // });
 
-  const handleSectionChange = (section) => {
-    setActiveSection(section);
-    setVisibleSection({
-      about: section === "about",
-      resume: section === "resume",
-      projects: section === "projects",
-      contact: section === "contact",
-    });
-  };
+  // const handleSectionChange = (section) => {
+  //   setActiveSection(section);
+  //   setVisibleSection({
+  //     about: section === "about",
+  //     resume: section === "resume",
+  //     projects: section === "projects",
+  //     contact: section === "contact",
+  //   });
+  // };
 
-  useEffect(() => {
-    setVisibleSection((prev) => ({
-      ...prev,
-      [activeSection]: true,
-    }));
-  }, [activeSection]);
+  // useEffect(() => {
+  //   setVisibleSection((prev) => ({
+  //     ...prev,
+  //     [activeSection]: true,
+  //   }));
+  // }, [activeSection]);
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
@@ -39,13 +39,27 @@ function App() {
 
   return (
     <>
-      <div className="container flex flex-col md:flex-row gap-4 mx-auto">
-        <Header onSectionChange={handleSectionChange} />
-        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-4 lg:h-[90dvh] -mt-[16px] md:mt-0 rounded-b-main-section lg:rounded-main-section overflow-hidden">
-          <div className="herosection-holder col-span-2 lg:ps-[40px]">
-            <HeroSection />
+      <div className="grand-parent md:relative md:h-[99dvh] lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
+        <div className="parent relative lg:h-full lg:my-6">
+          {/* <Header onSectionChange={handleSectionChange} /> */}
+          <Header />
+          <div className="low-parent main grid grid-cols-1 lg:grid-cols-5 gap-y-5 lg:gap-4 lg:h-full overflow-hidden">
+            <div className="hero col-span-2">
+              <HeroSection />
+            </div>
+
+            <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
+              <div className="all-sections-holder vertical-scrollbar grid grid-cols-1 lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 lg:overflow-auto lg:rounded-main-section">
+                <About />
+                <Resume />
+                <Projects />
+                <Contact />
+              </div>
+            </div>
           </div>
-          <div className="vertical-scrollbar col-span-3 lg:h-[100dvh] overflow-y-auto rounded-main-section overflow-x-hidden">
+        </div>
+
+        {/* <div className="vertical-scrollbar col-span-3 lg:h-[100dvh] overflow-y-auto rounded-main-section overflow-x-hidden">
             <div className="flex flex-col gap-6">
               {visibleSection.about && (
                 <div
@@ -84,8 +98,7 @@ function App() {
                 </div>
               )}
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
     </>
   );
@@ -107,3 +120,4 @@ export default App;
 // [ ] create dynamic cv
 // [ ] make the cv showable
 // [ ] make the cv downloadable in word file
+// [ ] add a simple notification/error when user send an successfully/failed email

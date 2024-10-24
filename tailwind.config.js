@@ -45,6 +45,7 @@ module.exports = {
 
       },
       backgroundImage: {
+        'nav-separator': 'radial-gradient(ellipse at top, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%)',
         'blurred-bg': 'linear-gradient(180deg, rgba(4, 25, 29, 0) 0%, rgb(1 9 15 / 90%) 100%)',
         'custom-gradient-to-r': 'linear-gradient(to right, #6e6e6e, transparent)',
         'custom-gradient-to-b': 'linear-gradient(to bottom, #6e6e6e, transparent)',

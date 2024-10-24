@@ -16,7 +16,7 @@ function ProfileCardButtons() {
         </a>
         <span className="absolute start-1/2 translate-x-[-50%] h-full w-[1px] bg-custom-gradient-to-b"></span>
         <a
-          href="#"
+          href="#contact"
           className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
         >
           Contact Me

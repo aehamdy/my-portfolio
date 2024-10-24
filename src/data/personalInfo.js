@@ -18,7 +18,8 @@ export const aboutMeList = [
 
 
 export const getInTouchList = [
-    {address: personalInfo.location},
+    {residence: personalInfo.residence},
+    {location: personalInfo.location},
     {email: personalInfo.email},
     {freelance: personalInfo.hiringStatus},
 ]

@@ -31,7 +31,7 @@ function ThemeSwitcher() {
   return (
     <div
       onClick={changeTheme}
-      className="text-2xl hover:text-accent duration-short cursor-pointer"
+      className="text-2xl text-medium-gray dark:text-white-85 hover:text-accent duration-short cursor-pointer"
     >
       {isDark ? <IoSunnyOutline /> : <IoMoonOutline />}
     </div>

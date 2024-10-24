@@ -13,9 +13,9 @@
     /* padding: 2px; */
   }
   .vertical-scrollbar::-webkit-scrollbar-thumb {
-    background: #323232;
+    background: #5a5a5a;
     border-radius: 100vh;
-    border: 2px solid #323232;
+    border: 2px solid #5a5a5a;
     cursor: pointer;
   }
   .vertical-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -30,7 +30,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background-color: #0f0f0f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,9 +43,15 @@
 
 @media (max-width: 767px) {
   :root {
-    scroll-padding-top: calc(var(--header-height) + 16px);
+    scroll-padding-top: calc(var(--header-height) + 7px);
   }
 }
+
+/* @media (min-width: 990px) {
+  :root {
+    scroll-padding-top: calc(var(--header-height) + 16px);
+  }
+} */
 
 body {
   font-family: "Lekton", monospace;

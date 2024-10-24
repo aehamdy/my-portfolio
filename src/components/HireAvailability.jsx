@@ -10,7 +10,7 @@ function HireAvailability() {
             : "bg-red-500 shadow-not-available-shadow"
         } rounded-[50%] ${availability && "animate-pulse"}`}
       ></span>
-      <p className="md:text-xs">
+      <p className="md:text-xs text-medium-gray dark:text-white-85 duration-short">
         {availability ? (
           "Available"
         ) : (

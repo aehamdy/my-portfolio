@@ -17,7 +17,7 @@ function Header({ onSectionChange }) {
   }, []);
 
   return (
-    <header className="sticky lg:absolute z-10 w-full lg:w-fit md:w-3/5 md:h-fit top-0 md:top-10 start-0 md:start-3 md:flex md:flex-col md:gap-3 text-dark-gray dark:text-white-90 bg-section-light dark:bg-section-dark md:bg-transparent md:dark:bg-transparent md:rounded-lg md:overflow-hidden">
+    <header className="md:flex md:flex-col gap-2 sticky md:fixed top-0 md:top-[50px] md:start-[2.46rem] lg:start-[2%] z-10 md:w-fit">
       <MiniProfile />
       <Navbar onSectionChange={onSectionChange} />
     </header>
