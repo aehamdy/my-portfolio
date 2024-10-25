@@ -3,7 +3,7 @@ import GetInTouchList from "./GetInTouchList";
 import Map from "./Map";
 import SectionTitle from "./SectionTitle";
 
-function Contact() {
+function ContactSection() {
   return (
     <section
       id="contact"
@@ -27,4 +27,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactSection;

@@ -3,10 +3,15 @@ import { projects } from "../data/projects";
 import NoProjectsFound from "./NoProjectsFound";
 
 function ProjectList({ selectedCategory }) {
+  const projectsArray = [];
+
   const filteredProjects = projects.filter((project) => {
     if (selectedCategory.toLowerCase() === "all") {
       return true;
     } else {
+      project.category.includes(selectedCategory.toLowerCase()) &&
+        projectsArray.push(project);
+
       return project.category.includes(selectedCategory.toLowerCase());
     }
   });

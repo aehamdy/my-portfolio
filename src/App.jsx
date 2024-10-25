@@ -1,10 +1,10 @@
 import "./App.css";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
-import About from "./components/About";
-import Resume from "./components/Resume";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import AboutSection from "./components/AboutSection";
+import ResumeSection from "./components/ResumeSection";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -37,12 +37,14 @@ function App() {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
   }, []);
 
+  useEffect(() => {}, [visibleSection]);
+
   return (
     <>
       <div className="grand-parent md:relative md:h-[99dvh] lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
         {/* Display on all screens excpet large screens and larger */}
         <div className="parent lg:hidden relative">
-          <Header />
+          <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid grid-cols-1 gap-y-5 overflow-hidden">
             <div className="hero col-span-2">
               <HeroSection />
@@ -50,10 +52,10 @@ function App() {
 
             <div className="gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid grid-cols-1 gap-5 mb-2">
-                <About />
-                <Resume />
-                <Projects />
-                <Contact />
+                <AboutSection />
+                <ResumeSection />
+                <ProjectsSection />
+                <ContactSection />
               </div>
             </div>
           </div>
@@ -70,41 +72,23 @@ function App() {
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 lg:overflow-auto lg:rounded-main-section">
                 {visibleSection.about && (
-                  <div
-                    className={`lg:animate-fadeInUp ${
-                      !visibleSection.about ? "hidden" : ""
-                    }`}
-                  >
-                    <About />
+                  <div className="lg:animate-fadeInUp">
+                    <AboutSection />
                   </div>
                 )}
                 {visibleSection.resume && (
-                  <div
-                    className={`lg:animate-fadeInUp ${
-                      !visibleSection.resume ? "hidden" : ""
-                    }`}
-                  >
-                    <Resume />
+                  <div className="lg:animate-fadeInUp">
+                    <ResumeSection />
                   </div>
                 )}
                 {visibleSection.projects && (
-                  <div
-                    className={` ${
-                      !visibleSection.projects
-                        ? "hidden"
-                        : "lg:animate-fadeInUp"
-                    }`}
-                  >
-                    <Projects />
+                  <div className="lg:animate-fadeInUp">
+                    <ProjectsSection />
                   </div>
                 )}
                 {visibleSection.contact && (
-                  <div
-                    className={` ${
-                      !visibleSection.contact ? "hidden" : "lg:animate-fadeInUp"
-                    }`}
-                  >
-                    <Contact />
+                  <div className="lg:animate-fadeInUp">
+                    <ContactSection />
                   </div>
                 )}
               </div>
@@ -117,6 +101,8 @@ function App() {
 }
 
 export default App;
+
+//#BUG: projects filteration is working only on small screen to medium, but doesn't work on large screen!
 
 //#TODOS:
 // [ ] fix the issue of HeroSection and Projects width are getting shrink when no projects found
@@ -132,5 +118,5 @@ export default App;
 // [ ] create dynamic cv
 // [ ] make the cv showable
 // [ ] make the cv downloadable in word file
-// [ ] add a simple notification/error when user send an successfully/failed email
+// [ ] add a simple notification/error when user send a successful/failed email
 // [ ] find proper icons to add to each services in MyServices section

@@ -15,7 +15,7 @@ function ProjectCategories({ setSelectedCategory }) {
             name="project-category"
             id={item}
             value={item}
-            onClick={handleChange}
+            onChange={handleChange}
             defaultChecked={item === "all"}
             className="hidden peer"
           />

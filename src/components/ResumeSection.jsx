@@ -2,7 +2,7 @@ import History from "./History";
 import Quotes from "./Quotes";
 import SectionTitle from "./SectionTitle";
 
-function Resume() {
+function ResumeSection() {
   return (
     <section
       id="resume"
@@ -15,4 +15,4 @@ function Resume() {
   );
 }
 
-export default Resume;
+export default ResumeSection;

@@ -3,7 +3,7 @@ import ProjectCategories from "./ProjectCategories";
 import ProjectList from "./ProjectList";
 import SectionTitle from "./SectionTitle";
 
-function Projects() {
+function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   return (
@@ -18,4 +18,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsSection;

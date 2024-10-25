@@ -3,7 +3,7 @@ import MyServices from "./MyServices";
 import Pricing from "./Pricing";
 import Testimonials from "./Testimonials";
 
-function About() {
+function AboutSection() {
   return (
     <section
       id="about"
@@ -17,4 +17,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutSection;
