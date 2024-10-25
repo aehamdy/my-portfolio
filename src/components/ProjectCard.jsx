@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-function ProjectCard({ key, project }) {
+function ProjectCard({ project }) {
   return (
-    <article key={key} className="group w-full">
+    <article className="group w-full">
       <a href={project.link} target="_blank" className="flex flex-col gap-2">
         <div className="w-full rounded-[25px] overflow-hidden">
           <img
