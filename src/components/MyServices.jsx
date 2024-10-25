@@ -8,7 +8,12 @@ function MyServices() {
       <SectionTitle title="my services" />
       <div className="flex flex-col md:flex-row md:flex-wrap px-section-padding">
         {myServices.map((service, i) => (
-          <ServiceCard key={i} service={service} myServices={myServices} />
+          <ServiceCard
+            key={i}
+            index={i}
+            service={service}
+            myServices={myServices}
+          />
         ))}
       </div>
     </article>
