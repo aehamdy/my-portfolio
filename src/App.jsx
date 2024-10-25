@@ -105,9 +105,7 @@ export default App;
 //#BUG: projects filteration is working only on small screen to medium, but doesn't work on large screen!
 
 //#TODOS:
-// [ ] fix the issue of HeroSection and Projects width are getting shrink when no projects found
 // [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
-// [ ] fix the issue of Contact section is getting smaller on large screen when click on its relatd nav button
 // [ ] add animation to each section when they get hide
 // [ ] make all constants/variables comes from one file
 // [ ] add env file
@@ -116,7 +114,9 @@ export default App;
 // [ ] add your real projects
 // [ ] create two components, one for horizontal graidnet to right and the other to bottom and implement them
 // [ ] create dynamic cv
-// [ ] make the cv showable
+// [ ] make the cv viewable
 // [ ] make the cv downloadable in word file
 // [ ] add a simple notification/error when user send a successful/failed email
 // [ ] find proper icons to add to each services in MyServices section
+// [ ] add loading animation that appears before rendering the website
+// [ ] add animated svg for body element and ensure that it is appearing on all screens larger than mobile screen
