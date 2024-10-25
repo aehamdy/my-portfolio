@@ -41,17 +41,23 @@
   scroll-behavior: smooth;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   :root {
-    scroll-padding-top: calc(var(--header-height) + 7px);
+    scroll-padding-top: var(--header-height);
   }
 }
 
-/* @media (min-width: 990px) {
+@media (max-width: 767px) {
   :root {
-    scroll-padding-top: calc(var(--header-height) + 16px);
+    scroll-padding-top: calc(var(--header-height) + 15px);
   }
-} */
+}
+
+@media (min-width: 991px) {
+  :root {
+    scroll-padding-top: 10px;
+  }
+}
 
 body {
   font-family: "Lekton", monospace;
