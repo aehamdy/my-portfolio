@@ -2,6 +2,7 @@
 import { projects } from "../data/projects";
 import NoProjectsFound from "./NoProjectsFound";
 import ProjectCard from "./ProjectCard";
+import SeparatorToBottom from "./SeparatorToBottom";
 
 function ProjectList({ selectedCategory }) {
   const projectsArray = [];
@@ -21,10 +22,13 @@ function ProjectList({ selectedCategory }) {
     <div
       className={`relative grid grid-cols-1 ${
         filteredProjects.length > 0 && "sm:grid-cols-2"
-      } gap-6 sm:gap-8 p-section-padding before:absolute before:hidden  ${
-        filteredProjects.length > 1 && "before:sm:block"
-      } before:w-[1px] before:h-full before:top-0 before:start-[50%] before:translate-x-[-50%] before:bg-custom-gradient-to-b`}
+      } gap-6 sm:gap-8 p-section-padding before:absolute before:hidden`}
     >
+      {filteredProjects.length > 1 && (
+        <div className="hidden sm:block absolute start-[50%] top-0 w-[1px] h-full">
+          <SeparatorToBottom />
+        </div>
+      )}
       {filteredProjects.length > 0 ? (
         filteredProjects.map((project, i) => (
           <ProjectCard key={i} project={project} />
