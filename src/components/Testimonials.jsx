@@ -1,4 +1,3 @@
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { testimonials } from "../data/testimonials";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";

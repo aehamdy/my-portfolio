@@ -105,7 +105,6 @@ export default App;
 //#BUG: projects filteration is working only on small screen to medium, but doesn't work on large screen!
 
 //#TODOS:
-// [ ] create a component for each of skills icons, testimonials and quotes
 // [ ] add padding to the left on small and medium screens and let the header stand vertically without hiding any part of the other content
 // [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
 // [ ] add animation to each section when they get hide
