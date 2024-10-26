@@ -13,7 +13,7 @@ export const aboutMeSkills = [
   { value: "HTML", icon: htmlIcon },
   { value: "CSS", icon: cssIcon },
   { value: "SASS", icon: sassIcon },
-  { value: "JS", icon: jsIcon },
+  { value: "JavaScript", icon: jsIcon },
   { value: "React", icon: reactIcon },
   { value: "Tailwind", icon: tailwindIcon },
   { value: "Git", icon: gitIcon },
