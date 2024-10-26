@@ -1,18 +1,14 @@
 /* eslint-disable react/prop-types */
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
+import { quoteLeftIcon, quoteRighttIcon } from "../data/icons";
 
-function TestimonialCard({ key, testimonial }) {
+function TestimonialCard({ testimonial }) {
   return (
-    <article key={key} className="flex-shrink-0 w-full flex flex-col gap-3">
+    <article className="flex-shrink-0 w-full flex flex-col gap-3">
       <div className="w-fit mx-auto">
         <p className="relative w-full sm:w-4/5 md:w-3/4 lg:w-3/5 mx-auto p-2.5 italic text-medium-gray dark:text-neutral-gray duration-short">
-          <span className="absolute top-0 left-0">
-            <BiSolidQuoteAltLeft />
-          </span>
+          <span className="absolute top-0 left-0">{quoteLeftIcon}</span>
           {testimonial.content}
-          <span className="absolute bottom-0 end-0">
-            <BiSolidQuoteAltRight />
-          </span>
+          <span className="absolute bottom-0 end-0">{quoteRighttIcon}</span>
         </p>
       </div>
       <div className="flex flex-col items-center gap-1">

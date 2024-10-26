@@ -1,21 +1,21 @@
 import {
-  DiCss3,
-  DiGit,
-  DiGithubBadge,
-  DiHtml5,
-  DiJsBadge,
-  DiReact,
-  DiSass,
-} from "react-icons/di";
-import { SiTailwindcss } from "react-icons/si";
+  cssIcon,
+  githubIconTwo,
+  gitIcon,
+  htmlIcon,
+  jsIcon,
+  reactIcon,
+  sassIcon,
+  tailwindIcon,
+} from "./icons";
 
 export const aboutMeSkills = [
-  { value: "HTML", icon: <DiHtml5 /> },
-  { value: "CSS", icon: <DiCss3 /> },
-  { value: "SASS", icon: <DiSass /> },
-  { value: "JS", icon: <DiJsBadge /> },
-  { value: "React", icon: <DiReact /> },
-  { value: "Tailwind", icon: <SiTailwindcss /> },
-  { value: "Git", icon: <DiGit /> },
-  { value: "Github", icon: <DiGithubBadge /> },
+  { value: "HTML", icon: htmlIcon },
+  { value: "CSS", icon: cssIcon },
+  { value: "SASS", icon: sassIcon },
+  { value: "JS", icon: jsIcon },
+  { value: "React", icon: reactIcon },
+  { value: "Tailwind", icon: tailwindIcon },
+  { value: "Git", icon: gitIcon },
+  { value: "Github", icon: githubIconTwo },
 ];

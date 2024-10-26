@@ -1,4 +1,4 @@
-import { IoCloudDownload, IoSend } from "react-icons/io5";
+import { downloadIcon, sendIcon } from "../data/icons";
 
 function ProfileCardButtons() {
   return (
@@ -11,7 +11,7 @@ function ProfileCardButtons() {
         >
           Download CV
           <span className="group-hover:text-accent translate-y-1 group-hover:-translate-y-1 duration-short">
-            <IoCloudDownload />
+            {downloadIcon}
           </span>
         </a>
         <span className="absolute start-1/2 translate-x-[-50%] h-full w-[1px] bg-custom-gradient-to-b"></span>
@@ -21,7 +21,7 @@ function ProfileCardButtons() {
         >
           Contact Me
           <span className="-rotate-45 group-hover:text-accent group-hover:-translate-y-1 duration-short">
-            <IoSend />
+            {sendIcon}
           </span>
         </a>
       </div>

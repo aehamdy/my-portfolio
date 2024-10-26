@@ -105,14 +105,15 @@ export default App;
 //#BUG: projects filteration is working only on small screen to medium, but doesn't work on large screen!
 
 //#TODOS:
-// [ ] add padding to the left on small and medium screens and let the header stand vertically without hiding any part of the other content
 // [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
 // [ ] add animation to each section when they get hide
 // [ ] make all constants/variables comes from one file
 // [ ] add env file
-// [ ] create only one file to contain all icons
 // [ ] create proper image to each one of your projects
 // [ ] add your real projects
+// [ ] create only one file to contain all icons
+// [ ] create a component for skills in about me section
+// [ ] fix the spacing between about me skills icon that caused because of the tool tip
 // [ ] create two components, one for horizontal graidnet to right and the other to bottom and implement them
 // [ ] create dynamic cv
 // [ ] make the cv viewable

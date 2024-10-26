@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import { FaChevronRight } from "react-icons/fa";
+import { chevronRightIcon } from "../data/icons";
 
-function PlanCard({ key, plan }) {
+function PlanCard({ index, plan }) {
   return (
     <div
       className={`relative flex flex-col items-center gap-6 w-full sm:w-1/2 mt-10 px-8 ${
-        key >= 1 &&
+        index >= 1 &&
         "sm:before:absolute before:top-0 before:start-0 before:w-[1px] before:h-full before:bg-custom-gradient-to-b"
       }`}
     >
@@ -52,7 +52,7 @@ function PlanCard({ key, plan }) {
       >
         order now{" "}
         <span className="group-hover:translate-x-1 text-base group-hover:text-accent duration-short">
-          <FaChevronRight />
+          {chevronRightIcon}
         </span>
       </button>
     </div>

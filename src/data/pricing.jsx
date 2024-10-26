@@ -1,9 +1,9 @@
-import { FaChessQueen, FaRocket } from "react-icons/fa";
+import { chessQueenIcon, rocketIcon } from "./icons";
 
 export const plans = [
   {
     type: "popular",
-    icon: <FaChessQueen />,
+    icon: chessQueenIcon,
     price: "22",
     features: [
       { feat: "WordPress Development", isIncluded: true, isNew: false },
@@ -15,7 +15,7 @@ export const plans = [
   },
   {
     type: "pro",
-    icon: <FaRocket />,
+    icon: rocketIcon,
     price: "48",
     features: [
       { feat: "WordPress Development", isIncluded: true, isNew: false },

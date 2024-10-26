@@ -1,13 +1,13 @@
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { githubIcon, linkedinIcon } from "../data/icons";
 
 const icons = [
   {
     link: "https://github.com/",
-    icon: IoLogoGithub,
+    icon: githubIcon,
   },
   {
     link: "https://linkedin.com",
-    icon: IoLogoLinkedin,
+    icon: linkedinIcon,
   },
 ];
 
@@ -20,7 +20,7 @@ function SocialMediaIcons() {
           className="text-white-90 hover:text-accent hover:scale-110 text-xl duration-short"
         >
           <a href={item.link} target="_blank" rel="noopener noreferrer">
-            <item.icon />
+            {item.icon}
           </a>
         </li>
       ))}

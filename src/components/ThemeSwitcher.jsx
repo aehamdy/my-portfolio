@@ -1,5 +1,5 @@
+import { moonIcon, sunIcon } from "../data/icons";
 import { useState, useEffect } from "react";
-import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 function ThemeSwitcher() {
   const [isDark, setIsDark] = useState(true);
@@ -33,7 +33,8 @@ function ThemeSwitcher() {
       onClick={changeTheme}
       className="text-2xl text-medium-gray dark:text-white-85 hover:text-accent duration-short cursor-pointer"
     >
-      {isDark ? <IoSunnyOutline /> : <IoMoonOutline />}
+      {/* {isDark ? <IoSunnyOutline /> : <IoMoonOutline />} */}
+      {isDark ? sunIcon : moonIcon}
     </div>
   );
 }

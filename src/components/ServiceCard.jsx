@@ -1,28 +1,21 @@
 /* eslint-disable react/prop-types */
-import { DiResponsive } from "react-icons/di";
-import { IoCodeSlash } from "react-icons/io5";
-import { LiaPagerSolid } from "react-icons/lia";
-import { MdOutlineDesignServices } from "react-icons/md";
+import { codeIcon, designIcon, pageIcon, responsiveIcon } from "../data/icons";
 
 function ServiceCard({ index, service, myServices }) {
   let icon;
 
   switch (service.type) {
     case "code":
-      icon = <IoCodeSlash style={{ strokeWidth: "0.1", fontSize: "40px" }} />;
+      icon = codeIcon;
       break;
     case "page":
-      icon = <LiaPagerSolid style={{ strokeWidth: "0.1", fontSize: "45px" }} />;
+      icon = pageIcon;
       break;
     case "responsive":
-      icon = <DiResponsive style={{ strokeWidth: "0.9", fontSize: "60px" }} />;
+      icon = responsiveIcon;
       break;
     case "design":
-      icon = (
-        <MdOutlineDesignServices
-          style={{ strokeWidth: "0", fontSize: "40px" }}
-        />
-      );
+      icon = designIcon;
       break;
     default:
       icon = null;

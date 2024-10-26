@@ -1,13 +1,8 @@
-import {
-  FaBriefcase,
-  FaPaperPlane,
-  FaRegListAlt,
-  FaRegUser,
-} from "react-icons/fa";
+import { briefcaseIcon, listIcon, planeIcon, userIcon } from "./icons";
 
 export const navItems = [
-  { value: "about", icon: <FaRegUser /> },
-  { value: "resume", icon: <FaRegListAlt /> },
-  { value: "projects", icon: <FaBriefcase /> },
-  { value: "contact", icon: <FaPaperPlane /> },
+  { value: "about", icon: userIcon },
+  { value: "resume", icon: listIcon },
+  { value: "projects", icon: briefcaseIcon },
+  { value: "contact", icon: planeIcon },
 ];
