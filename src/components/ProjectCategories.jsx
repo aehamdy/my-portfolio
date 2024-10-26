@@ -4,7 +4,7 @@ import ProjectCategoriesButton from "./ProjectCategoriesButton";
 
 function ProjectCategories({ setSelectedCategory }) {
   return (
-    <div className="flex gap-2 ms-2 pt-[12.5px] px-section-padding">
+    <div className="flex items-center gap-2 ms-2 px-section-padding">
       {projectCategories.map((item, i) => (
         <ProjectCategoriesButton
           key={i}
