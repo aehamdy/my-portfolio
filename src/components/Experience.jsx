@@ -1,8 +1,8 @@
-import { FaBriefcase } from "react-icons/fa";
 import SpecialHeading from "./SpecialHeading";
 import { experiences } from "../data/experiences";
+import { experienceIcon } from "../data/icons";
 
-const icon = <FaBriefcase />;
+const icon = experienceIcon;
 
 function Experience() {
   return (

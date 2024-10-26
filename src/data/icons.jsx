@@ -11,6 +11,7 @@ import {
   FaBriefcase,
   FaChessQueen,
   FaChevronRight,
+  FaGraduationCap,
   FaPaperPlane,
   FaRegListAlt,
   FaRegUser,
@@ -81,3 +82,9 @@ export const chevronRightIcon = <FaChevronRight />;
 //Quotes Icons
 export const quoteLeftIcon = <BiSolidQuoteAltLeft />;
 export const quoteRighttIcon = <BiSolidQuoteAltRight />;
+
+//Experience Icon
+export const experienceIcon = <FaBriefcase />;
+
+//Education Icon
+export const educationIcon = <FaGraduationCap />;
