@@ -1,5 +1,6 @@
 import { myServices } from "../data/myServices";
 import SectionTitle from "./SectionTitle";
+import SeparatorToBottom from "./SeparatorToBottom";
 import SeparatorToRight from "./SeparatorToRight";
 import ServiceCard from "./ServiceCard";
 
@@ -10,7 +11,10 @@ function MyServices() {
       <div className="mt-horizontal-separator-mt">
         <SeparatorToRight />
       </div>
-      <div className="flex flex-col md:flex-row md:flex-wrap mt-4 px-section-padding">
+      <div className="relative flex flex-col md:flex-row md:flex-wrap px-section-padding">
+        <div className="absolute w-full h-full start-[50%] top-0">
+          <SeparatorToBottom />
+        </div>
         {myServices.map((service, i) => (
           <ServiceCard
             key={i}

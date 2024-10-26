@@ -5,10 +5,7 @@ import SeparatorToRight from "./SeparatorToRight";
 function PlanCard({ index, plan }) {
   return (
     <div
-      className={`relative flex flex-col items-center gap-6 w-full sm:w-1/2 pt-10 px-8 ${
-        index >= 1 &&
-        "sm:before:absolute before:top-0 before:start-0 before:w-[1px] before:h-full before:bg-custom-gradient-to-b"
-      }`}
+      className={`relative flex flex-col items-center gap-6 w-full sm:w-1/2 pt-10 px-8`}
     >
       <div className="flex flex-col gap-2">
         <span className="p-3 text-3xl text-accent border border-accent rounded-full">
