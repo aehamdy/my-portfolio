@@ -24,6 +24,12 @@
 }
 
 :root {
+  --gradient-to-right: radial-gradient(
+    ellipse at left,
+    #ddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
@@ -71,5 +77,11 @@ body {
 }
 
 body.dark {
+  --gradient-to-right: radial-gradient(
+    ellipse at left,
+    rgba(197, 202, 213, 0.15) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
   background-color: rgb(22, 22, 22);
 }
