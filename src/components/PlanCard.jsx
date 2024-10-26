@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { chevronRightIcon } from "../data/icons";
+import SeparatorToRight from "./SeparatorToRight";
 
 function PlanCard({ index, plan }) {
   return (
@@ -45,7 +46,9 @@ function PlanCard({ index, plan }) {
           </li>
         ))}
       </ul>
-      <span className="w-full h-[1px] bg-custom-gradient-to-r"></span>
+      <span className="w-full">
+        <SeparatorToRight />
+      </span>
       <button
         type="button"
         className="group flex items-center gap-3 font-semibold text-sm uppercase text-dark-gray dark:text-white-90 hover:text-accent cursor-pointer duration-short"

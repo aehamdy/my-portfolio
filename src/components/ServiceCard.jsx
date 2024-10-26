@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { codeIcon, designIcon, pageIcon, responsiveIcon } from "../data/icons";
+import SeparatorToRight from "./SeparatorToRight";
 
 function ServiceCard({ index, service, myServices }) {
   let icon;
@@ -40,8 +41,10 @@ function ServiceCard({ index, service, myServices }) {
         <span
           className={`${
             index === 2 ? "md:hidden" : ""
-          } absolute bottom-0 start-0 w-full h-[1px] bg-custom-gradient-to-r`}
-        ></span>
+          } absolute bottom-0 start-0 w-full`}
+        >
+          <SeparatorToRight />
+        </span>
       )}
     </article>
   );

@@ -14,7 +14,7 @@ module.exports = {
       spacing: {
         'section-margin': '45px',  //inner section margin top
         'section-padding': '25px',  //inner section padding inline
-        'main-section-padding': '30px',  //main section padding Y axis
+        'main-section-padding': '25px',  //main section padding Y axis
       },
       borderRadius: {
         'main-section': '32px',  //main section rounded corners

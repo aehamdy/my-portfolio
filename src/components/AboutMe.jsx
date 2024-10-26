@@ -6,10 +6,10 @@ import SeparatorToRight from "./SeparatorToRight";
 
 function AboutMe() {
   return (
-    <article className="flex flex-col gap-7">
+    <article className="flex flex-col gap-4">
       <SectionTitle title="about me" />
       <SeparatorToRight />
-      <div className="flex flex-col gap-4 px-section-padding">
+      <div className="flex flex-col gap-4 mt-2 px-section-padding">
         <div className="flex flex-col text-start dark:text-white-55 text-medium-gray">
           <strong>
             Hello! I’m{" "}

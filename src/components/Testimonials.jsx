@@ -2,6 +2,7 @@ import { testimonials } from "../data/testimonials";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
+import SeparatorToRight from "./SeparatorToRight";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,9 +22,10 @@ function Testimonials() {
   }, []);
 
   return (
-    <article className="flex flex-col gap-7 mt-section-margin">
+    <article className="flex flex-col gap-4 mt-section-margin">
       <SectionTitle title="testimonials" />
-      <div className="flex flex-col items-center gap-6 px-section-padding">
+      <SeparatorToRight />
+      <div className="flex flex-col items-center gap-6 mt-3 px-section-padding">
         <div className="flex w-full overflow-hidden select-none">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
