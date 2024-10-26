@@ -2,7 +2,7 @@
 import { chevronRightIcon } from "../data/icons";
 import SeparatorToRight from "./SeparatorToRight";
 
-function PlanCard({ index, plan }) {
+function PlanCard({ plan }) {
   return (
     <div
       className={`relative flex flex-col items-center gap-6 w-full sm:w-1/2 pt-10 px-8`}
