@@ -2,11 +2,13 @@ import { personalInfo } from "../data/personalInfo";
 import AboutMeList from "./AboutMeList";
 import AboutMeSkills from "./AboutMeSkills";
 import SectionTitle from "./SectionTitle";
+import SeparatorToRight from "./SeparatorToRight";
 
 function AboutMe() {
   return (
     <article className="flex flex-col gap-7">
       <SectionTitle title="about me" />
+      <SeparatorToRight />
       <div className="flex flex-col gap-4 px-section-padding">
         <div className="flex flex-col text-start dark:text-white-55 text-medium-gray">
           <strong>

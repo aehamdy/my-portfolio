@@ -112,8 +112,8 @@ export default App;
 // [ ] create proper image to each one of your projects
 // [ ] add your real projects
 // [x] create only one file to contain all icons
-// [ ] create a component for skills in about me section
-// [ ] fix the spacing between about me skills icon that caused because of the tool tip
+// [x] create a component for skills in about me section
+// [x] fix the spacing between about me skills icon that caused because of the tool tip
 // [ ] create two components, one for horizontal graidnet to right and the other to bottom and implement them
 // [ ] create dynamic cv
 // [ ] make the cv viewable
