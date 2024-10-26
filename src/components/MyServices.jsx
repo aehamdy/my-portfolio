@@ -5,10 +5,12 @@ import ServiceCard from "./ServiceCard";
 
 function MyServices() {
   return (
-    <article className="flex flex-col gap-4 mt-section-margin">
+    <article className="flex flex-col mt-section-margin">
       <SectionTitle title="my services" />
-      <SeparatorToRight />
-      <div className="flex flex-col md:flex-row md:flex-wrap px-section-padding">
+      <div className="mt-horizontal-separator-mt">
+        <SeparatorToRight />
+      </div>
+      <div className="flex flex-col md:flex-row md:flex-wrap mt-4 px-section-padding">
         {myServices.map((service, i) => (
           <ServiceCard
             key={i}

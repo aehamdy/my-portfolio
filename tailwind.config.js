@@ -12,6 +12,7 @@ module.exports = {
         poppins: 'Poppins, sans-serif',
       },
       spacing: {
+        'horizontal-separator-mt': '1rem',
         'section-margin': '45px',  //inner section margin top
         'section-padding': '25px',  //inner section padding inline
         'main-section-padding': '25px',  //main section padding Y axis

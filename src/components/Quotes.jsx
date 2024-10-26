@@ -2,6 +2,7 @@ import { quotes } from "../data/quotes";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 import QuoteCard from "./QuoteCard";
+import SeparatorToRight from "./SeparatorToRight";
 
 function Quotes() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,6 +24,9 @@ function Quotes() {
   return (
     <section className="mt-8">
       <SectionTitle title="Quotes" />
+      <div className="mt-horizontal-separator-mt">
+        <SeparatorToRight />
+      </div>
       <div className="flex flex-col items-center gap-8 mt-6 px-section-padding">
         <div className="flex w-full overflow-hidden">
           <div

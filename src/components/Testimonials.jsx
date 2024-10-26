@@ -22,10 +22,12 @@ function Testimonials() {
   }, []);
 
   return (
-    <article className="flex flex-col gap-4 mt-section-margin">
+    <article className="flex flex-col mt-section-margin">
       <SectionTitle title="testimonials" />
-      <SeparatorToRight />
-      <div className="flex flex-col items-center gap-6 mt-3 px-section-padding">
+      <div className="mt-horizontal-separator-mt">
+        <SeparatorToRight />
+      </div>
+      <div className="flex flex-col items-center gap-6 mt-6 px-section-padding">
         <div className="flex w-full overflow-hidden select-none">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
