@@ -111,7 +111,7 @@ export default App;
 // [ ] add env file
 // [ ] create proper image to each one of your projects
 // [ ] add your real projects
-// [ ] create only one file to contain all icons
+// [x] create only one file to contain all icons
 // [ ] create a component for skills in about me section
 // [ ] fix the spacing between about me skills icon that caused because of the tool tip
 // [ ] create two components, one for horizontal graidnet to right and the other to bottom and implement them
