@@ -70,7 +70,7 @@ function App() {
             </div>
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
-              <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 lg:overflow-auto lg:rounded-main-section">
+              <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 lg:overflow-auto lg:overflow-x-hidden lg:rounded-main-section">
                 {visibleSection.about && (
                   <div className="lg:animate-fadeInUp">
                     <AboutSection />
