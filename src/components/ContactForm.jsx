@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import EmailNotification from "./EmailNotification";
 
 const serviceKey = "service_2d4wymy";
@@ -7,19 +7,33 @@ const templateKey = "template_463hoob";
 const publicKey = "jQYd4iWqxmBioX6Z8";
 
 export const ContactForm = () => {
+  const [isEmailSuccess, setIsEmailSuccess] = useState(null);
   const form = useRef();
 
   const sendEmail = (e) => {
+    setIsEmailSuccess(null);
     e.preventDefault();
 
     emailjs
       .sendForm(`${serviceKey}`, `${templateKey}`, form.current, `${publicKey}`)
       .then(
         () => {
-          console.log("SUCCESS!");
+          setTimeout(() => {
+            setIsEmailSuccess(true);
+          });
+
+          setTimeout(() => {
+            setIsEmailSuccess(null);
+          }, 4000);
+
+          // console.log("SUCCESS!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setTimeout(() => {
+            setIsEmailSuccess(false);
+          }, 500);
+
+          // console.log("FAILED...", error.text);
         }
       );
   };
@@ -28,8 +42,9 @@ export const ContactForm = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="font-poppins flex flex-col gap-7 pb-section-padding lg:pb-[80px] font-medium text-sm text-medium-gray dark:text-white-85"
+      className="relative font-poppins flex flex-col gap-7 pb-section-padding lg:pb-[80px] font-medium text-sm text-medium-gray dark:text-white-85"
     >
+      <EmailNotification isEmailSuccess={isEmailSuccess} />
       <div className="flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-0">
         <div className="sm:w-1/2 sm:pe-4">
           <input
@@ -74,7 +89,6 @@ export const ContactForm = () => {
           <span className="absolute w-[10px] h-[2px] rotate-[45deg] top-[-3px] translate-y-2 -end-[1px] bg-dark-gray dark:bg-white-90 group-hover:bg-accent duration-200"></span>
         </div>
       </button>
-      <EmailNotification />
     </form>
   );
 };
