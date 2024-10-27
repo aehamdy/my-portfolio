@@ -7,15 +7,12 @@ function ThemeSwitcher() {
   const changeTheme = () => {
     setIsDark((prevValue) => !prevValue);
 
-    // const bodyElement = document.body;
-    const rootElement = document.documentElement;
+    const bodyElement = document.body;
     if (isDark) {
-      // bodyElement.classList.remove("dark");
-      rootElement.classList.remove("dark");
+      bodyElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     } else {
-      // bodyElement.classList.add("dark");
-      rootElement.classList.add("dark");
+      bodyElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     }
   };
@@ -23,12 +20,10 @@ function ThemeSwitcher() {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
-      // document.body.classList.remove("dark");
-      document.documentElement.classList.remove("dark");
+      document.body.classList.remove("dark");
       setIsDark(false);
     } else {
-      // document.body.classList.add("dark");
-      document.documentElement.classList.add("dark");
+      document.body.classList.add("dark");
       setIsDark(true);
     }
   }, []);
