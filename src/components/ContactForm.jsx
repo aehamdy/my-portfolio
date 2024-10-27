@@ -69,8 +69,8 @@ export const ContactForm = () => {
       >
         <span>Send Message</span>
         <div className="relative top-[50%] end-1 translate-y-[-10%] group-hover:translate-x-[3px] duration-short">
-          <span className="absolute w-4 group-hover:w-[13px] h-[2px] top-[50%] translate-y-2 end-0 bg-white-90 group-hover:bg-accent duration-200"></span>
-          <span className="absolute w-[10px] h-[2px] rotate-[45deg] top-[-3px] translate-y-2 -end-[1px] bg-white-90 group-hover:bg-accent duration-200"></span>
+          <span className="absolute w-3.5 group-hover:w-[12px] h-[2px] top-[50%] translate-y-2 end-0 bg-dark-gray dark:bg-white-90 group-hover:bg-accent duration-200"></span>
+          <span className="absolute w-[10px] h-[2px] rotate-[45deg] top-[-3px] translate-y-2 -end-[1px] bg-dark-gray dark:bg-white-90 group-hover:bg-accent duration-200"></span>
         </div>
       </button>
     </form>
