@@ -63,11 +63,13 @@ function ProjectsSection({ visibleSection = {} }) {
       <div className="hidden lg:block">
         {visibleSection.projects && (
           <>
-            <div className="flex jusitfy-between items-center">
+            <div className="flex justify-between items-center">
               <SectionTitle title="projects" />
               <ProjectCategories setSelectedCategory={setSelectedCategory} />
             </div>
-
+            <div className="mt-horizontal-separator-mt">
+              <SeparatorToRight />
+            </div>
             <ProjectList selectedCategory={selectedCategory} />
           </>
         )}
