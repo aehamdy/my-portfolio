@@ -63,7 +63,9 @@ function ProjectsSection({ visibleSection = {} }) {
       <div className="hidden lg:block">
         {visibleSection.projects && (
           <>
+            <SectionTitle title="projects" />
             <ProjectCategories setSelectedCategory={setSelectedCategory} />
+
             <ProjectList selectedCategory={selectedCategory} />
           </>
         )}
