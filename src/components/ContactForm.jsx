@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import EmailNotification from "./EmailNotification";
 
 const serviceKey = "service_2d4wymy";
 const templateKey = "template_463hoob";
@@ -73,6 +74,7 @@ export const ContactForm = () => {
           <span className="absolute w-[10px] h-[2px] rotate-[45deg] top-[-3px] translate-y-2 -end-[1px] bg-dark-gray dark:bg-white-90 group-hover:bg-accent duration-200"></span>
         </div>
       </button>
+      <EmailNotification />
     </form>
   );
 };
