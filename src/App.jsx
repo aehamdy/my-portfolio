@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-      <div className="grand-parent md:relative md:h-[99dvh] lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
+      <div className="grand-parent md:relative lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
         {/* Display on all screens excpet large screens and larger */}
         <div className="parent lg:hidden relative">
           <Header onSectionChange={handleSectionChange} />

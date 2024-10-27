@@ -24,6 +24,9 @@
 }
 
 :root {
+  --light-bg: rgb(246, 246, 246);
+  --dark-bg: rgb(22, 22, 22);
+
   --gradient-to-right: radial-gradient(
     ellipse at left,
     #ddd 0%,
@@ -49,7 +52,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-  background-color: #0f0f0f;
+  /* background-color: #0f0f0f; */
+  background-color: var(--light-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,6 +61,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
+  transition-duration: 200ms;
+}
+
+:root.dark {
+  background-color: var(--dark-bg);
 }
 
 @media (max-width: 480px) {
@@ -84,7 +93,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(246, 246, 246);
+  /* background-color: rgb(246, 246, 246); */
   transition: background-color 0.5s ease, color 0.3s ease;
 }
 
@@ -107,5 +116,5 @@ body.dark {
     rgba(255, 255, 255, 0) 70%
   );
 
-  background-color: rgb(22, 22, 22);
+  /* background-color: rgb(22, 22, 22); */
 }
