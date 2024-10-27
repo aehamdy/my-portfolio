@@ -8,7 +8,7 @@ function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
+      className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section duration-short"
     >
       <SectionTitle title="get in touch" />
       <div className="mt-horizontal-separator-mt">

@@ -10,7 +10,7 @@ function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section"
+      className="py-main-section-padding bg-section-light dark:bg-section-dark rounded-main-section duration-short"
     >
       <div className="flex justify-between items-center">
         <SectionTitle title="projects" />
