@@ -15,6 +15,21 @@ function App() {
     projects: false,
     contact: false,
   });
+  const [loading, setLoading] = useState(true); // Loading state
+
+  useEffect(() => {
+    // Simulating data fetching
+    setTimeout(() => {
+      // After fetching data, initialize visibleSection
+      setVisibleSection({
+        about: true,
+        resume: false,
+        projects: false, // or false depending on your desired initial state
+        contact: false,
+      });
+      setLoading(false); // Set loading to false after data is fetched
+    }, 1000); // Simulating a 1-second API call
+  }, []);
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
@@ -37,7 +52,13 @@ function App() {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
   }, []);
 
-  useEffect(() => {}, [visibleSection]);
+  // useEffect(() => {
+  //   console.log("Visible Section:", visibleSection);
+  // }, [visibleSection]);
+
+  if (loading) {
+    return <div>Loading...</div>; // Show loading state until data is fetched
+  }
 
   return (
     <>
@@ -81,11 +102,17 @@ function App() {
                     <ResumeSection />
                   </div>
                 )}
-                {visibleSection.projects && (
+                {/* {visibleSection.projects && (
                   <div className="lg:animate-fadeInUp">
-                    <ProjectsSection />
+                    <ProjectsSection visibleSection={visibleSection} />
+                  </div>
+                )} */}
+                {visibleSection && visibleSection.projects && (
+                  <div className="lg:animate-fadeInUp">
+                    <ProjectsSection visibleSection={visibleSection} />
                   </div>
                 )}
+
                 {visibleSection.contact && (
                   <div className="lg:animate-fadeInUp">
                     <ContactSection />

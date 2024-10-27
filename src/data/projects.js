@@ -64,7 +64,7 @@ export const projects = [
         name: 'Furniture Mobile App',
         description: 'content', //add simple description
         link: '',
-        category: ['',],
+        category: ['video',],
     },
     {
         image: project8,

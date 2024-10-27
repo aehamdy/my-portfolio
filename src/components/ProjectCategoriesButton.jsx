@@ -2,6 +2,7 @@
 
 function ProjectCategoriesButton({ item, setSelectedCategory }) {
   const handleChange = (e) => {
+    e.preventDefault();
     setSelectedCategory(e.target.value);
   };
 
@@ -18,7 +19,7 @@ function ProjectCategoriesButton({ item, setSelectedCategory }) {
       />
       <label
         htmlFor={item}
-        className="font-normal text-sm text-dark-gray dark:text-white-85 hover:text-accent peer-checked:text-accent cursor-pointer duration-300"
+        className={`font-normal text-sm text-dark-gray dark:text-white-85 hover:text-accent peer-checked:text-accent cursor-pointer select-none duration-300`}
       >
         {item.charAt(0).toUpperCase() + item.slice(1)}
       </label>

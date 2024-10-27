@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from "react";
 import { projects } from "../data/projects";
 import NoProjectsFound from "./NoProjectsFound";
 import ProjectCard from "./ProjectCard";
@@ -18,10 +19,14 @@ function ProjectList({ selectedCategory }) {
     }
   });
 
+  // useEffect(() => {
+  //   console.log(filteredProjects);
+  // }, [selectedCategory]);
+
   return (
     <div
       className={`relative grid grid-cols-1 ${
-        filteredProjects.length > 0 && "sm:grid-cols-2"
+        filteredProjects.length >= 1 && "sm:grid-cols-2"
       } gap-6 sm:gap-8 p-section-padding before:absolute before:hidden`}
     >
       {filteredProjects.length > 1 && (
