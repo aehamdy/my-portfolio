@@ -110,7 +110,7 @@ export default App;
 // [x] fix the spacing between about me skills icon that caused because of the tool tip
 // [x] create two components, one for horizontal graidnet to right and the other to bottom and implement them
 // [x] find proper icons to add to each services in MyServices section
-// [ ] add a simple notification/error when user send a successful/failed email
+// [x] add a simple notification/error when user send a successful/failed email
 // [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
 // [ ] add animation to each section when they get hide
 // [ ] add animation to each project when filter changes

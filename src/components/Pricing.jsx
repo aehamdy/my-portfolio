@@ -12,7 +12,7 @@ function Pricing() {
         <SeparatorToRight />
       </div>
       <div className="relative flex flex-col sm:flex-row gap-6 sm:gap-0 px-section-padding">
-        <div className="absolute start-[50%] top-0 w-full h-full">
+        <div className="hidden sm:block absolute start-[50%] top-0 w-full h-full">
           <SeparatorToBottom />
         </div>
         {plans.map((plan, i) => (

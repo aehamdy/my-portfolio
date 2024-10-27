@@ -12,7 +12,7 @@ function MyServices() {
         <SeparatorToRight />
       </div>
       <div className="relative flex flex-col md:flex-row md:flex-wrap px-section-padding">
-        <div className="absolute w-full h-full start-[50%] top-0">
+        <div className="hidden md:block absolute w-full h-full start-[50%] top-0">
           <SeparatorToBottom />
         </div>
         {myServices.map((service, i) => (

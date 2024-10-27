@@ -10,7 +10,7 @@ function History() {
           <Experience />
         </div>
 
-        <div className="absolute start-[50%] top-0 w-full h-full">
+        <div className="hidden md:block absolute start-[50%] top-0 w-full h-full">
           <SeparatorToBottom />
         </div>
 
