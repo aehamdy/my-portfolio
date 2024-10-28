@@ -1,25 +1,21 @@
+import { personalInfo } from "./personalInfo";
+
 // Random Data
 const cvData = {
     personalDetails: {
-      name: 'Ahmed',
-      email: 'johndoe@example.com',
-      phone: '+1234567890',
-      address: '123 Street Name, City, Country',
-      linkedIn: 'https://www.linkedin.com/in/johndoe',
-      github: 'https://github.com/johndoe',
+      name: `${personalInfo.firstName} ${personalInfo.middleName} ${personalInfo.lastName}`,
+      email: `${personalInfo.email}`,
+      phone: `${personalInfo.phoneNumber}`,
+      address: `${personalInfo.location}`,
+      portfolio: `${personalInfo.social.portfolio}`,
+      linkedIn: `${personalInfo.social.linkedin}`,
+      github: `${personalInfo.social.github}`,
     },
     education: [
       {
-        institution: 'University Name',
-        degree: 'Bachelor of Science in Computer Science',
-        startDate: '2018',
-        endDate: '2022',
-      },
-      {
-        institution: 'High School Name',
-        degree: 'High School Diploma',
-        startDate: '2014',
-        endDate: '2018',
+        institution: `${personalInfo.education.universityName}`,
+        degree: `${personalInfo.education.degree}`,
+        graduationYear: `${personalInfo.education.graduationYear}`,
       },
     ],
     experience: [
@@ -35,14 +31,12 @@ const cvData = {
         ],
       },
     ],
-    skills: ['React JS', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'Git'],
-    projects: [
-      {
-        title: 'Portfolio Website',
-        description: 'A personal portfolio website to showcase my projects and experience.',
-        technologies: ['React JS', 'Tailwind CSS'],
-      },
-    ],
+    // skills: ['React JS', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'Git'],
+    skills: personalInfo.technicalSkills.flatMap(skill => {
+        const key = Object.keys(skill)[0];
+        return skill[key];
+    }),
+    projects: personalInfo.projects,
   };
   
   export default cvData;

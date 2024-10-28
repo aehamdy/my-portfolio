@@ -17,8 +17,9 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
         </button>
 
         {/* CV Content */}
-        <div>
+        <div className="">
           <h1 className="text-3xl font-bold">{cvData.personalDetails.name}</h1>
+          <hr />
           <p>{cvData.personalDetails.email}</p>
           <p>{cvData.personalDetails.phone}</p>
           <p>{cvData.personalDetails.address}</p>
@@ -68,9 +69,29 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
           {/* Skills */}
           <div className="mt-6">
             <h2 className="text-2xl font-semibold">Skills</h2>
-            <ul className="list-disc pl-5">
-              {cvData.skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
+            <ul className="flex gap-2">
+              {cvData.skills.map((skill, i) => (
+                <li key={i}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold">Projects</h2>
+            <ul className="flex flex-col gap-2">
+              {cvData.projects.map((project, i) => (
+                <li key={i}>
+                  <h3>{project.name}</h3>
+                  <p>Live Link: {project.liveLInk}</p>
+                  <p>Github Repository: {project.githubRep}</p>
+                  <p>
+                    Technologies used:{" "}
+                    {project.technologies.map((tech, i) => (
+                      <span key={i}>{tech} </span>
+                    ))}
+                  </p>
+                  <p>Challenge overcome: {project.challengeOvercome}</p>
+                </li>
               ))}
             </ul>
           </div>
