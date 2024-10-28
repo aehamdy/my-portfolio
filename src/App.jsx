@@ -17,6 +17,30 @@ function App() {
   });
   const [loading, setLoading] = useState(true); // Loading state
 
+  //Hook to make the SVG background moving vertically
+  useEffect(() => {
+    const lights = document.querySelectorAll(".light"); // Select all lights
+
+    const speeds = Array.from(
+      { length: lights.length },
+      () => Math.random() * 5 + 2 // Generate random speeds for each light
+    );
+
+    const moveLights = () => {
+      lights.forEach((light, index) => {
+        const speed = speeds[index]; // Each light has a different speed
+        const currentY = parseFloat(light.getAttribute("data-y")) || 0; // Get current Y position
+        const newY = (currentY + speed) % 1080; // Update position
+        light.setAttribute("transform", `translate(0, ${newY})`); // Apply transform
+        light.setAttribute("data-y", newY); // Store the new position
+      });
+    };
+
+    const intervalId = setInterval(moveLights, 50); // Call moveLights every 50ms
+
+    return () => clearInterval(intervalId); // Clean up interval on component unmount
+  }, []);
+
   useEffect(() => {
     // Simulating data fetching
     setTimeout(() => {
