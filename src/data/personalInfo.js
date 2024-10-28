@@ -29,6 +29,8 @@ export const personalInfo = {
             description: 'Developed a fully functional todo app with features like adding, editing, and deleting tasks, categorization, and filtration. Integrated a Pomodoro timer to enhance task management.',
             technologies: ['JavaScript', 'React JS', 'Tailwind CSS', 'localStorage'],
             challengeOvercome: 'Implementing dynamic themes using Tailwind CSS, creating localStorage-based persistence, and managing state across multiple components.',
+            addToViewableCv: false,
+            addToDownloadableCv: true,
         },
         {
             name: 'Weather App',
@@ -37,6 +39,8 @@ export const personalInfo = {
             description: 'Built a weather forecasting app that retrieves real-time weather data based on user input and displays detailed weather forecasts.',
             technologies: ['React JS', 'Tailwind CSS', 'Weather API'],
             challengeOvercome: 'Handling API responses efficiently, creating a clean UI for displaying large amounts of data.',
+            addToViewableCv: false,
+            addToDownloadableCv: true,
         },
         {
             name: 'Landing Pages',
@@ -45,6 +49,8 @@ export const personalInfo = {
             description: 'Designed and developed various landing pages using modern design practices, ensuring responsiveness across devices.',
             technologies: ['HTML', 'CSS', 'SASS'],
             challengeOvercome: 'Improved web performance and user experience through optimized media queries and clean, maintainable code.',
+            addToViewableCv: false,
+            addToDownloadableCv: true,
         },
         {
             name: 'Note-Taking App',
@@ -53,14 +59,18 @@ export const personalInfo = {
             description: 'Developed a note-taking web application where users can create, edit, and delete notes.',
             technologies: ['JavaScript', 'HTML', 'CSS'],
             challengeOvercome: 'Simplified UI and organized structure for seamless note management.',
+            addToViewableCv: false,
+            addToDownloadableCv: true,
         },
     ],
-    education: {
+    education: [
+        {
         universityName: 'Thebes Higher Institute of Engineering ',
         location: 'Cairo, Egypt',
         degree: "Bachelor's Degree in Communication & Electronics Engineering",
         graduationYear: '2020',
     },
+],
     certifications: ['Self-taught front-end developer through online resources and tutorials.'],
     additionalInformation: ['Open to both relocation and remote work opportunities.'],
     keyStrengths: [

@@ -39,17 +39,17 @@ function App() {
         {
           properties: {},
           children: [
+            // Full Name Section
             new Paragraph({
               children: [
                 new TextRun({
                   text: personalInfo.fullName(),
                   bold: true,
-                  size: 32, // font size
+                  size: 32,
                 }),
               ],
             }),
             new Paragraph({
-              //add horizontal line
               border: {
                 bottom: {
                   style: "single",
@@ -59,21 +59,21 @@ function App() {
               },
             }),
             new Paragraph({
-              children: [], // Empty paragraph just to create space
+              children: [], // Empty paragraph for spacing
             }),
-            // Add location, phone number, and email on the same line
+            // Location, Phone, and Email in one line
             new Paragraph({
               children: [
                 new TextRun({
                   text: `${personalInfo.location}`, // Location
-                  break: 0, // No line break after location
+                  break: 0, // No line break
                 }),
                 new TextRun({
                   text: ` | `, // Separator
                 }),
                 new TextRun({
                   text: `${personalInfo.phoneNumber}`, // Phone Number
-                  break: 0, // No line break after phone number
+                  break: 0, // No line break
                 }),
                 new TextRun({
                   text: ` | `, // Separator
@@ -84,14 +84,14 @@ function App() {
               ],
             }),
             new Paragraph({
-              children: [], // Empty paragraph just to create space
+              children: [], // Empty paragraph for spacing
             }),
-            // Add links for Portfolio, LinkedIn, and GitHub on the next line
+            // Social Links (Portfolio, LinkedIn, GitHub)
             new Paragraph({
               children: [
                 new TextRun({
-                  text: `Portfolio: ${personalInfo.social.portfolio}`, // Portfolio link
-                  hyperlink: personalInfo.social.portfolio, // Making it a hyperlink
+                  text: `Portfolio: ${personalInfo.social.portfolio}`,
+                  hyperlink: personalInfo.social.portfolio,
                   bold: true,
                 }),
               ],
@@ -99,8 +99,8 @@ function App() {
             new Paragraph({
               children: [
                 new TextRun({
-                  text: `LinkedIn: ${personalInfo.social.linkedin}`, // LinkedIn link
-                  hyperlink: personalInfo.social.linkedin, // Making it a hyperlink
+                  text: `LinkedIn: ${personalInfo.social.linkedin}`,
+                  hyperlink: personalInfo.social.linkedin,
                   bold: true,
                 }),
               ],
@@ -108,8 +108,8 @@ function App() {
             new Paragraph({
               children: [
                 new TextRun({
-                  text: `GitHub: ${personalInfo.social.github}`, // GitHub link
-                  hyperlink: personalInfo.social.github, // Making it a hyperlink
+                  text: `GitHub: ${personalInfo.social.github}`,
+                  hyperlink: personalInfo.social.github,
                   bold: true,
                 }),
               ],
@@ -133,31 +133,116 @@ function App() {
               return new Paragraph({
                 children: [
                   new TextRun({
-                    text: `-${skillName}: ${skillValues}`,
+                    text: `- ${skillName}: ${skillValues}`,
                   }),
                 ],
               });
             }),
-            // new Paragraph({
-            //   text: "Full Stack Developer",
-            // }),
-            // new Paragraph({
-            //   text: "Contact: john.doe@example.com",
-            // }),
-            // new Paragraph({
-            //   text: "Experience",
-            //   heading: "Heading1",
-            // }),
-            // new Paragraph({
-            //   text: "- Worked at XYZ company...",
-            // }),
-            // new Paragraph({
-            //   text: "Skills",
-            //   heading: "Heading1",
-            // }),
-            // new Paragraph({
-            //   text: "- JavaScript, React, Node.js",
-            // }),
+            // Projects Section
+            new Paragraph({
+              text: "Projects",
+              heading: "Heading1",
+            }),
+            ...personalInfo.projects
+              .filter((project) => project.addToDownloadableCv)
+              .map((project) => {
+                return new Paragraph({
+                  children: [
+                    // Project Name
+                    new TextRun({
+                      text: project.name,
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      text: "\n", // Line break
+                    }),
+                    // Live Link
+                    new TextRun({
+                      text: `Live Link: ${project.liveLink || "Not Available"}`,
+                      size: 22,
+                    }),
+                    new TextRun({
+                      text: "\n", // Line break
+                    }),
+                    // GitHub Repo
+                    new TextRun({
+                      text: `GitHub Repo: ${
+                        project.githubRepo || "Not Available"
+                      }`,
+                      size: 22,
+                    }),
+                    new TextRun({
+                      text: "\n", // Line break
+                    }),
+                    // Project Description
+                    new TextRun({
+                      text: project.description,
+                      size: 22,
+                    }),
+                    new TextRun({
+                      text: "\n", // Line break
+                    }),
+                    // Technologies Used
+                    new TextRun({
+                      text: `Technologies used: ${project.technologies.join(
+                        ", "
+                      )}`,
+                      size: 22,
+                      italic: true,
+                    }),
+                    new TextRun({
+                      text: "\n", // Line break
+                    }),
+                    // Challenge Overcome
+                    new TextRun({
+                      text: `Challenge overcome: ${project.challengeOvercome}`,
+                      size: 22,
+                    }),
+                    new TextRun({
+                      text: "\n\n", // Double line break for spacing
+                    }),
+                  ],
+                });
+              }),
+            // Education Section
+            new Paragraph({
+              text: "Education",
+              heading: "Heading1",
+            }),
+            ...personalInfo.education
+              .map((education) => {
+                return [
+                  // University Name and Location
+                  new Paragraph({
+                    children: [
+                      new TextRun({
+                        text: `${education.universityName} - ${education.location}`,
+                        size: 22,
+                        bold: true,
+                      }),
+                    ],
+                  }),
+                  // Degree and Graduation Year
+                  new Paragraph({
+                    children: [
+                      new TextRun({
+                        text: `${education.degree} - ${education.graduationYear}`,
+                        size: 22,
+                      }),
+                    ],
+                  }),
+                  // Extra spacing between education entries
+                  new Paragraph({
+                    children: [
+                      new TextRun({
+                        text: "", // Empty paragraph for spacing
+                      }),
+                    ],
+                  }),
+                ];
+              })
+              .flat(), // Flatten the array since multiple paragraphs are returned for each education entry
           ],
         },
       ],
