@@ -79,7 +79,7 @@ export const personalInfo = {
         'Enthusiastic about learning new technologies and contributing to team success.',
         'Passion for creating intuitive and accessible user experiences.'
     ],
-    references: 'Available upon request.',
+    references: ['Available upon request.'],
 }
 
 export const aboutMeList = [

@@ -269,6 +269,42 @@ function App() {
                 }),
               ],
             }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            // Key Strengths Section
+            new Paragraph({
+              text: "Key Strengths",
+              heading: "Heading1",
+            }),
+            ...personalInfo.keyStrengths.map((strength) => {
+              return new Paragraph({
+                children: [
+                  new TextRun({
+                    text: `- ${strength}`,
+                    size: 22,
+                  }),
+                ],
+              });
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            // References Section
+            new Paragraph({
+              text: "References",
+              heading: "Heading1",
+            }),
+            ...personalInfo.references.map((reference) => {
+              return new Paragraph({
+                children: [
+                  new TextRun({
+                    text: `- ${reference}`,
+                    size: 22,
+                  }),
+                ],
+              });
+            }),
           ],
         },
       ],
