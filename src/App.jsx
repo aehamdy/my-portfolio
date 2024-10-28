@@ -10,7 +10,6 @@ import CvModal from "./components/CvModal";
 import cvData from "./data/cvData";
 import CvContent from "./components/CvContent";
 import { saveAs } from "file-saver";
-import htmlDocx from "html-docx-js/dist/html-docx";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -32,22 +31,7 @@ function App() {
   };
 
   //download cv as word file
-  const downloadCvAsWordFile = () => {
-    const cvContentElement = document.createElement("div");
-    cvContentElement.innerHTML = CvContent(); //modify CvContent to return HTML
-
-    const content = `
-      <html>
-        <body>${cvContentElement.innerHTML}</body>
-      </html>
-    `;
-
-    //Convert HTML to .docx file
-    const blob = htmlDocx.asBlob(content);
-
-    //Save the file
-    saveAs(blob, "AhmedEssam_CV".docx);
-  };
+  const downloadCvAsWord = async () => {};
 
   //Hook to make the SVG background moving vertically
   useEffect(() => {
@@ -132,7 +116,7 @@ function App() {
                 <AboutSection />
                 <ResumeSection
                   openCvModal={openCvModal}
-                  downloadCv={downloadCvAsWordFile}
+                  downloadCv={downloadCvAsWord}
                 />
                 <ProjectsSection />
                 <ContactSection />
@@ -160,7 +144,7 @@ function App() {
                   <div className="lg:animate-fadeInUp">
                     <ResumeSection
                       openCvModal={openCvModal}
-                      downloadCv={downloadCvAsWordFile}
+                      downloadCv={downloadCvAsWord}
                     />
                   </div>
                 )}
