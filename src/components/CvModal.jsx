@@ -102,7 +102,7 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
                       Repo Link
                     </a>
                   </p>
-                  <ul>
+                  <ul className="flex gap-3">
                     Technologies used:{" "}
                     {project.technologies.map((tech, i) => (
                       <li key={i}>{tech} </li>

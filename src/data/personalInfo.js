@@ -3,6 +3,9 @@ export const personalInfo = {
     firstName: 'Ahmed',
     middleName: 'Essam',
     lastName: 'Hamdy',
+    fullName() {
+        return `${this.firstName} ${this.middleName} ${this.lastName}`;
+    },
     phoneNumber: '+20 1010573100',
     email: 'ae.hamdy91@gmail.com',
     residence: 'Egypt',
@@ -10,9 +13,10 @@ export const personalInfo = {
     languages: ['English', 'Arabic',],
     title: 'Frontend Developer',
     bio: 'A passionate frontend developer with experience in building responsive and accessible web applications using React, Tailwind CSS, and more.',
-    social: {portfolio: '', linkedin: 'https://www.linkedin.com/in/aehamdy/', github: 'https://github.com/aehamdy'},
+    social: {portfolio: 'www.personalportfolio.com', linkedin: 'https://www.linkedin.com/in/aehamdy/', github: 'https://github.com/aehamdy'},
+    summary: 'Enthusiastic and self-driven Junior Front-End Developer with a passion for building interactive, user-friendly web applications. Proficient in HTML, CSS, JavaScript, React, and Tailwind CSS, with a strong focus on responsive design and seamless user experiences. Eager to apply creative ideas in real-world projects while continuously learning and growing in the fast-evolving web development landscape.',
     technicalSkills: [
-        {languages: ['HTML', 'CSS', 'JavaScript', 'SASS']},
+        {Languages: ['HTML', 'CSS', 'JavaScript', 'SASS']},
         {'Frameworks & Libraries': ['React JS', 'Tailwind CSS']},
         {'Version Control': ['Git', 'Github']},
         {'Other Tools': ['Agile methodologies','Responsive design','Figma (basic)']}

@@ -11,6 +11,7 @@ import cvData from "./data/cvData";
 import CvContent from "./components/CvContent";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 import { saveAs } from "file-saver";
+import { personalInfo } from "./data/personalInfo";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -41,32 +42,122 @@ function App() {
             new Paragraph({
               children: [
                 new TextRun({
-                  text: "John Doe",
+                  text: personalInfo.fullName(),
                   bold: true,
                   size: 32, // font size
                 }),
               ],
             }),
             new Paragraph({
-              text: "Full Stack Developer",
+              //add horizontal line
+              border: {
+                bottom: {
+                  style: "single",
+                  size: 6, // Line thickness
+                  space: 0, // Space above and below the line
+                },
+              },
             }),
             new Paragraph({
-              text: "Contact: john.doe@example.com",
+              children: [], // Empty paragraph just to create space
+            }),
+            // Add location, phone number, and email on the same line
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: `${personalInfo.location}`, // Location
+                  break: 0, // No line break after location
+                }),
+                new TextRun({
+                  text: ` | `, // Separator
+                }),
+                new TextRun({
+                  text: `${personalInfo.phoneNumber}`, // Phone Number
+                  break: 0, // No line break after phone number
+                }),
+                new TextRun({
+                  text: ` | `, // Separator
+                }),
+                new TextRun({
+                  text: `${personalInfo.email}`, // Email
+                }),
+              ],
             }),
             new Paragraph({
-              text: "Experience",
+              children: [], // Empty paragraph just to create space
+            }),
+            // Add links for Portfolio, LinkedIn, and GitHub on the next line
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: `Portfolio: ${personalInfo.social.portfolio}`, // Portfolio link
+                  hyperlink: personalInfo.social.portfolio, // Making it a hyperlink
+                  bold: true,
+                }),
+              ],
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: `LinkedIn: ${personalInfo.social.linkedin}`, // LinkedIn link
+                  hyperlink: personalInfo.social.linkedin, // Making it a hyperlink
+                  bold: true,
+                }),
+              ],
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: `GitHub: ${personalInfo.social.github}`, // GitHub link
+                  hyperlink: personalInfo.social.github, // Making it a hyperlink
+                  bold: true,
+                }),
+              ],
+            }),
+            // Summary Section
+            new Paragraph({
+              text: "Summary",
               heading: "Heading1",
             }),
             new Paragraph({
-              text: "- Worked at XYZ company...",
+              text: personalInfo.summary,
             }),
+            // Technical Skills Section
             new Paragraph({
-              text: "Skills",
+              text: "Technical Skills",
               heading: "Heading1",
             }),
-            new Paragraph({
-              text: "- JavaScript, React, Node.js",
+            ...personalInfo.technicalSkills.map((skill) => {
+              const skillName = Object.keys(skill)[0];
+              const skillValues = skill[skillName].join(", ");
+              return new Paragraph({
+                children: [
+                  new TextRun({
+                    text: `-${skillName}: ${skillValues}`,
+                  }),
+                ],
+              });
             }),
+            // new Paragraph({
+            //   text: "Full Stack Developer",
+            // }),
+            // new Paragraph({
+            //   text: "Contact: john.doe@example.com",
+            // }),
+            // new Paragraph({
+            //   text: "Experience",
+            //   heading: "Heading1",
+            // }),
+            // new Paragraph({
+            //   text: "- Worked at XYZ company...",
+            // }),
+            // new Paragraph({
+            //   text: "Skills",
+            //   heading: "Heading1",
+            // }),
+            // new Paragraph({
+            //   text: "- JavaScript, React, Node.js",
+            // }),
           ],
         },
       ],
