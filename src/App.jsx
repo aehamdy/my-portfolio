@@ -232,17 +232,43 @@ function App() {
                       }),
                     ],
                   }),
-                  // Extra spacing between education entries
                   new Paragraph({
-                    children: [
-                      new TextRun({
-                        text: "", // Empty paragraph for spacing
-                      }),
-                    ],
+                    children: [], // Empty paragraph for spacing
                   }),
                 ];
               })
-              .flat(), // Flatten the array since multiple paragraphs are returned for each education entry
+              .flat(),
+            // Certification Section
+            new Paragraph({
+              text: "Certification",
+              heading: "Heading1",
+            }),
+            ...personalInfo.certifications.map((certification) => {
+              return new Paragraph({
+                children: [
+                  new TextRun({
+                    text: certification,
+                    size: 22,
+                  }),
+                ],
+              });
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            // Additional Information Section
+            new Paragraph({
+              text: "Additional Information",
+              heading: "Heading1",
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: personalInfo.additionalInformation,
+                  size: 22,
+                }),
+              ],
+            }),
           ],
         },
       ],

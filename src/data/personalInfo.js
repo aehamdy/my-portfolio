@@ -72,7 +72,7 @@ export const personalInfo = {
     },
 ],
     certifications: ['Self-taught front-end developer through online resources and tutorials.'],
-    additionalInformation: ['Open to both relocation and remote work opportunities.'],
+    additionalInformation: 'Open to both relocation and remote work opportunities.',
     keyStrengths: [
         'Strong problem-solving skills and attention to detail.',
         'Ability to work independently on complex tasks and projects.',
