@@ -89,6 +89,9 @@
 body {
   font-family: "Lekton", monospace;
   margin: 0;
+  position: relative;
+  padding: 0;
+  overflow-x: hidden;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -117,4 +120,21 @@ body.dark {
   );
 
   background-color: var(--dark-bg);
+}
+
+#cyberlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.line {
+  fill: #f6b84610;
+}
+.lights {
+  fill: #f6b846;
 }
