@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
 import { projects } from "../data/projects";
 import NoProjectsFound from "./NoProjectsFound";
 import ProjectCard from "./ProjectCard";
@@ -18,10 +17,6 @@ function ProjectList({ selectedCategory }) {
       return project.category.includes(selectedCategory.toLowerCase());
     }
   });
-
-  // useEffect(() => {
-  //   console.log(filteredProjects);
-  // }, [selectedCategory]);
 
   return (
     <div

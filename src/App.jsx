@@ -151,3 +151,6 @@ export default App;
 // [ ] add loading animation that appears before rendering the website
 // [ ] add animated svg for body element and ensure that it is appearing on all screens larger than mobile screen
 // [ ] add your real photo
+// [ ] add svg icon as favicon
+// [ ] ensure the favicon to be in both dark/light mode of the user's browser
+// [ ] add carbon fiber css pattern as a background to the body element
