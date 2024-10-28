@@ -109,7 +109,7 @@ function App() {
             <div className="gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid grid-cols-1 gap-5 mb-2">
                 <AboutSection />
-                <ResumeSection />
+                <ResumeSection openCvModal={openCvModal} />
                 <ProjectsSection />
                 <ContactSection />
               </div>
@@ -134,7 +134,7 @@ function App() {
                 )}
                 {visibleSection.resume && (
                   <div className="lg:animate-fadeInUp">
-                    <ResumeSection />
+                    <ResumeSection openCvModal={openCvModal} />
                   </div>
                 )}
                 {/* {visibleSection.projects && (

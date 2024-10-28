@@ -7,7 +7,7 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
       onClick={closeModal}
       className="fixed inset-0 flex items-center justify-center z-50 text-black bg-black bg-opacity-50"
     >
-      <div className="bg-white p-6 rounded-lg w-full max-w-4xl mx-auto overflow-auto max-h-[95vh]">
+      <div className="bg-white p-6 rounded-lg w-full max-w-4xl mx-1 sm:mx-auto overflow-auto max-h-[95vh]">
         {/* Close Button */}
         <button
           onClick={closeModal}

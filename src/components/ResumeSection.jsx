@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
+import CvButtons from "./CvButtons";
 import History from "./History";
 import Quotes from "./Quotes";
 import SectionTitle from "./SectionTitle";
 import SeparatorToRight from "./SeparatorToRight";
 
-function ResumeSection() {
+function ResumeSection({ openCvModal }) {
   return (
     <section
       id="resume"
@@ -13,6 +15,7 @@ function ResumeSection() {
       <div className="mt-horizontal-separator-mt">
         <SeparatorToRight />
       </div>
+      <CvButtons openCvModal={openCvModal} />
       <History />
       <Quotes />
     </section>
