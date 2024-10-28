@@ -24,6 +24,14 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
           <p>{cvData.personalDetails.phone}</p>
           <p>{cvData.personalDetails.address}</p>
           <p>
+            <a
+              href={cvData.personalDetails.portfolio}
+              className="text-blue-500"
+            >
+              Portfolio
+            </a>
+          </p>
+          <p>
             <a href={cvData.personalDetails.linkedIn} className="text-blue-500">
               LinkedIn
             </a>{" "}
@@ -82,14 +90,24 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
               {cvData.projects.map((project, i) => (
                 <li key={i}>
                   <h3>{project.name}</h3>
-                  <p>Live Link: {project.liveLInk}</p>
-                  <p>Github Repository: {project.githubRep}</p>
                   <p>
+                    Live Link:
+                    <a href={project.liveLink} className="text-blue-500">
+                      Live Link
+                    </a>
+                  </p>
+                  <p>
+                    Github Repository:
+                    <a href={project.githubRep} className="text-blue-500">
+                      Repo Link
+                    </a>
+                  </p>
+                  <ul>
                     Technologies used:{" "}
                     {project.technologies.map((tech, i) => (
-                      <span key={i}>{tech} </span>
+                      <li key={i}>{tech} </li>
                     ))}
-                  </p>
+                  </ul>
                   <p>Challenge overcome: {project.challengeOvercome}</p>
                 </li>
               ))}
