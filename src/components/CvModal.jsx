@@ -7,11 +7,11 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
       onClick={closeModal}
       className="fixed inset-0 flex items-center justify-center z-50 text-black bg-black bg-opacity-50"
     >
-      <div className="bg-white p-6 rounded-lg w-full max-w-4xl mx-auto">
+      <div className="bg-white p-6 rounded-lg w-full max-w-4xl mx-auto overflow-auto max-h-[95vh]">
         {/* Close Button */}
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+          className="absolute top-4 right-32 py-1 px-2 text-black hover:text-red-500 border-2 border-black rounded-full"
         >
           X
         </button>
@@ -56,7 +56,7 @@ const CvModal = ({ isOpen, closeModal, cvData }) => {
                 <p>
                   {job.startDate} - {job.endDate}
                 </p>
-                <ul className="list-disc pl-5">
+                <ul className="pl-5">
                   {job.description.map((desc, idx) => (
                     <li key={idx}>{desc}</li>
                   ))}
