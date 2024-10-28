@@ -6,6 +6,8 @@ import ResumeSection from "./components/ResumeSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
+import CvModal from "./components/CvModal";
+import cvData from "./data/cvData";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -15,7 +17,16 @@ function App() {
     projects: false,
     contact: false,
   });
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
   const [loading, setLoading] = useState(true); // Loading state
+
+  const openCvModal = () => {
+    setIsCvModalOpen(true);
+  };
+
+  const closeCvModal = () => {
+    setIsCvModalOpen(false);
+  };
 
   //Hook to make the SVG background moving vertically
   useEffect(() => {
@@ -92,7 +103,7 @@ function App() {
           <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid grid-cols-1 gap-y-5 overflow-hidden">
             <div className="hero col-span-2">
-              <HeroSection />
+              <HeroSection openCvModal={openCvModal} />
             </div>
 
             <div className="gap-5 rounded-main-section overflow-hidden">
@@ -111,7 +122,7 @@ function App() {
           <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid lg:grid-cols-5 lg:gap-4 lg:h-full overflow-hidden">
             <div className="hero col-span-2">
-              <HeroSection />
+              <HeroSection openCvModal={openCvModal} />
             </div>
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
@@ -146,6 +157,11 @@ function App() {
             </div>
           </div>
         </div>
+        <CvModal
+          isOpen={isCvModalOpen}
+          closeModal={closeCvModal}
+          cvData={cvData}
+        />
       </div>
     </>
   );
