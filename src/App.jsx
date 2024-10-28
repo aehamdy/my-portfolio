@@ -8,6 +8,9 @@ import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
 import CvModal from "./components/CvModal";
 import cvData from "./data/cvData";
+import CvContent from "./components/CvContent";
+import { saveAs } from "file-saver";
+import htmlDocx from "html-docx-js/dist/html-docx";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -26,6 +29,24 @@ function App() {
 
   const closeCvModal = () => {
     setIsCvModalOpen(false);
+  };
+
+  //download cv as word file
+  const downloadCvAsWordFile = () => {
+    const cvContentElement = document.createElement("div");
+    cvContentElement.innerHTML = CvContent(); //modify CvContent to return HTML
+
+    const content = `
+      <html>
+        <body>${cvContentElement.innerHTML}</body>
+      </html>
+    `;
+
+    //Convert HTML to .docx file
+    const blob = htmlDocx.asBlob(content);
+
+    //Save the file
+    saveAs(blob, "AhmedEssam_CV".docx);
   };
 
   //Hook to make the SVG background moving vertically
@@ -109,7 +130,10 @@ function App() {
             <div className="gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid grid-cols-1 gap-5 mb-2">
                 <AboutSection />
-                <ResumeSection openCvModal={openCvModal} />
+                <ResumeSection
+                  openCvModal={openCvModal}
+                  downloadCv={downloadCvAsWordFile}
+                />
                 <ProjectsSection />
                 <ContactSection />
               </div>
@@ -134,7 +158,10 @@ function App() {
                 )}
                 {visibleSection.resume && (
                   <div className="lg:animate-fadeInUp">
-                    <ResumeSection openCvModal={openCvModal} />
+                    <ResumeSection
+                      openCvModal={openCvModal}
+                      downloadCv={downloadCvAsWordFile}
+                    />
                   </div>
                 )}
                 {/* {visibleSection.projects && (
@@ -157,11 +184,9 @@ function App() {
             </div>
           </div>
         </div>
-        <CvModal
-          isOpen={isCvModalOpen}
-          closeModal={closeCvModal}
-          cvData={cvData}
-        />
+        <CvModal isOpen={isCvModalOpen} closeModal={closeCvModal}>
+          <CvContent />
+        </CvModal>
       </div>
     </>
   );

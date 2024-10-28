@@ -1,7 +1,7 @@
 import cvData from "../data/cvData";
 
 function CvContent() {
-  return (
+  return `
     <div>
       <h1>{cvData.personalDetails.name}</h1>
       <p>{cvData.personalDetails.email}</p>
@@ -39,8 +39,7 @@ function CvContent() {
           <li key={index}>{skill}</li>
         ))}
       </ul>
-    </div>
-  );
+    </div>`;
 }
 
 export default CvContent;
