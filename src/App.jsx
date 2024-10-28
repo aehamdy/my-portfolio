@@ -34,6 +34,9 @@ function App() {
 
   //download cv as word file
   const downloadCvAsWord = async () => {
+    const headingFont = "Calibri (Heading)"; // Font for headings
+    const bodyFont = "Cambria"; // Font for body text
+
     const doc = new Document({
       sections: [
         {
@@ -46,6 +49,7 @@ function App() {
                   text: personalInfo.fullName(),
                   bold: true,
                   size: 32,
+                  font: headingFont, // Using heading font
                 }),
               ],
             }),
@@ -67,19 +71,24 @@ function App() {
                 new TextRun({
                   text: `${personalInfo.location}`, // Location
                   break: 0, // No line break
+                  font: bodyFont, // Using body font
                 }),
                 new TextRun({
                   text: ` | `, // Separator
+                  font: bodyFont, // Using body font
                 }),
                 new TextRun({
                   text: `${personalInfo.phoneNumber}`, // Phone Number
                   break: 0, // No line break
+                  font: bodyFont, // Using body font
                 }),
                 new TextRun({
                   text: ` | `, // Separator
+                  font: bodyFont, // Using body font
                 }),
                 new TextRun({
                   text: `${personalInfo.email}`, // Email
+                  font: bodyFont, // Using body font
                 }),
               ],
             }),
@@ -93,6 +102,7 @@ function App() {
                   text: `Portfolio: ${personalInfo.social.portfolio}`,
                   hyperlink: personalInfo.social.portfolio,
                   bold: true,
+                  font: bodyFont, // Using body font
                 }),
               ],
             }),
@@ -102,6 +112,7 @@ function App() {
                   text: `LinkedIn: ${personalInfo.social.linkedin}`,
                   hyperlink: personalInfo.social.linkedin,
                   bold: true,
+                  font: bodyFont, // Using body font
                 }),
               ],
             }),
@@ -111,6 +122,7 @@ function App() {
                   text: `GitHub: ${personalInfo.social.github}`,
                   hyperlink: personalInfo.social.github,
                   bold: true,
+                  font: bodyFont, // Using body font
                 }),
               ],
             }),
@@ -118,14 +130,17 @@ function App() {
             new Paragraph({
               text: "Summary",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             new Paragraph({
               text: personalInfo.summary,
+              font: bodyFont, // Using body font
             }),
             // Technical Skills Section
             new Paragraph({
               text: "Technical Skills",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             ...personalInfo.technicalSkills.map((skill) => {
               const skillName = Object.keys(skill)[0];
@@ -134,6 +149,7 @@ function App() {
                 children: [
                   new TextRun({
                     text: `- ${skillName}: ${skillValues}`,
+                    font: bodyFont, // Using body font
                   }),
                 ],
               });
@@ -142,6 +158,7 @@ function App() {
             new Paragraph({
               text: "Projects",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             ...personalInfo.projects
               .filter((project) => project.addToDownloadableCv)
@@ -153,17 +170,21 @@ function App() {
                       text: project.name,
                       bold: true,
                       size: 24,
+                      font: headingFont, // Using heading font
                     }),
                     new TextRun({
                       text: "\n", // Line break
+                      font: bodyFont, // Ensure body font is applied after break
                     }),
                     // Live Link
                     new TextRun({
                       text: `Live Link: ${project.liveLink || "Not Available"}`,
                       size: 22,
+                      font: bodyFont, // Using body font
                     }),
                     new TextRun({
                       text: "\n", // Line break
+                      font: bodyFont, // Ensure body font is applied after break
                     }),
                     // GitHub Repo
                     new TextRun({
@@ -171,17 +192,21 @@ function App() {
                         project.githubRepo || "Not Available"
                       }`,
                       size: 22,
+                      font: bodyFont, // Using body font
                     }),
                     new TextRun({
                       text: "\n", // Line break
+                      font: bodyFont, // Ensure body font is applied after break
                     }),
                     // Project Description
                     new TextRun({
                       text: project.description,
                       size: 22,
+                      font: bodyFont, // Using body font
                     }),
                     new TextRun({
                       text: "\n", // Line break
+                      font: bodyFont, // Ensure body font is applied after break
                     }),
                     // Technologies Used
                     new TextRun({
@@ -190,14 +215,17 @@ function App() {
                       )}`,
                       size: 22,
                       italic: true,
+                      font: bodyFont, // Using body font
                     }),
                     new TextRun({
                       text: "\n", // Line break
+                      font: bodyFont, // Ensure body font is applied after break
                     }),
                     // Challenge Overcome
                     new TextRun({
                       text: `Challenge overcome: ${project.challengeOvercome}`,
                       size: 22,
+                      font: bodyFont, // Using body font
                     }),
                     new TextRun({
                       text: "\n\n", // Double line break for spacing
@@ -209,6 +237,7 @@ function App() {
             new Paragraph({
               text: "Education",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             ...personalInfo.education
               .map((education) => {
@@ -220,6 +249,7 @@ function App() {
                         text: `${education.universityName} - ${education.location}`,
                         size: 22,
                         bold: true,
+                        font: bodyFont, // Using body font
                       }),
                     ],
                   }),
@@ -229,6 +259,7 @@ function App() {
                       new TextRun({
                         text: `${education.degree} - ${education.graduationYear}`,
                         size: 22,
+                        font: bodyFont, // Using body font
                       }),
                     ],
                   }),
@@ -242,6 +273,7 @@ function App() {
             new Paragraph({
               text: "Certification",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             ...personalInfo.certifications.map((certification) => {
               return new Paragraph({
@@ -249,6 +281,7 @@ function App() {
                   new TextRun({
                     text: certification,
                     size: 22,
+                    font: bodyFont, // Using body font
                   }),
                 ],
               });
@@ -260,12 +293,14 @@ function App() {
             new Paragraph({
               text: "Additional Information",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             new Paragraph({
               children: [
                 new TextRun({
                   text: personalInfo.additionalInformation,
                   size: 22,
+                  font: bodyFont, // Using body font
                 }),
               ],
             }),
@@ -276,6 +311,7 @@ function App() {
             new Paragraph({
               text: "Key Strengths",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             ...personalInfo.keyStrengths.map((strength) => {
               return new Paragraph({
@@ -283,6 +319,7 @@ function App() {
                   new TextRun({
                     text: `- ${strength}`,
                     size: 22,
+                    font: bodyFont, // Using body font
                   }),
                 ],
               });
@@ -294,6 +331,7 @@ function App() {
             new Paragraph({
               text: "References",
               heading: "Heading1",
+              font: headingFont, // Using heading font
             }),
             ...personalInfo.references.map((reference) => {
               return new Paragraph({
@@ -301,6 +339,7 @@ function App() {
                   new TextRun({
                     text: `- ${reference}`,
                     size: 22,
+                    font: bodyFont, // Using body font
                   }),
                 ],
               });
