@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import CvModal from "./components/CvModal";
 import cvData from "./data/cvData";
 import CvContent from "./components/CvContent";
+import { Document, Packer, Paragraph, TextRun } from "docx";
 import { saveAs } from "file-saver";
 
 function App() {
@@ -31,7 +32,50 @@ function App() {
   };
 
   //download cv as word file
-  const downloadCvAsWord = async () => {};
+  const downloadCvAsWord = async () => {
+    const doc = new Document({
+      sections: [
+        {
+          properties: {},
+          children: [
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: "John Doe",
+                  bold: true,
+                  size: 32, // font size
+                }),
+              ],
+            }),
+            new Paragraph({
+              text: "Full Stack Developer",
+            }),
+            new Paragraph({
+              text: "Contact: john.doe@example.com",
+            }),
+            new Paragraph({
+              text: "Experience",
+              heading: "Heading1",
+            }),
+            new Paragraph({
+              text: "- Worked at XYZ company...",
+            }),
+            new Paragraph({
+              text: "Skills",
+              heading: "Heading1",
+            }),
+            new Paragraph({
+              text: "- JavaScript, React, Node.js",
+            }),
+          ],
+        },
+      ],
+    });
+
+    Packer.toBlob(doc).then((blob) => {
+      saveAs(blob, "John_Doe_CV.docx");
+    });
+  };
 
   //Hook to make the SVG background moving vertically
   useEffect(() => {
@@ -168,7 +212,11 @@ function App() {
             </div>
           </div>
         </div>
-        <CvModal isOpen={isCvModalOpen} closeModal={closeCvModal}>
+        <CvModal
+          isOpen={isCvModalOpen}
+          closeModal={closeCvModal}
+          cvData={cvData}
+        >
           <CvContent />
         </CvModal>
       </div>

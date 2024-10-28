@@ -1,7 +1,7 @@
 // Random Data
 const cvData = {
     personalDetails: {
-      name: 'John Doe',
+      name: 'Ahmed',
       email: 'johndoe@example.com',
       phone: '+1234567890',
       address: '123 Street Name, City, Country',
