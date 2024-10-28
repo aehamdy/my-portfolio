@@ -130,11 +130,12 @@ body.dark {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  display: none;
 }
 
 .line {
   fill: #f6b84610;
 }
 .lights {
-  fill: #f6b846;
+  fill: #f6b84699;
 }

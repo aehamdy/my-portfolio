@@ -60,7 +60,7 @@ function ProjectsSection({ visibleSection = {} }) {
         </>
       </section>
 
-      <div className="hidden lg:block">
+      <div className="hidden lg:block py-main-section-padding bg-section-light dark:bg-section-dark">
         {visibleSection.projects && (
           <>
             <div className="flex justify-between items-center">

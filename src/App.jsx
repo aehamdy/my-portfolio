@@ -115,7 +115,7 @@ function App() {
             </div>
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
-              <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 lg:overflow-auto lg:overflow-x-hidden lg:rounded-main-section">
+              <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 bg-section-light dark:bg-section-dark lg:overflow-auto lg:overflow-x-hidden lg:rounded-main-section">
                 {visibleSection.about && (
                   <div className="lg:animate-fadeInUp">
                     <AboutSection />
@@ -162,19 +162,18 @@ export default App;
 // [x] create two components, one for horizontal graidnet to right and the other to bottom and implement them
 // [x] find proper icons to add to each services in MyServices section
 // [x] add a simple notification/error when user send a successful/failed email
+// [x] add animated svg for body element
+// [ ] create dynamic cv
+// [ ] make the cv viewable
+// [ ] make the cv downloadable in word file
+
 // [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
-// [ ] add animation to each section when they get hide
 // [ ] add animation to each project when filter changes
 // [ ] make all constants/variables comes from one file
 // [ ] add env file
 // [ ] create proper image to each one of your projects
 // [ ] add your real projects
-// [ ] create dynamic cv
-// [ ] make the cv viewable
-// [ ] make the cv downloadable in word file
 // [ ] add loading animation that appears before rendering the website
-// [ ] add animated svg for body element and ensure that it is appearing on all screens larger than mobile screen
 // [ ] add your real photo
 // [ ] add svg icon as favicon
 // [ ] ensure the favicon to be in both dark/light mode of the user's browser
-// [ ] add carbon fiber css pattern as a background to the body element
