@@ -35,8 +35,8 @@ function App() {
   //download cv as word file
   const downloadCvAsWord = async () => {
     // Font and Color Variables
-    const headingFont = "Calibri";
-    const bodyFont = "Cambria";
+    const headingFont = "Calibri (Headings)";
+    const bodyFont = "Cambria (Body)";
 
     const nameFontSize = 26;
     const headingFontSize = 14;
@@ -93,7 +93,7 @@ function App() {
                   color: "000000",
                 }),
                 new TextRun({
-                  text: `${personalInfo.phoneNumber}`, // Phone Number
+                  text: `Phone: ${personalInfo.phoneNumber}`, // Phone Number
                   font: bodyFont,
                   size: bodyFontSize * 2,
                   color: "000000",
@@ -105,7 +105,7 @@ function App() {
                   color: "000000",
                 }),
                 new TextRun({
-                  text: `${personalInfo.email}`, // Email
+                  text: `Email: ${personalInfo.email}`, // Email
                   font: bodyFont,
                   size: bodyFontSize * 2,
                   color: "000000",
@@ -245,6 +245,9 @@ function App() {
               ],
               style: "Heading1", // Style for collapsibility
             }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
             // Projects
             ...personalInfo.projects
               .filter((project) => project.addToDownloadableCv)
@@ -355,10 +358,9 @@ function App() {
                     children: [
                       new TextRun({
                         text: `${education.universityName} - ${education.location}`,
-                        font: headingFont,
+                        font: bodyFont,
                         size: bodyFontSize * 2,
                         color: "000000",
-                        bold: true,
                       }),
                     ],
                   }),
