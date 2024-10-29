@@ -187,6 +187,10 @@ function App() {
                 }),
               ],
             }),
+
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
             new Paragraph({
               children: [], // Empty paragraph for spacing
             }),
@@ -219,6 +223,10 @@ function App() {
                 ],
               });
             }),
+
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
             new Paragraph({
               children: [], // Empty paragraph for spacing
             }),
@@ -235,23 +243,27 @@ function App() {
                   bold: true,
                 }),
               ],
-              style: "Heading1", // Added style for collapsibility
+              style: "Heading1", // Style for collapsibility
             }),
             // Projects
             ...personalInfo.projects
               .filter((project) => project.addToDownloadableCv)
               .flatMap((project, index) => [
+                // Project Name (Collapsible)
                 new Paragraph({
                   children: [
                     new TextRun({
                       text: project.name,
+                      heading: "Heading2", // Set to Heading2 for project collapsibility
                       font: headingFont,
                       size: projectFontSize * 2,
                       color: projectColor,
                       bold: true,
                     }),
                   ],
+                  style: "Heading2", // Style for collapsibility
                 }),
+                // Project Content (Initially hidden, displayed on expand)
                 new Paragraph({
                   children: [
                     new TextRun({
@@ -313,6 +325,7 @@ function App() {
                 }),
               ]),
 
+            // Additional spacing
             new Paragraph({
               children: [], // Empty paragraph for spacing
             }),
@@ -325,15 +338,16 @@ function App() {
               children: [
                 new TextRun({
                   text: "Education",
-                  heading: "Heading1",
+                  heading: "Heading1", // Use the same Heading1 for collapsibility
                   font: headingFont,
                   size: headingFontSize * 2,
                   color: headingColor,
                   bold: true,
                 }),
               ],
-              style: "Heading1", // Added style for collapsibility
+              style: "Heading1", // Style for collapsibility
             }),
+            // Education Content
             ...personalInfo.education
               .map((education) => {
                 return [
@@ -348,10 +362,27 @@ function App() {
                       }),
                     ],
                   }),
-                  // ... (other education-related paragraphs remain unchanged)
+                  new Paragraph({
+                    children: [
+                      new TextRun({
+                        text: `${education.degree} - ${education.graduationYear}`,
+                        font: bodyFont,
+                        size: bodyFontSize * 2,
+                        color: "000000",
+                      }),
+                    ],
+                  }),
+                  new Paragraph({
+                    children: [], // Empty paragraph for spacing
+                  }),
                 ];
               })
               .flat(),
+
+            // Additional spacing
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
 
             // Certification Section
             new Paragraph({
@@ -380,6 +411,14 @@ function App() {
               });
             }),
 
+            // Additional spacing
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+
             // Additional Information Section
             new Paragraph({
               children: [
@@ -403,6 +442,14 @@ function App() {
                   color: "000000",
                 }),
               ],
+            }),
+
+            // Additional spacing
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
             }),
 
             // Key Strengths Section
@@ -430,6 +477,14 @@ function App() {
                   }),
                 ],
               });
+            }),
+
+            // Additional spacing
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
             }),
 
             // References Section
