@@ -11,13 +11,18 @@ const cvData = {
       linkedIn: `${personalInfo.social.linkedin}`,
       github: `${personalInfo.social.github}`,
     },
-    education: [
+    education: 
       {
-        institution: `${personalInfo.education.universityName}`,
-        degree: `${personalInfo.education.degree}`,
+        universityName: `${personalInfo.education[0].universityName}`,
+        degree: `${personalInfo.education[0].degree}`,
         graduationYear: `${personalInfo.education.graduationYear}`,
       },
-    ],
+      // skills: ['React JS', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'Git'],
+      skills: personalInfo.technicalSkills.flatMap(skill => {
+          const key = Object.keys(skill)[0];
+          return skill[key];
+      }),
+      projects: personalInfo.projects.filter(project => project.addToViewableCv),
     experience: [
       {
         company: 'Tech Company',
@@ -25,18 +30,12 @@ const cvData = {
         startDate: 'Jan 2023',
         endDate: 'Present',
         description: [
-          'Developed and maintained user-friendly web applications using React JS.',
+          'Developed and maintained user-friendly web applications using, HTML, CSS, JavaScript and React JS.',
           'Collaborated with designers and backend developers to deliver high-quality products.',
           'Implemented responsive designs using Tailwind CSS.',
         ],
       },
     ],
-    // skills: ['React JS', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'Git'],
-    skills: personalInfo.technicalSkills.flatMap(skill => {
-        const key = Object.keys(skill)[0];
-        return skill[key];
-    }),
-    projects: personalInfo.projects,
   };
   
   export default cvData;

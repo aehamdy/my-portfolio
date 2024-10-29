@@ -7,9 +7,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
 import CvModal from "./components/CvModal";
-import cvData from "./data/cvData";
 import CvContent from "./components/CvContent";
-import { handleFileDownload } from "./data/handleFileDownload";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -159,11 +157,7 @@ function App() {
             </div>
           </div>
         </div>
-        <CvModal
-          isOpen={isCvModalOpen}
-          closeModal={closeCvModal}
-          cvData={cvData}
-        >
+        <CvModal isOpen={isCvModalOpen} closeModal={closeCvModal}>
           <CvContent />
         </CvModal>
       </div>
@@ -185,8 +179,8 @@ export default App;
 // [x] add animated svg for body element
 // [x] create dynamic cv
 // [x] make the cv downloadable in word file
-// [ ] change the name of the downloadable word file to my firstname + lastname (line 528)
-// [ ] isolate the function of the downloadable cv as a stand alone component
+// [x] change the name of the downloadable word file to my firstname + lastname (line 528)
+// [x] isolate the function of the downloadable cv as a stand alone component
 // [x] make the cv viewable
 // [ ] restructure the viewable cv
 

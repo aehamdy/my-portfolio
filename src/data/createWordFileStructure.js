@@ -253,7 +253,7 @@ export const createWordFileStructure = () => {
             // Projects
             ...personalInfo.projects
               .filter((project) => project.addToDownloadableCv)
-              .flatMap((project, index) => [
+              .flatMap((project) => [
                 // Project Name (Collapsible)
                 new Paragraph({
                   children: [

@@ -23,13 +23,13 @@ export const personalInfo = {
     ],
     projects: [
         {
-            name: 'Todo App with Pomodoro Timer & Dark Mode',
+            name: 'Todo App with Pomodoro Timer',
             liveLink: 'www.livelink.com',
             githubRepo: 'www.githubRepoLink.com',
             description: 'Developed a fully functional todo app with features like adding, editing, and deleting tasks, categorization, and filtration. Integrated a Pomodoro timer to enhance task management.',
             technologies: ['JavaScript', 'React JS', 'Tailwind CSS', 'localStorage'],
             challengeOvercome: 'Implementing dynamic themes using Tailwind CSS, creating localStorage-based persistence, and managing state across multiple components.',
-            addToViewableCv: false,
+            addToViewableCv: true,
             addToDownloadableCv: true,
         },
         {
@@ -39,7 +39,7 @@ export const personalInfo = {
             description: 'Built a weather forecasting app that retrieves real-time weather data based on user input and displays detailed weather forecasts.',
             technologies: ['React JS', 'Tailwind CSS', 'Weather API'],
             challengeOvercome: 'Handling API responses efficiently, creating a clean UI for displaying large amounts of data.',
-            addToViewableCv: false,
+            addToViewableCv: true,
             addToDownloadableCv: true,
         },
         {
@@ -59,7 +59,7 @@ export const personalInfo = {
             description: 'Developed a note-taking web application where users can create, edit, and delete notes.',
             technologies: ['JavaScript', 'HTML', 'CSS'],
             challengeOvercome: 'Simplified UI and organized structure for seamless note management.',
-            addToViewableCv: false,
+            addToViewableCv: true,
             addToDownloadableCv: true,
         },
     ],
