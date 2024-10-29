@@ -7,7 +7,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
 import CvModal from "./components/CvModal";
-import CvContent from "./components/CvContent";
+import LoadingAnimation from "./components/LoadingAnimation";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -63,7 +63,7 @@ function App() {
         contact: false,
       });
       setLoading(false); // Set loading to false after data is fetched
-    }, 1000); // Simulating a 1-second API call
+    }, 5000); // Simulating a 1-second API call
   }, []);
 
   const handleSectionChange = (section) => {
@@ -87,12 +87,8 @@ function App() {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
   }, []);
 
-  // useEffect(() => {
-  //   console.log("Visible Section:", visibleSection);
-  // }, [visibleSection]);
-
   if (loading) {
-    return <div>Loading...</div>; // Show loading state until data is fetched
+    return <LoadingAnimation />; // Show loading state until data is fetched
   }
 
   return (
@@ -157,9 +153,7 @@ function App() {
             </div>
           </div>
         </div>
-        <CvModal isOpen={isCvModalOpen} closeModal={closeCvModal}>
-          <CvContent />
-        </CvModal>
+        <CvModal isOpen={isCvModalOpen} closeModal={closeCvModal} />
       </div>
     </>
   );
@@ -182,15 +176,15 @@ export default App;
 // [x] change the name of the downloadable word file to my firstname + lastname (line 528)
 // [x] isolate the function of the downloadable cv as a stand alone component
 // [x] make the cv viewable
-// [ ] restructure the viewable cv
+// [x] restructure the viewable cv
 
-// [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
-// [ ] add animation to each project when filter changes
+// [ ] add loading animation that appears before rendering the website
+// [ ] add svg icon as favicon
+// [ ] ensure the favicon to be in both dark/light mode of the user's browser
 // [ ] make all constants/variables comes from one file
 // [ ] add env file
 // [ ] create proper image to each one of your projects
 // [ ] add your real projects
-// [ ] add loading animation that appears before rendering the website
 // [ ] add your real photo
-// [ ] add svg icon as favicon
-// [ ] ensure the favicon to be in both dark/light mode of the user's browser
+// [ ] add animation to each project when filter changes
+// [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx

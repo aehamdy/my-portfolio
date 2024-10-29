@@ -21,7 +21,7 @@ module.exports = {
         'main-section': '32px',  //main section rounded corners
       },
       colors: {
-        accent: '#f6b846',
+        accent: 'var(--accent-color)',
         'white-55': 'rgba(255,255,255,0.55)',  //#8C
         'white-85': 'rgba(255,255,255,0.85)', //#D9
         'white-90': 'rgba(255,255,255,0.9)',  //#E6
