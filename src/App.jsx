@@ -50,7 +50,12 @@ function App() {
     const doc = new Document({
       sections: [
         {
-          properties: {},
+          properties: {
+            page: {
+              spelling: false, //Disable spell check
+              // grammer: false, //Disable grammer check
+            },
+          },
           children: [
             // Full Name Section
             new Paragraph({
