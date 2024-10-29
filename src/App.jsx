@@ -7,7 +7,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
 import CvModal from "./components/CvModal";
-import LoadingAnimation from "./components/LoadingAnimation";
+import PortfolioLoader from "./components/PortfolioLoader";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -63,7 +63,7 @@ function App() {
         contact: false,
       });
       setLoading(false); // Set loading to false after data is fetched
-    }, 5000); // Simulating a 1-second API call
+    }, 4000); // Simulating a 1-second API call
   }, []);
 
   const handleSectionChange = (section) => {
@@ -88,7 +88,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <LoadingAnimation />; // Show loading state until data is fetched
+    return <PortfolioLoader />; // Show loading state until data is fetched
   }
 
   return (

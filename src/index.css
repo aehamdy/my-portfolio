@@ -302,27 +302,22 @@ body.dark {
 
 @keyframes color_5881 {
   0% {
-    /* background-color: rgba(246, 184, 70, 2); */
     background-color: rgba(246, 184, 70, 0.5);
   }
 
   25% {
-    /* background-color: rgba(246, 184, 70, 6); */
     background-color: rgba(246, 184, 70, 0.9);
   }
 
   50% {
-    /* background-color: rgba(246, 184, 70, 2); */
     background-color: rgba(246, 184, 70, 0.5);
   }
 
   75% {
-    /* background-color: rgba(246, 184, 70, 6); */
     background-color: rgba(246, 184, 70, 0.9);
   }
 
   100% {
-    /* background-color: rgba(246, 184, 70, 2); */
     background-color: rgba(246, 184, 70, 0.5);
   }
 }

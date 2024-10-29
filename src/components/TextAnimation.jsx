@@ -10,8 +10,8 @@ function TextAnimation() {
 */
 
   return (
-    <main className="container">
-      <section className="animation">
+    <section className="container text-white-55">
+      <div className="animation">
         <div className="text-wrapper">
           <div className="text first">
             Loading innovation and interaction...
@@ -21,8 +21,8 @@ function TextAnimation() {
           </div>
           <div className="text third">Code in motion, almost there...</div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
 

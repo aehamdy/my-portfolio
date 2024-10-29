@@ -3,7 +3,6 @@ import AboutMeList from "./AboutMeList";
 import AboutMeSkills from "./AboutMeSkills";
 import SectionTitle from "./SectionTitle";
 import SeparatorToRight from "./SeparatorToRight";
-import TextAnimation from "./TextAnimation";
 
 function AboutMe() {
   return (
@@ -23,7 +22,6 @@ function AboutMe() {
             experience in wordpress, also I am good at Magento. I love to talk
             with you about our unique.
           </p>
-          <TextAnimation />
         </div>
         <div className="flex flex-col md:grid md:grid-cols-2 md:justify-between gap-5">
           <AboutMeList />
