@@ -95,17 +95,3 @@ export const getInTouchList = [
     {email: personalInfo.email},
     {freelance: personalInfo.hiringStatus},
 ]
-
-/*
-const headingFont = "Calibri";
-const bodyFont = "Cambria";
-
-const nameFontSize = 26;
-const headingFontSize = 14;
-const bodyFontSize = 11;
-const projectFontSize = 13;
-
-const nameColor = "1F497D"; // Hex color for name
-const headingColor = "365F91"; // Hex color for section headings
-const projectColor = "4F81BD"; // Hex color for project names
-*/

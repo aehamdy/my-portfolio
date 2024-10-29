@@ -5,7 +5,7 @@ import Quotes from "./Quotes";
 import SectionTitle from "./SectionTitle";
 import SeparatorToRight from "./SeparatorToRight";
 
-function ResumeSection({ openCvModal, downloadCv }) {
+function ResumeSection({ openCvModal }) {
   return (
     <section
       id="resume"
@@ -15,7 +15,7 @@ function ResumeSection({ openCvModal, downloadCv }) {
       <div className="mt-horizontal-separator-mt">
         <SeparatorToRight />
       </div>
-      <CvButtons openCvModal={openCvModal} downloadCv={downloadCv} />
+      <CvButtons openCvModal={openCvModal} />
       <History />
       <Quotes />
     </section>

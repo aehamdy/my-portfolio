@@ -1,11 +1,13 @@
+import { handleFileDownload } from "../data/handleFileDownload";
+
 /* eslint-disable react/prop-types */
-function CvButtons({ openCvModal, downloadCv }) {
+function CvButtons({ openCvModal }) {
   return (
     <div className="relative w-full">
       <span className="absolute top-0 left-0 w-full h-[1px] bg-custom-gradient-to-r"></span>
       <div className="relative flex w-full text-sm font-semibold">
         <button
-          onClick={downloadCv}
+          onClick={handleFileDownload}
           className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
         >
           Download CV
