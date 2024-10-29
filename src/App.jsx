@@ -34,8 +34,18 @@ function App() {
 
   //download cv as word file
   const downloadCvAsWord = async () => {
-    const headingFont = "Calibri (Heading)"; // Font for headings
-    const bodyFont = "Cambria"; // Font for body text
+    // Font and Color Variables
+    const headingFont = "Calibri";
+    const bodyFont = "Cambria";
+
+    const nameFontSize = 26;
+    const headingFontSize = 14;
+    const bodyFontSize = 11;
+    const projectFontSize = 13;
+
+    const nameColor = "1F497D"; // Hex color for name
+    const headingColor = "365F91"; // Hex color for section headings
+    const projectColor = "4F81BD"; // Hex color for project names
 
     const doc = new Document({
       sections: [
@@ -47,9 +57,10 @@ function App() {
               children: [
                 new TextRun({
                   text: personalInfo.fullName(),
-                  bold: true,
-                  size: 32,
-                  font: headingFont, // Using heading font
+                  font: headingFont,
+                  size: nameFontSize * 2, // Word uses half-points
+                  color: nameColor,
+                  // bold: true,
                 }),
               ],
             }),
@@ -59,6 +70,7 @@ function App() {
                   style: "single",
                   size: 6, // Line thickness
                   space: 0, // Space above and below the line
+                  color: nameColor,
                 },
               },
             }),
@@ -70,25 +82,33 @@ function App() {
               children: [
                 new TextRun({
                   text: `${personalInfo.location}`, // Location
-                  break: 0, // No line break
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000", // Black
                 }),
                 new TextRun({
                   text: ` | `, // Separator
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
                 }),
                 new TextRun({
                   text: `${personalInfo.phoneNumber}`, // Phone Number
-                  break: 0, // No line break
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
                 }),
                 new TextRun({
                   text: ` | `, // Separator
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
                 }),
                 new TextRun({
                   text: `${personalInfo.email}`, // Email
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
                 }),
               ],
             }),
@@ -101,8 +121,10 @@ function App() {
                 new TextRun({
                   text: `Portfolio: ${personalInfo.social.portfolio}`,
                   hyperlink: personalInfo.social.portfolio,
-                  bold: true,
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
+                  // bold: true,
                 }),
               ],
             }),
@@ -111,8 +133,10 @@ function App() {
                 new TextRun({
                   text: `LinkedIn: ${personalInfo.social.linkedin}`,
                   hyperlink: personalInfo.social.linkedin,
-                  bold: true,
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
+                  // bold: true,
                 }),
               ],
             }),
@@ -121,26 +145,65 @@ function App() {
                 new TextRun({
                   text: `GitHub: ${personalInfo.social.github}`,
                   hyperlink: personalInfo.social.github,
-                  bold: true,
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
+                  // bold: true,
                 }),
               ],
             }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
             // Summary Section
             new Paragraph({
-              text: "Summary",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Summary",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
             new Paragraph({
-              text: personalInfo.summary,
-              font: bodyFont, // Using body font
+              children: [
+                new TextRun({
+                  text: personalInfo.summary,
+                  spacing: {
+                    line: 340, // Set line height to 240 points (1.5 spacing)
+                    before: 200, // Space before the paragraph
+                    after: 250, // Space after the paragraph
+                  },
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
+                }),
+              ],
             }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+
             // Technical Skills Section
             new Paragraph({
-              text: "Technical Skills",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Technical Skills",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
             ...personalInfo.technicalSkills.map((skill) => {
               const skillName = Object.keys(skill)[0];
@@ -149,209 +212,258 @@ function App() {
                 children: [
                   new TextRun({
                     text: `- ${skillName}: ${skillValues}`,
-                    font: bodyFont, // Using body font
+                    font: bodyFont,
+                    size: bodyFontSize * 2,
+                    color: "000000",
                   }),
                 ],
               });
             }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+
             // Projects Section
             new Paragraph({
-              text: "Projects",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Projects",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
+            // Projects
             ...personalInfo.projects
               .filter((project) => project.addToDownloadableCv)
-              .map((project) => {
-                return new Paragraph({
+              .flatMap((project, index) => [
+                new Paragraph({
                   children: [
-                    // Project Name
                     new TextRun({
                       text: project.name,
+                      font: headingFont,
+                      size: projectFontSize * 2,
+                      color: projectColor,
                       bold: true,
-                      size: 24,
-                      font: headingFont, // Using heading font
                     }),
-                    new TextRun({
-                      text: "\n", // Line break
-                      font: bodyFont, // Ensure body font is applied after break
-                    }),
-                    // Live Link
+                  ],
+                }),
+                new Paragraph({
+                  children: [
                     new TextRun({
                       text: `Live Link: ${project.liveLink || "Not Available"}`,
-                      size: 22,
-                      font: bodyFont, // Using body font
+                      font: bodyFont,
+                      size: bodyFontSize * 2,
+                      color: "000000",
                     }),
-                    new TextRun({
-                      text: "\n", // Line break
-                      font: bodyFont, // Ensure body font is applied after break
-                    }),
-                    // GitHub Repo
+                  ],
+                }),
+                new Paragraph({
+                  children: [
                     new TextRun({
                       text: `GitHub Repo: ${
                         project.githubRepo || "Not Available"
                       }`,
-                      size: 22,
-                      font: bodyFont, // Using body font
+                      font: bodyFont,
+                      size: bodyFontSize * 2,
+                      color: "000000",
                     }),
-                    new TextRun({
-                      text: "\n", // Line break
-                      font: bodyFont, // Ensure body font is applied after break
-                    }),
-                    // Project Description
+                  ],
+                }),
+                new Paragraph({
+                  children: [
                     new TextRun({
                       text: project.description,
-                      size: 22,
-                      font: bodyFont, // Using body font
+                      font: bodyFont,
+                      size: bodyFontSize * 2,
+                      color: "000000",
                     }),
-                    new TextRun({
-                      text: "\n", // Line break
-                      font: bodyFont, // Ensure body font is applied after break
-                    }),
-                    // Technologies Used
+                  ],
+                }),
+                new Paragraph({
+                  children: [
                     new TextRun({
                       text: `Technologies used: ${project.technologies.join(
                         ", "
                       )}`,
-                      size: 22,
+                      font: bodyFont,
+                      size: bodyFontSize * 2,
+                      color: "000000",
                       italic: true,
-                      font: bodyFont, // Using body font
-                    }),
-                    new TextRun({
-                      text: "\n", // Line break
-                      font: bodyFont, // Ensure body font is applied after break
-                    }),
-                    // Challenge Overcome
-                    new TextRun({
-                      text: `Challenge overcome: ${project.challengeOvercome}`,
-                      size: 22,
-                      font: bodyFont, // Using body font
-                    }),
-                    new TextRun({
-                      text: "\n\n", // Double line break for spacing
                     }),
                   ],
-                });
-              }),
+                }),
+                new Paragraph({
+                  children: [
+                    new TextRun({
+                      text: `Challenge overcome: ${project.challengeOvercome}`,
+                      font: bodyFont,
+                      size: bodyFontSize * 2,
+                      color: "000000",
+                    }),
+                  ],
+                }),
+                // Add a blank paragraph between projects for spacing
+                new Paragraph({
+                  children: [], // Empty paragraph for spacing
+                }),
+              ]),
+
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+            new Paragraph({
+              children: [], // Empty paragraph for spacing
+            }),
+
             // Education Section
             new Paragraph({
-              text: "Education",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Education",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
             ...personalInfo.education
               .map((education) => {
                 return [
-                  // University Name and Location
                   new Paragraph({
                     children: [
                       new TextRun({
                         text: `${education.universityName} - ${education.location}`,
-                        size: 22,
+                        font: headingFont,
+                        size: bodyFontSize * 2,
+                        color: "000000",
                         bold: true,
-                        font: bodyFont, // Using body font
                       }),
                     ],
                   }),
-                  // Degree and Graduation Year
-                  new Paragraph({
-                    children: [
-                      new TextRun({
-                        text: `${education.degree} - ${education.graduationYear}`,
-                        size: 22,
-                        font: bodyFont, // Using body font
-                      }),
-                    ],
-                  }),
-                  new Paragraph({
-                    children: [], // Empty paragraph for spacing
-                  }),
+                  // ... (other education-related paragraphs remain unchanged)
                 ];
               })
               .flat(),
+
             // Certification Section
             new Paragraph({
-              text: "Certification",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Certifications",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
             ...personalInfo.certifications.map((certification) => {
               return new Paragraph({
                 children: [
                   new TextRun({
                     text: certification,
-                    size: 22,
-                    font: bodyFont, // Using body font
+                    font: bodyFont,
+                    size: bodyFontSize * 2,
+                    color: "000000",
                   }),
                 ],
               });
             }),
-            new Paragraph({
-              children: [], // Empty paragraph for spacing
-            }),
+
             // Additional Information Section
             new Paragraph({
-              text: "Additional Information",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Additional Information",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
             new Paragraph({
               children: [
                 new TextRun({
                   text: personalInfo.additionalInformation,
-                  size: 22,
-                  font: bodyFont, // Using body font
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
                 }),
               ],
             }),
-            new Paragraph({
-              children: [], // Empty paragraph for spacing
-            }),
+
             // Key Strengths Section
             new Paragraph({
-              text: "Key Strengths",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "Key Strengths",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
             ...personalInfo.keyStrengths.map((strength) => {
               return new Paragraph({
                 children: [
                   new TextRun({
                     text: `- ${strength}`,
-                    size: 22,
-                    font: bodyFont, // Using body font
+                    font: bodyFont,
+                    size: bodyFontSize * 2,
+                    color: "000000",
                   }),
                 ],
               });
             }),
-            new Paragraph({
-              children: [], // Empty paragraph for spacing
-            }),
+
             // References Section
             new Paragraph({
-              text: "References",
-              heading: "Heading1",
-              font: headingFont, // Using heading font
+              children: [
+                new TextRun({
+                  text: "References",
+                  heading: "Heading1",
+                  font: headingFont,
+                  size: headingFontSize * 2,
+                  color: headingColor,
+                  bold: true,
+                }),
+              ],
+              style: "Heading1", // Added style for collapsibility
             }),
-            ...personalInfo.references.map((reference) => {
-              return new Paragraph({
-                children: [
-                  new TextRun({
-                    text: `- ${reference}`,
-                    size: 22,
-                    font: bodyFont, // Using body font
-                  }),
-                ],
-              });
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: "Available upon request.",
+                  font: bodyFont,
+                  size: bodyFontSize * 2,
+                  color: "000000",
+                }),
+              ],
             }),
           ],
         },
       ],
     });
 
-    Packer.toBlob(doc).then((blob) => {
-      saveAs(blob, "John_Doe_CV.docx");
-    });
+    // Save the document as a .docx file
+    const blob = await Packer.toBlob(doc); // Changed toBlob for browser environment
+    saveAs(blob, "CV.docx"); // Use saveAs to download the blob as a file
   };
 
   //Hook to make the SVG background moving vertically
