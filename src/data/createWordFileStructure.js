@@ -1,4 +1,4 @@
-import { Document, Paragraph, TextRun } from "docx";
+import { Document, ExternalHyperlink, Paragraph, TextRun } from "docx";
 import { personalInfo } from "./personalInfo";
 
 export const createWordFileStructure = () => {
@@ -89,43 +89,70 @@ export const createWordFileStructure = () => {
             }),
             // Social Links (Portfolio, LinkedIn, GitHub)
             new Paragraph({
-              children: [
-                new TextRun({
-                  text: `Portfolio: ${personalInfo.social.portfolio}`,
-                  hyperlink: personalInfo.social.portfolio,
-                  style:'Hyperlink',
-                  font: bodyFont,
-                  size: bodyFontSize * 2,
-                  color: "000000",
-                  // bold: true,
-                }),
-              ],
+                children: [
+                  new TextRun({
+                    text: "Portfolio: ", // Normal text for LinkedIn
+                    font:bodyFont,
+                    size: bodyFontSize * 2,
+                    color: "000000"
+                    // Optionally, you can style this TextRun
+                  }),
+                  new ExternalHyperlink({
+                    children: [
+                      new TextRun({
+                        text: personalInfo.social.portfolio, // URL text as clickable link
+                        style: "Hyperlink", // Applies the hyperlink style in Word
+                        font: bodyFont,
+                        size: bodyFontSize * 2,
+                      }),
+                    ],
+                    link: personalInfo.social.portfolio, // Set the hyperlink URL here
+                  }),
+                ],
             }),
             new Paragraph({
-              children: [
-                new TextRun({
-                  text: `LinkedIn: ${personalInfo.social.linkedin}`,
-                  hyperlink: personalInfo.social.linkedin,
-                  style:'Hyperlink',
-                  font: bodyFont,
-                  size: bodyFontSize * 2,
-                  color: "000000",
-                  // bold: true,
-                }),
-              ],
+                children: [
+                  new TextRun({
+                    text: "LinkedIn: ", // Normal text for LinkedIn
+                    font:bodyFont,
+                    size: bodyFontSize * 2,
+                    color: "000000"
+                    // Optionally, you can style this TextRun
+                  }),
+                  new ExternalHyperlink({
+                    children: [
+                      new TextRun({
+                        text: personalInfo.social.linkedin, // URL text as clickable link
+                        style: "Hyperlink", // Applies the hyperlink style in Word
+                        font: bodyFont,
+                        size: bodyFontSize * 2,
+                      }),
+                    ],
+                    link: personalInfo.social.linkedin, // Set the hyperlink URL here
+                  }),
+                ],
             }),
             new Paragraph({
-              children: [
-                new TextRun({
-                  text: `GitHub: ${personalInfo.social.github}`,
-                  hyperlink: personalInfo.social.github,
-                  style:'Hyperlink',
-                  font: bodyFont,
-                  size: bodyFontSize * 2,
-                  color: "000000",
-                  // bold: true,
-                }),
-              ],
+                children: [
+                  new TextRun({
+                    text: "Github: ", // Normal text for LinkedIn
+                    font:bodyFont,
+                    size: bodyFontSize * 2,
+                    color: "000000"
+                    // Optionally, you can style this TextRun
+                  }),
+                  new ExternalHyperlink({
+                    children: [
+                      new TextRun({
+                        text: personalInfo.social.github, // URL text as clickable link
+                        style: "Hyperlink", // Applies the hyperlink style in Word
+                        font: bodyFont,
+                        size: bodyFontSize * 2,
+                      }),
+                    ],
+                    link: personalInfo.social.github, // Set the hyperlink URL here
+                  }),
+                ],
             }),
             new Paragraph({
               children: [], // Empty paragraph for spacing
@@ -241,29 +268,68 @@ export const createWordFileStructure = () => {
                   ],
                   style: "Heading2", // Style for collapsibility
                 }),
-                // Project Content (Initially hidden, displayed on expand)
                 new Paragraph({
-                  children: [
-                    new TextRun({
-                      text: `Live Link: ${project.liveLink || "Not Available"}`,
-                      font: bodyFont,
-                      size: bodyFontSize * 2,
-                      color: "000000",
-                    }),
-                  ],
-                }),
+                    children: [
+                      new TextRun({
+                        text: "Live Link: ", // Normal text for Live Link
+                        font: bodyFont,
+                        size: bodyFontSize * 2,
+                        color: "000000",
+                      }),
+                      ...(project.liveLink
+                        ? [
+                            new ExternalHyperlink({
+                              children: [
+                                new TextRun({
+                                  text: project.liveLink, // URL text as clickable link
+                                  style: "Hyperlink", // Applies the hyperlink style in Word
+                                  font: bodyFont,
+                                  size: bodyFontSize * 2,
+                                }),
+                              ],
+                              link: project.liveLink, // Set the hyperlink URL here
+                            }),
+                          ]
+                        : [
+                            new TextRun({
+                              text: "Not Available", // Normal text if link is not available
+                              font: bodyFont,
+                              size: bodyFontSize * 2,
+                            }),
+                          ]),
+                    ],
+                  }),
                 new Paragraph({
-                  children: [
-                    new TextRun({
-                      text: `GitHub Repo: ${
-                        project.githubRepo || "Not Available"
-                      }`,
-                      font: bodyFont,
-                      size: bodyFontSize * 2,
-                      color: "000000",
-                    }),
-                  ],
-                }),
+                    children: [
+                      new TextRun({
+                        text: "Github Repo: ", // Normal text for Live Link
+                        font: bodyFont,
+                        size: bodyFontSize * 2,
+                        color: "000000",
+                      }),
+                      ...(project.githubRepo
+                        ? [
+                            new ExternalHyperlink({
+                              children: [
+                                new TextRun({
+                                  text: project.githubRepo, // URL text as clickable link
+                                  style: "Hyperlink", // Applies the hyperlink style in Word
+                                  font: bodyFont,
+                                  size: bodyFontSize * 2,
+                                }),
+                              ],
+                              link: project.githubRepo, // Set the hyperlink URL here
+                            }),
+                          ]
+                        : [
+                            new TextRun({
+                              text: "Not Available", // Normal text if link is not available
+                              font: bodyFont,
+                              size: bodyFontSize * 2,
+                            }),
+                          ]),
+                    ],
+                  }),
                 new Paragraph({
                   children: [
                     new TextRun({

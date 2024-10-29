@@ -24,8 +24,8 @@ export const personalInfo = {
     projects: [
         {
             name: 'Todo App with Pomodoro Timer & Dark Mode',
-            liveLink: '',
-            githubRepo: '',
+            liveLink: 'www.livelink.com',
+            githubRepo: 'www.githubRepoLink.com',
             description: 'Developed a fully functional todo app with features like adding, editing, and deleting tasks, categorization, and filtration. Integrated a Pomodoro timer to enhance task management.',
             technologies: ['JavaScript', 'React JS', 'Tailwind CSS', 'localStorage'],
             challengeOvercome: 'Implementing dynamic themes using Tailwind CSS, creating localStorage-based persistence, and managing state across multiple components.',
