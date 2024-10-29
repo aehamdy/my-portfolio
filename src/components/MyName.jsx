@@ -4,7 +4,7 @@ import { personalInfo } from "../data/personalInfo";
 function MyName({ textStyle }) {
   return (
     <p className={`w-fit ${textStyle} duration-short`}>
-      {`${personalInfo.firstName} ${personalInfo.lastName}`}
+      {`${personalInfo.firstName} ${personalInfo.middleName}`}
     </p>
   );
 }

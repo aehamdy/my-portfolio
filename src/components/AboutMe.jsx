@@ -3,6 +3,7 @@ import AboutMeList from "./AboutMeList";
 import AboutMeSkills from "./AboutMeSkills";
 import SectionTitle from "./SectionTitle";
 import SeparatorToRight from "./SeparatorToRight";
+import TextAnimation from "./TextAnimation";
 
 function AboutMe() {
   return (
@@ -15,13 +16,14 @@ function AboutMe() {
         <div className="flex flex-col text-start dark:text-white-55 text-medium-gray">
           <strong>
             Hello! I’m{" "}
-            {`${personalInfo.firstName + " " + personalInfo.lastName}`}.
+            {`${personalInfo.firstName + " " + personalInfo.middleName}`}.
           </strong>
           <p>
             Back-end & Frond-end developer from UK, London. I have rich
             experience in wordpress, also I am good at Magento. I love to talk
             with you about our unique.
           </p>
+          <TextAnimation />
         </div>
         <div className="flex flex-col md:grid md:grid-cols-2 md:justify-between gap-5">
           <AboutMeList />
