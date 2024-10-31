@@ -44,7 +44,10 @@ function ProjectsSection({ visibleSection = {} }) {
           <div className="flex justify-between items-center">
             <SectionTitle title="projects" />
             <div className="hidden sm:block">
-              <ProjectCategories setSelectedCategory={setSelectedCategory} />
+              <ProjectCategories
+                setSelectedCategory={setSelectedCategory}
+                selectedCategory={selectedCategory}
+              />
             </div>
           </div>
           <div className="mt-horizontal-separator-mt">
@@ -54,6 +57,7 @@ function ProjectsSection({ visibleSection = {} }) {
             <ProjectCategories
               setSelectedCategory={setSelectedCategory}
               visibleSection={visibleSection}
+              selectedCategory={selectedCategory}
             />
           </div>
           <ProjectList selectedCategory={selectedCategory} />
