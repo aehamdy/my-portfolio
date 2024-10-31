@@ -19,6 +19,9 @@ function ProjectCard({ project }) {
           </h4>
 
           <span className="text-sm text-light-gray">
+            {project.simpleDiscribtion}
+          </span>
+          <span className="text-sm text-light-gray">
             {project.technologies.join(" + ")}
           </span>
         </div>
