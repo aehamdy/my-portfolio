@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
+import { handleFileDownload } from "../data/handleFileDownload";
 import { downloadIcon, sendIcon } from "../data/icons";
 
-function ProfileCardButtons({ openCvModal }) {
+function ProfileCardButtons() {
   return (
     <div className="relative w-full">
       <span className="absolute top-0 left-0 w-full h-[1px] bg-custom-gradient-to-r"></span>
       <div className="relative flex w-full text-sm font-semibold">
         <button
-          onClick={openCvModal}
+          onClick={handleFileDownload}
           className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
         >
           Download CV

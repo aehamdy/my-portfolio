@@ -15,13 +15,13 @@ import usePageLoader from "./hooks/usePageLoader";
 function App() {
   const { activeSection, visibleSection, handleSectionChange } =
     useSectionVisibility();
-  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
+  // const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
   useSVGAnimation(); // Initialize SVG animation hook
   const loading = usePageLoader(); // Initialize loading state
 
-  const openCvModal = () => setIsCvModalOpen(true);
-  const closeCvModal = () => setIsCvModalOpen(false);
+  // const openCvModal = () => setIsCvModalOpen(true);
+  // const closeCvModal = () => setIsCvModalOpen(false);
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
@@ -39,13 +39,13 @@ function App() {
           <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid grid-cols-1 gap-y-5 overflow-hidden">
             <div className="hero col-span-2">
-              <HeroSection openCvModal={openCvModal} />
+              <HeroSection />
             </div>
 
             <div className="gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid grid-cols-1 gap-5 mb-2">
                 <AboutSection />
-                <ResumeSection openCvModal={openCvModal} />
+                <ResumeSection />
                 <ProjectsSection />
                 <ContactSection />
               </div>
@@ -58,7 +58,7 @@ function App() {
           <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid lg:grid-cols-5 lg:gap-4 lg:h-full overflow-hidden">
             <div className="hero col-span-2">
-              <HeroSection openCvModal={openCvModal} />
+              <HeroSection />
             </div>
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
@@ -70,7 +70,7 @@ function App() {
                 )}
                 {visibleSection.resume && (
                   <div className="lg:animate-fadeInUp">
-                    <ResumeSection openCvModal={openCvModal} />
+                    <ResumeSection />
                   </div>
                 )}
                 {/* {visibleSection.projects && (
@@ -93,7 +93,6 @@ function App() {
             </div>
           </div>
         </div>
-        <CvModal isOpen={isCvModalOpen} closeModal={closeCvModal} />
       </div>
     </>
   );
