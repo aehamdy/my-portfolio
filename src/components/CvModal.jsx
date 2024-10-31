@@ -33,7 +33,7 @@ const CvModal = ({ isOpen, closeModal }) => {
       ref={overlayRef}
       className="cv-overlay font-poppins fixed inset-0 flex items-center justify-center z-50 text-black bg-black bg-opacity-70"
     >
-      <div className="vertical-scrollbar overflow-y-auto relative max-h-[95vh] mx-1 sm:mx-auto py-5 px-3 md:px-5 lg:p-6 bg-[#fefaf1] dark:bg-body-dark rounded-lg w-full max-w-4xl overflow-auto">
+      <div className="vertical-scrollbar overflow-y-auto relative max-h-[95vh] mx-1 sm:mx-auto py-5 px-3 md:px-5 lg:p-6 bg-[#fefaf1] dark:bg-body-dark rounded-lg w-full max-w-4xl overflow-auto select-none">
         {/* Close Button */}
         <button
           onClick={closeModal}

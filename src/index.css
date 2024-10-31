@@ -89,6 +89,11 @@
   }
 }
 
+::selection {
+  color: #323232;
+  background-color: var(--accent-color);
+}
+
 body {
   font-family: "Lekton", monospace;
   margin: 0;

@@ -2,7 +2,7 @@
 
 function ProjectCard({ project }) {
   return (
-    <article className="group w-full">
+    <article className="group w-full h-fit">
       <a href={project.link} target="_blank" className="flex flex-col gap-2">
         <div className="w-full rounded-[25px] overflow-hidden">
           <img

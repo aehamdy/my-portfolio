@@ -63,7 +63,7 @@ function App() {
         contact: false,
       });
       setLoading(false); // Set loading to false after data is fetched
-    }, 4000); // Simulating a 1-second API call
+    }, 3800); // Simulating a 1-second API call
   }, []);
 
   const handleSectionChange = (section) => {
@@ -177,8 +177,8 @@ export default App;
 // [x] isolate the function of the downloadable cv as a stand alone component
 // [x] make the cv viewable
 // [x] restructure the viewable cv
+// [x] add loading animation that appears before rendering the website
 
-// [ ] add loading animation that appears before rendering the website
 // [ ] add svg icon as favicon
 // [ ] ensure the favicon to be in both dark/light mode of the user's browser
 // [ ] make all constants/variables comes from one file
