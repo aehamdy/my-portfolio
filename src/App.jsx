@@ -101,8 +101,6 @@ function App() {
 
 export default App;
 
-//#BUG: projects filteration is working only on small screen to medium, but doesn't work on large screen!
-
 //#TODOS:
 // [x] create only one file to contain all icons
 // [x] create a component for skills in about me section
@@ -118,11 +116,10 @@ export default App;
 // [x] make the cv viewable
 // [x] restructure the viewable cv
 // [x] add loading animation that appears before rendering the website
+// [x] add icon as favicon
+// [x] ensure the favicon to be in both dark/light mode of the user's browser
+// [x] make all constants/variables comes from one file
 
-// [ ] add svg icon as favicon
-// [ ] ensure the favicon to be in both dark/light mode of the user's browser
-// [ ] make all constants/variables comes from one file
-// [ ] add env file
 // [ ] create proper image to each one of your projects
 // [ ] add your real projects
 // [ ] add your real photo

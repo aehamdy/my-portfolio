@@ -6,8 +6,8 @@ export const personalInfo = {
     fullName() {
         return `${this.firstName} ${this.middleName} ${this.lastName}`;
     },
-    phoneNumber: '+20 1010573100',
-    email: 'ae.hamdy91@gmail.com',
+    phoneNumber: "+20 1010573100",
+    email: "ae.hamdy91@gmail.com",
     residence: 'Egypt',
     location: 'Cairo, Egypt',
     languages: ['English', 'Arabic',],
@@ -15,12 +15,14 @@ export const personalInfo = {
     bio: 'A passionate frontend developer with experience in building responsive and accessible web applications using React, Tailwind CSS, and more.',
     social: {portfolio: 'www.personalportfolio.com', linkedin: 'https://www.linkedin.com/in/aehamdy/', github: 'https://github.com/aehamdy'},
     summary: 'Enthusiastic and self-driven Junior Front-End Developer with a passion for building interactive, user-friendly web applications. Proficient in HTML, CSS, JavaScript, React, and Tailwind CSS, with a strong focus on responsive design and seamless user experiences. Eager to apply creative ideas in real-world projects while continuously learning and growing in the fast-evolving web development landscape.',
+    
     technicalSkills: [
         {Languages: ['HTML', 'CSS', 'JavaScript', 'SASS']},
         {'Frameworks & Libraries': ['React JS', 'Tailwind CSS']},
         {'Version Control': ['Git', 'Github']},
         {'Other Tools': ['Agile methodologies','Responsive design','Figma (basic)']}
     ],
+    
     projects: [
         {
             name: 'Todo App with Pomodoro Timer',
@@ -63,6 +65,7 @@ export const personalInfo = {
             addToDownloadableCv: true,
         },
     ],
+    
     education: [
         {
         universityName: 'Thebes Higher Institute of Engineering ',
@@ -71,27 +74,18 @@ export const personalInfo = {
         graduationYear: '2020',
     },
 ],
-    certifications: ['Self-taught front-end developer through online resources and tutorials.'],
-    additionalInformation: 'Open to both relocation and remote work opportunities.',
-    keyStrengths: [
+    
+certifications: ['Self-taught front-end developer through online resources and tutorials.'],
+    
+additionalInformation: 'Open to both relocation and remote work opportunities.',
+    
+keyStrengths: [
         'Strong problem-solving skills and attention to detail.',
         'Ability to work independently on complex tasks and projects.',
         'Enthusiastic about learning new technologies and contributing to team success.',
         'Passion for creating intuitive and accessible user experiences.'
     ],
+    
     references: ['Available upon request.'],
+
 }
-
-export const aboutMeList = [
-    {residence: personalInfo.residence},
-    {location: personalInfo.location},
-    {languages: personalInfo.languages},
-]
-
-
-export const getInTouchList = [
-    {residence: personalInfo.residence},
-    {location: personalInfo.location},
-    {email: personalInfo.email},
-    {freelance: personalInfo.hiringStatus},
-]

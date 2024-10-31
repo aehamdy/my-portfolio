@@ -1,4 +1,4 @@
-import { aboutMeList } from "../data/personalInfo";
+import { aboutMeList } from "../data/aboutMeList";
 import DetailPanel from "./DetailPanel";
 
 function AboutMeList() {
