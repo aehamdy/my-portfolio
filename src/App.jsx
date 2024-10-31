@@ -1,94 +1,34 @@
 import "./App.css";
+import { useEffect, useState } from "react";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
 import AboutSection from "./components/AboutSection";
 import ResumeSection from "./components/ResumeSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
-import { useEffect, useState } from "react";
 import CvModal from "./components/CvModal";
 import PortfolioLoader from "./components/PortfolioLoader";
+import useSectionVisibility from "./hooks/useSectionVisibility";
+import useSVGAnimation from "./hooks/useSVGAnimation";
+import usePageLoader from "./hooks/usePageLoader";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("about");
-  const [visibleSection, setVisibleSection] = useState({
-    about: true,
-    resume: false,
-    projects: false,
-    contact: false,
-  });
+  const { activeSection, visibleSection, handleSectionChange } =
+    useSectionVisibility();
   const [isCvModalOpen, setIsCvModalOpen] = useState(false);
-  const [loading, setLoading] = useState(true); // Loading state
 
-  const openCvModal = () => {
-    setIsCvModalOpen(true);
-  };
+  useSVGAnimation(); // Initialize SVG animation hook
+  const loading = usePageLoader(); // Initialize loading state
 
-  const closeCvModal = () => {
-    setIsCvModalOpen(false);
-  };
-
-  //Hook to make the SVG background moving vertically
-  useEffect(() => {
-    const lights = document.querySelectorAll(".light"); // Select all lights
-
-    const speeds = Array.from(
-      { length: lights.length },
-      () => Math.random() * 5 + 2 // Generate random speeds for each light
-    );
-
-    const moveLights = () => {
-      lights.forEach((light, index) => {
-        const speed = speeds[index]; // Each light has a different speed
-        const currentY = parseFloat(light.getAttribute("data-y")) || 0; // Get current Y position
-        const newY = (currentY + speed) % 1080; // Update position
-        light.setAttribute("transform", `translate(0, ${newY})`); // Apply transform
-        light.setAttribute("data-y", newY); // Store the new position
-      });
-    };
-
-    const intervalId = setInterval(moveLights, 50); // Call moveLights every 50ms
-
-    return () => clearInterval(intervalId); // Clean up interval on component unmount
-  }, []);
-
-  useEffect(() => {
-    // Simulating data fetching
-    setTimeout(() => {
-      // After fetching data, initialize visibleSection
-      setVisibleSection({
-        about: true,
-        resume: false,
-        projects: false, // or false depending on your desired initial state
-        contact: false,
-      });
-      setLoading(false); // Set loading to false after data is fetched
-    }, 3800); // Simulating a 1-second API call
-  }, []);
-
-  const handleSectionChange = (section) => {
-    setActiveSection(section);
-    setVisibleSection({
-      about: section === "about",
-      resume: section === "resume",
-      projects: section === "projects",
-      contact: section === "contact",
-    });
-  };
-
-  useEffect(() => {
-    setVisibleSection((prev) => ({
-      ...prev,
-      [activeSection]: true,
-    }));
-  }, [activeSection]);
+  const openCvModal = () => setIsCvModalOpen(true);
+  const closeCvModal = () => setIsCvModalOpen(false);
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
   }, []);
 
   if (loading) {
-    return <PortfolioLoader />; // Show loading state until data is fetched
+    return <PortfolioLoader />;
   }
 
   return (
