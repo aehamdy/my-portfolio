@@ -1,7 +1,7 @@
 import { Document, ExternalHyperlink, Paragraph, TextRun } from "docx";
-import { personalInfo } from "./personalInfo";
+import personalInfo from "./personalInfo";
 
-export const createWordFileStructure = () => {
+const createWordFileStructure = () => {
     const headingFont = "Calibri (Headings)";
     const bodyFont = "Cambria (Body)";
 
@@ -561,3 +561,5 @@ export const createWordFileStructure = () => {
 
     return doc;
 }
+
+export default createWordFileStructure;

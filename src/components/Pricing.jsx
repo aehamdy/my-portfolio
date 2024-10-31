@@ -1,4 +1,4 @@
-import { plans } from "../data/pricing";
+import plans from "../data/pricing";
 import SectionTitle from "./SectionTitle";
 import PlanCard from "./PlanCard";
 import SeparatorToRight from "./SeparatorToRight";

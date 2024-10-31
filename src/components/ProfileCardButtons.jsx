@@ -1,4 +1,4 @@
-import { handleFileDownload } from "../data/handleFileDownload";
+import handleFileDownload from "../data/handleFileDownload";
 import { downloadIcon, sendIcon } from "../data/icons";
 
 function ProfileCardButtons() {

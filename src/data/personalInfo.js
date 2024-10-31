@@ -1,4 +1,4 @@
-export const personalInfo = {
+const personalInfo = {
     hiringStatus: true,
     firstName: 'Ahmed',
     middleName: 'Essam',
@@ -100,3 +100,5 @@ keyStrengths: [
     references: ['Available upon request.'],
 
 }
+
+export default personalInfo;

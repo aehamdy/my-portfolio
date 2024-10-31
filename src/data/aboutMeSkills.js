@@ -9,7 +9,7 @@ import {
   tailwindIcon,
 } from "./icons";
 
-export const aboutMeSkills = [
+const aboutMeSkills = [
   { value: "HTML", icon: htmlIcon },
   { value: "CSS", icon: cssIcon },
   { value: "SASS", icon: sassIcon },
@@ -19,3 +19,5 @@ export const aboutMeSkills = [
   { value: "Git", icon: gitIcon },
   { value: "Github", icon: githubIconTwo },
 ];
+
+export default aboutMeSkills;

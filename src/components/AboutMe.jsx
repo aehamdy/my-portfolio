@@ -1,4 +1,4 @@
-import { personalInfo } from "../data/personalInfo";
+import personalInfo from "../data/personalInfo";
 import AboutMeList from "./AboutMeList";
 import AboutMeSkills from "./AboutMeSkills";
 import SectionTitle from "./SectionTitle";

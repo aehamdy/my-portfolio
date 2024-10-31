@@ -1,5 +1,5 @@
 import SpecialHeading from "./SpecialHeading";
-import { education } from "../data/education";
+import education from "../data/education";
 import { educationIcon } from "../data/icons";
 
 const icon = educationIcon;

@@ -1,6 +1,6 @@
 import { chessQueenIcon, rocketIcon } from "./icons";
 
-export const plans = [
+const plans = [
   {
     type: "popular",
     icon: chessQueenIcon,
@@ -26,3 +26,5 @@ export const plans = [
     ],
   },
 ];
+
+export default plans;

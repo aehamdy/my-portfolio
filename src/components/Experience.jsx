@@ -1,7 +1,6 @@
 import SpecialHeading from "./SpecialHeading";
-import { experiences } from "../data/experiences";
+import experiences from "../data/experiences";
 import { experienceIcon } from "../data/icons";
-import SeparatorToRight from "./SeparatorToRight";
 
 const icon = experienceIcon;
 

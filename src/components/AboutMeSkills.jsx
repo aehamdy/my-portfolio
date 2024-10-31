@@ -1,4 +1,4 @@
-import { aboutMeSkills } from "../data/aboutMeSkills";
+import aboutMeSkills from "../data/aboutMeSkills";
 import SkillsIcon from "./SkillsIcon";
 
 function AboutMeSkills() {

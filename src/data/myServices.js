@@ -1,4 +1,4 @@
-export const myServices = [
+const myServices = [
     {type: 'code', heading: "Custom Web Development", content: "I develop custom websites tailored to your unique needs, bringing your vision to life with clean, well-structured code."},
     {type: 'page', heading: "Single Page Applications (SPA)", content: "Using React JS, I build dynamic, high-performance single-page applications that offer fast and interactive user experiences."},
     {type: 'responsive', heading: "Responsive Web Design", content: "I create responsive, mobile-first websites using HTML, CSS, and JavaScript, ensuring seamless user experiences across all devices."},
@@ -8,3 +8,5 @@ export const myServices = [
     // {heading: "Cross-Browser Compatibility", content: "I ensure that your website functions flawlessly across all modern web browsers, improving accessibility for a wider audience."},
     // {heading: "Version Control with Git", content: "I maintain clean and organized codebases through Git, enabling smooth collaboration and version management throughout the development process."},
 ]
+
+export default myServices

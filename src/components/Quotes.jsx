@@ -1,4 +1,4 @@
-import { quotes } from "../data/quotes";
+import quotes from "../data/quotes";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 import QuoteCard from "./QuoteCard";

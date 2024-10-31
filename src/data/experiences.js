@@ -1,4 +1,4 @@
-export const experiences = [
+const experiences = [
     {
         heading: 'Freelance Frontend Developer',
         dateFrom: '2024',
@@ -21,3 +21,5 @@ export const experiences = [
         ]
     },
 ];
+
+export default experiences;

@@ -1,7 +1,9 @@
-import { personalInfo } from "./personalInfo";
+import personalInfo from "./personalInfo";
 
-export const aboutMeList = [
+const aboutMeList = [
     {residence: personalInfo.residence},
     {location: personalInfo.location},
     {languages: personalInfo.languages},
 ]
+
+export default aboutMeList;

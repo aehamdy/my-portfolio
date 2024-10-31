@@ -1,4 +1,4 @@
-import { myServices } from "../data/myServices";
+import myServices from "../data/myServices";
 import SectionTitle from "./SectionTitle";
 import SeparatorToBottom from "./SeparatorToBottom";
 import SeparatorToRight from "./SeparatorToRight";

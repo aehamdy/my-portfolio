@@ -1,4 +1,4 @@
-import { getInTouchList } from "../data/getInTouchList";
+import getInTouchList from "../data/getInTouchList";
 import DetailPanel from "./DetailPanel";
 
 function GetInTouchList() {

@@ -1,4 +1,4 @@
-export const education = [
+const education = [
     {
         dateFrom: '',
         dateTo: 'Graduated in 2020',
@@ -32,3 +32,5 @@ export const education = [
         ],
     },
 ]
+
+export default education;

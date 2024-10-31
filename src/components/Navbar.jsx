@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { navItems } from "../data/navbar";
+import navItems from "../data/navbar";
 import SeparatorCenter from "./SeparatorCenter";
 import SeparatorToRight from "./SeparatorToRight";
 

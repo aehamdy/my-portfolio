@@ -1,5 +1,7 @@
+import personalInfo from "../data/personalInfo";
+
 function HireAvailability() {
-  const availability = true;
+  const availability = personalInfo.hiringStatus;
 
   return (
     <div className="flex md:flex-col items-center gap-2 mx-auto duration-short">

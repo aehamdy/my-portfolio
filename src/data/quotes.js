@@ -1,4 +1,4 @@
-export const quotes = [
+const quotes = [
     {
         img: '',
         author: 'Paul Cookson',
@@ -35,3 +35,5 @@ export const quotes = [
     //     content: 'No one comes to your website to be entertained. They have questions they think you can answer. Content answers questions.',
     // },
 ]
+
+export default quotes;

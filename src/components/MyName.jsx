@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { personalInfo } from "../data/personalInfo";
+import personalInfo from "../data/personalInfo";
 
 function MyName({ textStyle }) {
   return (
