@@ -7,7 +7,7 @@ import spentrackerApp from "../assets/projects/spentracker.webp";
 import kasperTemplate from "../assets/projects/Kasper_Template.webp";
 import leonTemplate from "../assets/projects/Leon_Template.webp";
 
-export const projectCategories = ['all', 'video', 'link', 'image', 'gallery', 'content'];
+export const projectCategories = ['all', 'web app', 'landing page', 'api', 'single page app', 'portfolio'];
 
 export const projects = [
     {
@@ -17,7 +17,7 @@ export const projects = [
         description: 'gallery',
         technologies: ['React JS', 'Tailwind CSS'],
         link: 'https://todomoro.vercel.app/',
-        category: ['gallery',],
+        category: ['web app', 'single page app'],
     },
     {
         image: weatherApp,
@@ -26,7 +26,7 @@ export const projects = [
         description: 'image',
         technologies: ['React JS', 'Tailwind CSS'],
         link: 'https://sky-cast-wine.vercel.app/',
-        category: ['image',],
+        category: ['web app', 'api', 'single page app'],
     },
     {
         image: gymTeam,
@@ -35,7 +35,7 @@ export const projects = [
         description: 'image',
         technologies: ['React JS', 'Tailwind CSS'],
         link: 'https://gymteam-landingpage.vercel.app/',
-        category: ['image',], //React JS & Tailwinc CSS
+        category: ['landing page',], //React JS & Tailwinc CSS
     },
     {
         image: spentrackerApp,
@@ -44,7 +44,7 @@ export const projects = [
         description: 'video',
         technologies: ['HTML', 'SASS', 'JavaScript'],
         link: 'https://aehamdy.github.io/expenses-tracker/',
-        category: ['video', 'link'], //HTML SASS JS
+        category: ['web app', 'single page app'], //HTML SASS JS
     },
     {
         image: noteTakingApp,
@@ -53,7 +53,7 @@ export const projects = [
         description: 'link',
         technologies: ['HTML', 'CSS', 'JavaScript'],
         link: 'https://aehamdy.github.io/note_taking_app_final_js_project_almdrasa/',
-        category: ['link'],
+        category: ['web app', 'single page app'],
     },
     {
         image: agencyTemplate,
@@ -62,7 +62,7 @@ export const projects = [
         description: 'Mobile gallery app',
         technologies: ['HTML', 'CSS'],
         link: 'https://aehamdy.github.io/elzero-html-css-template-three/',
-        category: ['gallery', 'image'],
+        category: ['landing page',],
     },
     {
         image: kasperTemplate,
@@ -71,7 +71,7 @@ export const projects = [
         description: 'content',
         technologies: ['HTML', 'CSS'],
         link: 'https://aehamdy.github.io/kasper-html-css-template/',
-        category: ['',],
+        category: ['landing page',],
     },
     {
         image: leonTemplate,
@@ -80,6 +80,6 @@ export const projects = [
         description: 'content',
         technologies: ['HTML', 'CSS'],
         link: 'https://aehamdy.github.io/leon-html-css-template/',
-        category: ['video',],
+        category: ['landing page',],
     },
 ]

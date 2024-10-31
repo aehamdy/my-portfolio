@@ -19,9 +19,14 @@ function ProjectCategoriesButton({ item, setSelectedCategory }) {
       />
       <label
         htmlFor={item}
-        className={`font-normal text-sm text-dark-gray dark:text-white-85 hover:text-accent peer-checked:text-accent cursor-pointer select-none duration-300`}
+        className={`font-normal text-xs md:text-sm text-dark-gray dark:text-white-85 hover:text-accent peer-checked:text-accent cursor-pointer select-none duration-300`}
       >
-        {item.charAt(0).toUpperCase() + item.slice(1)}
+        {item.toLowerCase() === "api"
+          ? item.toUpperCase()
+          : item
+              .split(" ")
+              .map((word, i) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ")}
       </label>
     </div>
   );

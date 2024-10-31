@@ -119,9 +119,8 @@ export default App;
 // [x] add icon as favicon
 // [x] ensure the favicon to be in both dark/light mode of the user's browser
 // [x] make all constants/variables comes from one file
+// [x] create proper image to each one of your projects
+// [x] add your real projects
 
-// [ ] create proper image to each one of your projects
-// [ ] add your real projects
 // [ ] add your real photo
 // [ ] add animation to each project when filter changes
-// [ ] make the functionality of setting visible section and set active section to be dynamic using the constant array of navbar.jsx
