@@ -121,8 +121,8 @@ export default App;
 // [x] make all constants/variables comes from one file
 // [x] create proper image to each one of your projects
 // [x] add your real projects
+// [x] make each project to display the name of the project itself like Expenses Tracker's name to be SpenTracker
+// [x] add simple discribtion to each project that describes its purpose
 
-// [ ] make each project to display the name of the project itself like Expenses Tracker's name to be SpenTracker
-// [ ] add simple discribtion to each project that describes its purpose
 // [ ] add your real photo
 // [ ] add animation to each project when filter changes

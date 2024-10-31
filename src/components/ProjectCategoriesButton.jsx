@@ -16,7 +16,6 @@ function ProjectCategoriesButton({
         id={item}
         value={item}
         onChange={handleChange}
-        checked={item === selectedCategory}
         defaultChecked={item === "all"}
         className="hidden peer"
       />
