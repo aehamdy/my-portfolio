@@ -45,7 +45,7 @@ export const personalInfo = {
             addToDownloadableCv: true,
         },
         {
-            name: 'React JS + Tailwind CSS Landing Pages',
+            name: ' Landing Pages (React JS + Tailwind CSS)',
             liveLink: 'https://gymteam-landingpage.vercel.app/',
             githubRepo: 'https://github.com/aehamdy/gymteam_landingpage',
             description: 'Designed and developed various landing pages using React JS and Tailwind CSS, ensuring responsiveness across devices.',
@@ -65,11 +65,11 @@ export const personalInfo = {
             addToDownloadableCv: true,
         },
         {
-            name: 'HTML + CSSLanding Pages',
+            name: 'Landing Pages (HTML + SASS)',
             liveLink: 'https://aehamdy.github.io/elzero-html-css-template-three/',
-            githubRepo: '',
+            githubRepo: 'https://github.com/aehamdy/elzero-html-css-template-three',
             description: 'Designed and developed various landing pages using modern design practices, ensuring responsiveness across devices.',
-            technologies: ['HTML', 'CSS',],
+            technologies: ['HTML', 'SASS',],
             challengeOvercome: 'Improved web performance and user experience through optimized media queries and clean, maintainable code.',
             addToViewableCv: false,
             addToDownloadableCv: true,
