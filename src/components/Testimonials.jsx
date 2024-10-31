@@ -1,4 +1,4 @@
-import { testimonials } from "../data/testimonials";
+import testimonials from "../data/testimonials";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";

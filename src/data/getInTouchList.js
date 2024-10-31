@@ -1,4 +1,4 @@
-import { personalInfo } from "./personalInfo";
+import personalInfo from "./personalInfo";
 
 const getInTouchList = [
     {residence: personalInfo.residence},
