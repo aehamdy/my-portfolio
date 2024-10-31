@@ -19,8 +19,7 @@ function ProjectCard({ project }) {
           </h4>
 
           <span className="text-sm text-light-gray">
-            {project.description.charAt(0).toUpperCase() +
-              project.description.slice(1).toLowerCase()}
+            {project.technologies.join(" + ")}
           </span>
         </div>
       </a>
