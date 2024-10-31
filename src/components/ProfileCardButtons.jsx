@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { handleFileDownload } from "../data/handleFileDownload";
 import { downloadIcon, sendIcon } from "../data/icons";
 

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import History from "./History";
 import Quotes from "./Quotes";
 import SectionTitle from "./SectionTitle";

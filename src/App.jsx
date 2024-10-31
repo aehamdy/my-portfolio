@@ -1,12 +1,11 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
 import AboutSection from "./components/AboutSection";
 import ResumeSection from "./components/ResumeSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
-import CvModal from "./components/CvModal";
 import PortfolioLoader from "./components/PortfolioLoader";
 import useSectionVisibility from "./hooks/useSectionVisibility";
 import useSVGAnimation from "./hooks/useSVGAnimation";
@@ -17,11 +16,11 @@ function App() {
     useSectionVisibility();
   // const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
-  useSVGAnimation(); // Initialize SVG animation hook
-  const loading = usePageLoader(); // Initialize loading state
-
   // const openCvModal = () => setIsCvModalOpen(true);
   // const closeCvModal = () => setIsCvModalOpen(false);
+
+  useSVGAnimation(); // Initialize SVG animation hook
+  const loading = usePageLoader(); // Initialize loading state
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";

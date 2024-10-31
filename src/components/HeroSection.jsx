@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import myImage from "../assets/my-image.jpg";
 import ProfileInfoSection from "./ProfileInfoSection";
 

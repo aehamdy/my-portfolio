@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import MyName from "./MyName";
 import ProfileCardButtons from "./ProfileCardButtons";
 import SocialMediaIcons from "./SocialMediaIcons";
