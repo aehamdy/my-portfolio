@@ -12,8 +12,7 @@ import useSVGAnimation from "./hooks/useSVGAnimation";
 import usePageLoader from "./hooks/usePageLoader";
 
 function App() {
-  const { activeSection, visibleSection, handleSectionChange } =
-    useSectionVisibility();
+  const { visibleSection, handleSectionChange } = useSectionVisibility();
   // const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
   // const openCvModal = () => setIsCvModalOpen(true);
