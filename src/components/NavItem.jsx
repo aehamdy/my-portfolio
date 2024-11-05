@@ -10,10 +10,10 @@ function NavItem({ index, item, onSectionChange, navItems})  {
           onClick={() => onSectionChange(item.value)}
           className="group flex flex-col items-center gap-2 p-2"
         >
-          <span className="text-lg group-hover:text-accent duration-short">
+          <span className="text-lg group-hover:text-accent duration-v-short">
             {item.icon}
           </span>
-          <span className="text-xs group-hover:text-accent duration-short">
+          <span className="text-xs group-hover:text-accent duration-v-short">
             {item.value.toUpperCase()}
           </span>
         </a>

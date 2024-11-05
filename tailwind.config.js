@@ -60,6 +60,7 @@ module.exports = {
       },
       transitionDuration: {
         short: '500ms',
+        'v-short': '250ms',
       },
       animation: {
         fadeInUp: 'fadeInUp 0.7s ease forwards',
