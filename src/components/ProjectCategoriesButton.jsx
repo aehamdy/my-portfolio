@@ -21,7 +21,7 @@ function ProjectCategoriesButton({
       />
       <label
         htmlFor={item}
-        className={`font-normal text-xs md:text-sm cursor-pointer select-none duration-300
+        className={`font-normal text-[0.67rem] sm:text-xs md:text-sm cursor-pointer select-none duration-300
           ${
             item === selectedCategory
               ? "text-accent"
