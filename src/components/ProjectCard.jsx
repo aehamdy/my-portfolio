@@ -21,9 +21,6 @@ function ProjectCard({ project }) {
           <span className="text-sm text-light-gray">
             {project.simpleDiscribtion}
           </span>
-          <span className="text-sm text-light-gray">
-            {project.technologies.join(" + ")}
-          </span>
         </div>
       </a>
     </article>
