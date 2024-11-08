@@ -3,6 +3,7 @@ import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 import QuoteCard from "./QuoteCard";
 import SeparatorToRight from "./SeparatorToRight";
+import { arrowLeft, arrowRight } from "../data/icons";
 
 function Quotes() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,7 +28,11 @@ function Quotes() {
       <div className="mt-horizontal-separator-mt">
         <SeparatorToRight />
       </div>
-      <div className="flex flex-col items-center gap-8 mt-6 px-section-padding">
+      <div className="relative flex flex-col items-center gap-8 mt-6 px-section-padding">
+      <div className="absolute top-1/2 w-[90%] flex justify-between mx-8 z-[5]">
+          <button className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowLeft}</button>
+          <button className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowRight}</button>
+        </div>
         <div className="flex w-full overflow-hidden">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
