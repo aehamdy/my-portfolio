@@ -31,6 +31,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { LiaPagerSolid } from "react-icons/lia";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 //MiniProfile Icons
 export const sunIcon = <IoSunnyOutline />;
@@ -88,3 +89,7 @@ export const experienceIcon = <FaBriefcase />;
 
 //Education Icon
 export const educationIcon = <FaGraduationCap />;
+
+// Arrow Icons
+export const arrowRight = <SlArrowRight />;
+export const arrowLeft = <SlArrowLeft />;
