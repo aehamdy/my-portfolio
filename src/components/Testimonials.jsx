@@ -3,6 +3,7 @@ import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import SeparatorToRight from "./SeparatorToRight";
+import { arrowLeft, arrowRight } from "../data/icons";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,12 +23,16 @@ function Testimonials() {
   }, []);
 
   return (
-    <article className="flex flex-col mt-section-margin">
+    <section className="flex flex-col mt-section-margin">
       <SectionTitle title="testimonials" />
       <div className="mt-horizontal-separator-mt">
         <SeparatorToRight />
       </div>
-      <div className="flex flex-col items-center gap-6 mt-6 px-section-padding">
+      <div className="relative flex flex-col items-center gap-6 mt-6 px-section-padding">
+        <div className="absolute top-1/2 w-[90%] flex justify-between mx-8 z-[5]">
+          <button className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowLeft}</button>
+          <button className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowRight}</button>
+        </div>
         <div className="flex w-full overflow-hidden select-none">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
@@ -52,7 +57,7 @@ function Testimonials() {
           ))}
         </div>
       </div>
-    </article>
+    </section>
   );
 }
 
