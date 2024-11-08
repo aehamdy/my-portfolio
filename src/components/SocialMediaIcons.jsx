@@ -1,12 +1,13 @@
 import { githubIcon, linkedinIcon } from "../data/icons";
+import personalInfo from "../data/personalInfo";
 
 const icons = [
   {
-    link: "https://github.com/",
+    link: personalInfo.social.github,
     icon: githubIcon,
   },
   {
-    link: "https://linkedin.com",
+    link: personalInfo.social.linkedin,
     icon: linkedinIcon,
   },
 ];
