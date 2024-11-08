@@ -65,6 +65,16 @@
 
   scroll-behavior: smooth;
   transition-duration: 200ms;
+
+
+  --bg-color: #111;
+  --txt-color: #fff;
+  --color-c1: red;
+  --color-c2: blue;
+  --offset-c1: 3px;
+  --offset-c2: 2px;
+  --lay-c1: 2px;
+  --lay-c2: 2px;
 }
 
 :root.dark {
@@ -148,6 +158,7 @@ body.dark {
 .lights {
   fill: var(--accent-color-80);
 }
+
 
 /* LoadingAnimation */
 .lds-spinner {
@@ -387,3 +398,405 @@ body.dark {
     transform: translateY(100%); /* Continue moving down out of view */
   }
 }
+
+
+/* ========================================= */
+/* Glitch Animation*/
+.glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/my-image.jpg) center/cover no-repeat;
+  transform: translateX(10px);
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  background-blend-mode: difference;
+}
+
+.glitch:after, .glitch:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: translateX(10px);
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  background-blend-mode: difference;
+}
+
+.glitch:before {
+  animation-name: glitchAnim1;
+}
+.glitch:after {
+  animation-name: glitchAnim2;
+}
+
+@keyframes glitchAnim1 {
+  0%, 25.1%, 100% {
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+  4% {
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+  }
+  5% {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  9% {
+  clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+  }
+  10% {
+  clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+  }
+  14% {
+  clip-path: polygon(0 40%, 100% 40%, 100% 50%, 0 50%);
+  }
+  15% {
+  clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+  }
+  19% {
+  clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+  }
+  20% {
+  clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+  }
+  24% {
+  clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%);
+  }
+  25% {
+  clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+  
+}
+
+@keyframes glitchAnim2 {
+  0%, 25.1%, 100% {
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+  4% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%);
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  5% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    background-color: transparent;
+  }
+  9% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+  }
+  10% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+  }
+  14% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 50%, 0 50%);
+  }
+  15% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+  }
+  19% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+  }
+  20% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+  }
+  24% {
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+
+/* image's parts */
+/* .glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/my-image.jpg') center/cover no-repeat;
+  animation: glitchEffect 3s ease-in-out 1;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+.glitch:before,
+.glitch:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.6;
+}
+
+.glitch:before {
+  animation: glitchEffect 3s ease-in-out 1;
+}
+
+.glitch:after {
+  animation: glitchEffect2 2.8s ease-in-out 1;
+}
+
+@keyframes glitchEffect {
+  0%, 25%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  5% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  15% {
+    clip-path: inset(60% 0 20% 0);
+  }
+  35% {
+    clip-path: inset(10% 0 75% 0);
+  }
+  50% {
+    clip-path: inset(40% 0 40% 0);
+  }
+  75% {
+    clip-path: inset(70% 0 10% 0);
+  }
+}
+
+@keyframes glitchEffect2 {
+  0%, 20%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  10% {
+    clip-path: inset(30% 0 50% 0);
+  }
+  40% {
+    clip-path: inset(50% 0 20% 0);
+  }
+  60% {
+    clip-path: inset(15% 0 70% 0);
+  }
+  85% {
+    clip-path: inset(5% 0 80% 0);
+  }
+} */
+
+/* 
+  2nd parts animation
+ */
+
+/* .glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/my-image.jpg') center/cover no-repeat;
+  animation: glitchEffect 3s ease-in-out 1;
+  mix-blend-mode: difference;
+}
+
+.glitch:before,
+.glitch:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.5;
+}
+
+.glitch:before {
+  animation: glitchEffect1 3s ease-in-out 1;
+}
+
+.glitch:after {
+  animation: glitchEffect2 3s ease-in-out 1;
+}
+
+@keyframes glitchEffect {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  5% {
+    clip-path: inset(10% 0 40% 0);
+  }
+  15% {
+    clip-path: inset(20% 0 50% 0);
+  }
+  25% {
+    clip-path: inset(5% 0 70% 0);
+  }
+  40% {
+    clip-path: inset(30% 0 50% 0);
+  }
+  60% {
+    clip-path: inset(40% 0 20% 0);
+  }
+  80% {
+    clip-path: inset(10% 0 60% 0);
+  }
+}
+
+@keyframes glitchEffect1 {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  10% {
+    clip-path: inset(10% 0 40% 0);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  20% {
+    clip-path: inset(30% 0 50% 0);
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  30% {
+    clip-path: inset(40% 0 60% 0);
+    background-color: rgba(0, 0, 255, 0.2);
+  }
+  50% {
+    clip-path: inset(50% 0 20% 0);
+    background-color: rgba(255, 255, 0, 0.1);
+  }
+}
+
+@keyframes glitchEffect2 {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  10% {
+    clip-path: inset(15% 0 45% 0);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  20% {
+    clip-path: inset(25% 0 55% 0);
+    background-color: rgba(0, 255, 0, 0.3);
+  }
+  30% {
+    clip-path: inset(35% 0 65% 0);
+    background-color: rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    clip-path: inset(40% 0 60% 0);
+    background-color: rgba(255, 0, 255, 0.2);
+  }
+} */ 
+
+/* 
+  2nd parts animation
+ */
+
+/* .glitch {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/my-image.jpg') center/cover no-repeat;
+  animation: glitchEffect 3s ease-in-out 1;
+}
+
+.glitch::before,
+.glitch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.glitch::before {
+  animation: glitch1 3s ease-in-out 1;
+}
+
+.glitch::after {
+  animation: glitch2 3s ease-in-out 1;
+}
+
+@keyframes glitchEffect {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  5% {
+    clip-path: inset(10% 0 20% 0);
+  }
+  15% {
+    clip-path: inset(25% 0 40% 0);
+  }
+  25% {
+    clip-path: inset(30% 0 60% 0);
+  }
+  40% {
+    clip-path: inset(40% 0 50% 0);
+  }
+  60% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  80% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes glitch1 {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  8% {
+    clip-path: inset(5% 0 40% 0);
+  }
+  14% {
+    clip-path: inset(20% 0 50% 0);
+  }
+  18% {
+    clip-path: inset(25% 0 60% 0);
+  }
+  24% {
+    clip-path: inset(30% 0 40% 0);
+    background-color: rgba(0, 255, 0, 0.3);
+  }
+  32% {
+    clip-path: inset(40% 0 50% 0);
+  }
+  45% {
+    clip-path: inset(35% 0 55% 0);
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+}
+
+@keyframes glitch2 {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  10% {
+    clip-path: inset(10% 0 40% 0);
+  }
+  20% {
+    clip-path: inset(30% 0 60% 0);
+  }
+  30% {
+    clip-path: inset(40% 0 50% 0);
+    background-color: rgba(255, 0, 255, 0.2);
+  }
+  35% {
+    clip-path: inset(50% 0 30% 0);
+  }
+  50% {
+    clip-path: inset(60% 0 40% 0);
+    background-color: rgba(0, 0, 255, 0.3);
+  }
+  60% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+  */
+
