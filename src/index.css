@@ -401,15 +401,14 @@ body.dark {
 
 
 /* ========================================= */
-/* Glitch Animation*/
-.glitch {
+/* Glitch Animation */
+/* .glitch {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url(./assets/my-image.jpg) center/cover no-repeat;
-  /* transform: translateX(10px); */
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -513,7 +512,10 @@ body.dark {
   25% {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
-}
+} */
+
+
+
 
 /* image's parts */
 /* .glitch {
@@ -690,8 +692,11 @@ body.dark {
   }
 } */ 
 
+
+
+
 /* 
-  2nd parts animation
+  3rd parts animation
  */
 
 /* .glitch {
@@ -799,4 +804,3 @@ body.dark {
   }
 }
   */
-
