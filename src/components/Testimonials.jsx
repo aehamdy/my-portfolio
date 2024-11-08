@@ -62,8 +62,8 @@ function Testimonials() {
               onClick={() => goToSlide(i)}
               className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
                 currentIndex === i
-                  ? "bg-accent"
-                  : "bg-transparent border border-accent"
+                  ? "bg-accent w-[1.2rem]"
+                  : "bg-transparent border border-accent duration-v-short"
               }`}
             ></span>
           ))}
