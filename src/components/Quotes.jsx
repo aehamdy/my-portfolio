@@ -62,8 +62,8 @@ function Quotes() {
               key={i}
               onClick={() => goToQuote(i)}
               className={`w-2.5 h-2.5 ${
-                i === currentIndex ? "bg-accent" : ""
-              } border border-accent rounded-full cursor-pointer duration-short`}
+                i === currentIndex ? "bg-accent w-[1.2rem]" : ""
+              } border border-accent rounded-full cursor-pointer duration-v-short`}
             ></span>
           ))}
         </div>
