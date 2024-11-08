@@ -12,6 +12,12 @@ function Testimonials() {
     setCurrentIndex(index);
   };
 
+  const handleLeftArrow = () => {
+    setCurrentIndex(prevIndex => 
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    )
+  }
+
   const handleRightArrow = () => {
     setCurrentIndex(prevIndex => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
@@ -36,7 +42,7 @@ function Testimonials() {
       </div>
       <div className="relative flex flex-col items-center gap-6 mt-6 px-section-padding">
         <div className="absolute top-1/2 w-[90%] flex justify-between mx-8 z-[5]">
-          <button onClick className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowLeft}</button>
+          <button onClick={handleLeftArrow} className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowLeft}</button>
           <button onClick={handleRightArrow} className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowRight}</button>
         </div>
         <div className="flex w-full overflow-hidden select-none">
