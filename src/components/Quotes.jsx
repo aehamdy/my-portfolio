@@ -8,6 +8,12 @@ import { arrowLeft, arrowRight } from "../data/icons";
 function Quotes() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleRightArrow = () => {
+    setCurrentIndex(prevIndex => 
+      prevIndex === quotes.length - 1 ? 0 : prevIndex + 1
+    )
+  }
+
   const goToQuote = (index) => {
     setCurrentIndex(index);
   };
@@ -31,7 +37,7 @@ function Quotes() {
       <div className="relative flex flex-col items-center gap-8 mt-6 px-section-padding">
       <div className="absolute top-1/2 w-[90%] flex justify-between mx-8 z-[5]">
           <button className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowLeft}</button>
-          <button className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowRight}</button>
+          <button onClick={handleRightArrow} className="text-medium-gray hover:text-dark-gray dark:text-neutral-gray dark:hover:text-light-gray-dd cursor-pointer">{arrowRight}</button>
         </div>
         <div className="flex w-full overflow-hidden">
           <div
