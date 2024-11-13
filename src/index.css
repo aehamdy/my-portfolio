@@ -81,19 +81,19 @@
   background-color: var(--dark-bg);
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
+  :root {
+    scroll-padding-top: calc(var(--header-height) + 20px);
+  }
+}
+
+@media (481px <= width <= 767px) {
   :root {
     scroll-padding-top: calc(var(--header-height) + 15px);
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  :root {
-    scroll-padding-top: calc(var(--header-height) + 15px);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
+@media (768px <= width <= 991px) {
   :root {
     scroll-padding-top: 15px;
   }
