@@ -51,7 +51,7 @@ function App() {
           </div>
         </div>
 
-        {/* Display starting from larger screen and larger */}
+        {/* Display starting from large screen and larger */}
         <div className="parent hidden lg:block relative lg:h-full lg:my-6">
           <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid lg:grid-cols-5 lg:gap-4 lg:h-full overflow-hidden">
