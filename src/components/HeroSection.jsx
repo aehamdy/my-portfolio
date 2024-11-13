@@ -1,4 +1,4 @@
-import myImage from "../assets/my-image.jpg";
+import myImage from "../assets/personal-image.webp";
 import ProfileInfoSection from "./ProfileInfoSection";
 
 function HeroSection() {
