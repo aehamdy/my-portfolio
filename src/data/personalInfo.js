@@ -1,3 +1,5 @@
+import { agencyTemplate, gymTeam, kasperTemplate, leonTemplate, noteTakingApp, spentrackerApp, todomoroApp, weatherApp } from "./projectsImages";
+
 const personalInfo = {
     hiringStatus: true,
     firstName: 'Ahmed',
@@ -28,7 +30,7 @@ const personalInfo = {
         {
             name: 'Todomoro App',
             cvName: 'Todo App with Pomodoro Timer',
-            image: '',
+            image: todomoroApp,
             altText: "project's image",
             simpleDiscribtion: "Todo App + Pomodoro Technique Timer + Normal Timer",
             liveLink: 'https://todomoro.vercel.app',
@@ -44,7 +46,7 @@ const personalInfo = {
         {
             name: 'SkyCast',
             cvName: 'Weather App',
-            image: '',
+            image: weatherApp,
             altText: "project's image",
             simpleDiscribtion: "Weather Forecast App",
             liveLink: 'https://sky-cast-wine.vercel.app',
@@ -60,7 +62,7 @@ const personalInfo = {
         {
             name: 'GymTeam',
             cvName: 'Landing Pages (React JS + Tailwind CSS)',
-            image: '',
+            image: gymTeam,
             altText: "project's image",
             simpleDiscribtion: "GYM Landing Page",
             liveLink: 'https://gymteam-landingpage.vercel.app',
@@ -76,7 +78,7 @@ const personalInfo = {
         {
             name: 'Noties',
             cvName: 'Note-Taking App',
-            image: '',
+            image: noteTakingApp,
             altText: "project's image",
             simpleDiscribtion: "Note Taking App",
             liveLink: 'https://aehamdy.github.io/note_taking_app_final_js_project_almdrasa',
@@ -92,7 +94,7 @@ const personalInfo = {
         {
             name: 'SpenTracker',
             cvName: 'Spending Tracker App',
-            image: '',
+            image: spentrackerApp,
             altText: "project's image",
             simpleDiscribtion: "Expenses Tracker App",
             liveLink: 'https://aehamdy.github.io/expenses-tracker',
@@ -108,7 +110,7 @@ const personalInfo = {
         {
             name: 'Agency Template',
             cvName: 'Landing Pages (HTML + CSS)',
-            image: '',
+            image: agencyTemplate,
             altText: "project's image",
             simpleDiscribtion: "Agency Landing Page",
             liveLink: 'https://aehamdy.github.io/elzero-html-css-template-three',
@@ -124,7 +126,7 @@ const personalInfo = {
         {
             name: 'Kasper Template',
             cvName: 'Landing Pages (HTML + CSS)',
-            image: '',
+            image: kasperTemplate,
             altText: "project's image",
             simpleDiscribtion: "Agency Landing Page",
             liveLink: 'https://aehamdy.github.io/kasper-html-css-template',
@@ -140,7 +142,7 @@ const personalInfo = {
         {
             name: 'Leon Template',
             cvName: 'Landing Pages (HTML + CSS)',
-            image: '',
+            image: leonTemplate,
             altText: "project's image",
             simpleDiscribtion: "Agency Landing Page",
             liveLink: 'https://aehamdy.github.io/kasper-html-css-template',
