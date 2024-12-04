@@ -10,12 +10,12 @@ function ProjectList({ selectedCategory }) {
 
   const filteredProjects = personalInfo.projects.filter((project) => {
     if (selectedCategory.toLowerCase() === "all") {
-      return true;
+      return project.addToPortfolioProjects;
     } else {
       project.category.includes(selectedCategory.toLowerCase()) &&
         projectsArray.push(project);
 
-      return project.category.includes(selectedCategory.toLowerCase());
+      return project.addToPortfolioProjects && project.category.includes(selectedCategory.toLowerCase());
     }
   });
 
