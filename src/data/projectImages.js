@@ -6,6 +6,7 @@ import noteTakingApp from "../assets/projects/noteapp.webp";
 import spentrackerApp from "../assets/projects/spentracker.webp";
 import kasperTemplate from "../assets/projects/Kasper_Template.webp";
 import leonTemplate from "../assets/projects/Leon_Template.webp";
+import gleamyAgency from "../assets/projects/gleamy-agency.webp"
 
 export {
     todomoroApp,
@@ -16,4 +17,5 @@ export {
     spentrackerApp,
     kasperTemplate,
     leonTemplate,
+    gleamyAgency,
 }

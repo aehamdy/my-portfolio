@@ -1,4 +1,4 @@
-import { agencyTemplate, gymTeam, kasperTemplate, leonTemplate, noteTakingApp, spentrackerApp, todomoroApp, weatherApp } from "./projectsImages";
+import { agencyTemplate, gleamyAgency, gymTeam, kasperTemplate, leonTemplate, noteTakingApp, spentrackerApp, todomoroApp, weatherApp } from "./projectImages";
 
 const personalInfo = {
     hiringStatus: true,
@@ -27,6 +27,22 @@ const personalInfo = {
     ],
     
     projects: [
+        {
+            name: 'Gleamy Agency',
+            cvName: 'Agency Website',
+            image: gleamyAgency,
+            altText: "project's image",
+            simpleDiscribtion: "Multipage Website",
+            liveLink: 'https://gleamy-agency.vercel.app',
+            githubRepo: 'https://github.com/aehamdy/gleamy-agency',
+            description: 'This React JS web application for a digital agency delivers a seamless user experience with dynamic pages for Home, Services, About Us, and Portfolio. Built with react-router-dom for smooth navigation and Tailwind CSS for modern styling, it features active link highlighting via NavLink. A robust error page handles invalid routes with a clear message, Home navigation, and automatic redirection. A reusable PageLayout component ensures consistent structure, dynamically rendering content through Outlet for efficiency and scalability.',
+            technologies: ['React JS', 'React-router-dom', 'Tailwind CSS'],
+            challengeOvercome: 'I crafted dynamic active link styling, developed a user-friendly error page with redirection, designed a reusable layout for consistency, and delivered a fully responsive interface using Tailwind CSS.',
+            category: ['web app', 'single page app'],
+            addToPortfolioProjects: true,
+            addToDownloadableCv: true,
+            addToViewableCv: false,
+        },
         {
             name: 'Todomoro App',
             cvName: 'Todo App with Pomodoro Timer',
