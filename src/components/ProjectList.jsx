@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { projects } from "../data/projects";
+import personalInfo from "../data/personalInfo";
+// import { projects } from "../data/projects";
 import NoProjectsFound from "./NoProjectsFound";
 import ProjectCard from "./ProjectCard";
 import SeparatorToBottom from "./SeparatorToBottom";
@@ -7,7 +8,7 @@ import SeparatorToBottom from "./SeparatorToBottom";
 function ProjectList({ selectedCategory }) {
   const projectsArray = [];
 
-  const filteredProjects = projects.filter((project) => {
+  const filteredProjects = personalInfo.projects.filter((project) => {
     if (selectedCategory.toLowerCase() === "all") {
       return true;
     } else {
