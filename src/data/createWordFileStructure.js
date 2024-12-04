@@ -258,7 +258,7 @@ const createWordFileStructure = () => {
                 new Paragraph({
                   children: [
                     new TextRun({
-                      text: project.name,
+                      text: project.cvName,
                       heading: "Heading2", // Set to Heading2 for project collapsibility
                       font: headingFont,
                       size: projectFontSize * 2,
