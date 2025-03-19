@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import handleFileDownload from "../data/handleFileDownload";
 import { downloadIcon, sendIcon } from "../data/icons";
 
-function ProfileCardButtons() {
+function ProfileCardButtons({ onSectionChange }) {
   return (
     <div className="relative w-full">
       <span className="absolute top-0 left-0 w-full h-[1px] bg-custom-gradient-to-r"></span>
@@ -18,6 +19,7 @@ function ProfileCardButtons() {
         <span className="absolute start-1/2 translate-x-[-50%] h-full w-[1px] bg-custom-gradient-to-b"></span>
         <a
           href="#contact"
+          onClick={() => onSectionChange("contact")}
           className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
         >
           Contact Me

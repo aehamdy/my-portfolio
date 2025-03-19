@@ -60,7 +60,7 @@ function App() {
           <Header onSectionChange={handleSectionChange} />
           <div className="low-parent main grid lg:grid-cols-5 lg:gap-4 lg:h-full overflow-hidden">
             <div className="hero col-span-2">
-              <HeroSection />
+              <HeroSection onSectionChange={handleSectionChange} />
             </div>
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
