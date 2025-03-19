@@ -32,6 +32,7 @@ import { LiaPagerSolid } from "react-icons/lia";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 //MiniProfile Icons
 export const sunIcon = <IoSunnyOutline />;
@@ -58,6 +59,7 @@ export const sassIcon = <DiSass />;
 export const jsIcon = <DiJsBadge />;
 export const reactIcon = <DiReact />;
 export const tailwindIcon = <SiTailwindcss />;
+export const framerMotionIcon = <TbBrandFramerMotion />;
 export const gitIcon = <DiGit />;
 export const githubIconTwo = <DiGithubBadge />;
 
