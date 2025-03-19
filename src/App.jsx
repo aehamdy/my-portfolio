@@ -18,9 +18,9 @@ function App() {
   useSVGAnimation(); // Initialize SVG animation hook
   const loading = usePageLoader(); // Initialize loading state
 
-  // Scrolls the content container to the top whenever the visible section changes
+  // Scrolls the content container to the top whenever the visible section changes on large screens
   useEffect(() => {
-    if (contentRef.current) {
+    if (window.innerWidth >= 1024 && contentRef.current) {
       contentRef.current.scrollTo({ top: 0 });
     }
   }, [visibleSection]);
