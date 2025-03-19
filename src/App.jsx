@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
 import AboutSection from "./components/AboutSection";
@@ -13,13 +13,17 @@ import usePageLoader from "./hooks/usePageLoader";
 
 function App() {
   const { visibleSection, handleSectionChange } = useSectionVisibility();
-  // const [isCvModalOpen, setIsCvModalOpen] = useState(false);
-
-  // const openCvModal = () => setIsCvModalOpen(true);
-  // const closeCvModal = () => setIsCvModalOpen(false);
+  const contentRef = useRef(null);
 
   useSVGAnimation(); // Initialize SVG animation hook
   const loading = usePageLoader(); // Initialize loading state
+
+  // Scrolls the content container to the top whenever the visible section changes
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTo({ top: 0 });
+    }
+  }, [visibleSection]);
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
@@ -60,7 +64,10 @@ function App() {
             </div>
 
             <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
-              <div className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 bg-section-light dark:bg-section-dark lg:overflow-auto lg:overflow-x-hidden lg:rounded-main-section">
+              <div
+                ref={contentRef}
+                className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 bg-section-light dark:bg-section-dark lg:overflow-auto lg:overflow-x-hidden lg:rounded-main-section"
+              >
                 {visibleSection.about && (
                   <div className="lg:animate-fadeInUp">
                     <AboutSection />
@@ -97,29 +104,3 @@ function App() {
 }
 
 export default App;
-
-//#TODOS:
-// [x] create only one file to contain all icons
-// [x] create a component for skills in about me section
-// [x] fix the spacing between about me skills icon that caused because of the tool tip
-// [x] create two components, one for horizontal graidnet to right and the other to bottom and implement them
-// [x] find proper icons to add to each services in MyServices section
-// [x] add a simple notification/error when user send a successful/failed email
-// [x] add animated svg for body element
-// [x] create dynamic cv
-// [x] make the cv downloadable in word file
-// [x] change the name of the downloadable word file to my firstname + lastname (line 528)
-// [x] isolate the function of the downloadable cv as a stand alone component
-// [x] make the cv viewable
-// [x] restructure the viewable cv
-// [x] add loading animation that appears before rendering the website
-// [x] add icon as favicon
-// [x] ensure the favicon to be in both dark/light mode of the user's browser
-// [x] make all constants/variables comes from one file
-// [x] create proper image to each one of your projects
-// [x] add your real projects
-// [x] make each project to display the name of the project itself like Expenses Tracker's name to be SpenTracker
-// [x] add simple discribtion to each project that describes its purpose
-
-// [ ] add your real photo
-// [ ] add animation to each project when filter changes
