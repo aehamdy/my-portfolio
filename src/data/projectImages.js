@@ -6,16 +6,18 @@ import noteTakingApp from "../assets/projects/noteapp.webp";
 import spentrackerApp from "../assets/projects/spentracker.webp";
 import kasperTemplate from "../assets/projects/Kasper_Template.webp";
 import leonTemplate from "../assets/projects/Leon_Template.webp";
-import gleamyAgency from "../assets/projects/gleamy-agency.webp"
+import gleamyAgency from "../assets/projects/gleamy-agency.webp";
+import glozin from "../assets/projects/glozin.webp";
 
 export {
-    todomoroApp,
-    weatherApp,
-    gymTeam,
-    agencyTemplate,
-    noteTakingApp,
-    spentrackerApp,
-    kasperTemplate,
-    leonTemplate,
-    gleamyAgency,
-}
+  glozin,
+  todomoroApp,
+  weatherApp,
+  gymTeam,
+  agencyTemplate,
+  noteTakingApp,
+  spentrackerApp,
+  kasperTemplate,
+  leonTemplate,
+  gleamyAgency,
+};
