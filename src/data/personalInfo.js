@@ -10,6 +10,7 @@ import {
   weatherApp,
   glozin,
 } from "./projectImages";
+import { categories } from "./categories";
 
 const personalInfo = {
   hiringStatus: true,
@@ -107,7 +108,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       Throughout the project, I encountered various issues related to state updates, 
       component re-renders, and data flow. I tackled these challenges by following tutorials, 
       consulting documentation, and leveraging AI assistance to find optimal solutions.`,
-      category: ["web app", "api"],
+      category: [categories.webApp, categories.api],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -125,7 +126,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["React JS", "React-router-dom", "Tailwind CSS"],
       challengeOvercome:
         "I crafted dynamic active link styling, developed a user-friendly error page with redirection, designed a reusable layout for consistency, and delivered a fully responsive interface using Tailwind CSS.",
-      category: ["landing page"],
+      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -143,7 +144,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["React JS", "Tailwind CSS", "localStorage"],
       challengeOvercome:
         "Implementing dynamic themes using Tailwind CSS, creating localStorage-based persistence, and managing state across multiple components.",
-      category: ["web app", "single page app"],
+      category: [categories.webApp],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -161,7 +162,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["React JS", "Tailwind CSS", "Weather API"],
       challengeOvercome:
         "Handling API responses efficiently, creating a clean UI for displaying large amounts of data.",
-      category: ["web app", "api", "single page app"],
+      category: [categories.webApp, categories.api],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -179,7 +180,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["React JS", "Tailwind CSS"],
       challengeOvercome:
         "Improved web performance and user experience through optimized media queries and clean, maintainable code.",
-      category: ["landing page"],
+      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -199,7 +200,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["JavaScript", "HTML", "CSS"],
       challengeOvercome:
         "Simplified UI and organized structure for seamless note management.",
-      category: ["web app", "single page app"],
+      category: [categories.webApp],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -217,7 +218,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["HTML", "SASS", "JavaScript"],
       challengeOvercome:
         "Simplified UI and organized structure for seamless note management.",
-      category: ["web app", "single page app"],
+      category: [categories.webApp],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -235,7 +236,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["HTML", "CSS"],
       challengeOvercome:
         "Improved web performance and user experience through optimized media queries and clean, maintainable code.",
-      category: ["landing page"],
+      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -253,7 +254,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["HTML", "CSS"],
       challengeOvercome:
         "Improved web performance and user experience through optimized media queries and clean, maintainable code.",
-      category: ["landing page"],
+      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: false,
       addToViewableCv: false,
@@ -271,7 +272,7 @@ This project strengthened my skills in React’s Context API, React Router for n
       technologies: ["HTML", "CSS"],
       challengeOvercome:
         "Improved web performance and user experience through optimized media queries and clean, maintainable code.",
-      category: ["landing page"],
+      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: false,
       addToViewableCv: false,
