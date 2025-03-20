@@ -50,6 +50,52 @@ const personalInfo = {
 
   projects: [
     {
+      name: "Glozin",
+      cvName: "E-commerce Store",
+      image: gleamyAgency,
+      altText: "project's image",
+      simpleDiscribtion: "E-commerce Website",
+      liveLink: "https://glozin-store.vercel.app/",
+      githubRepo: "https://github.com/aehamdy/glozin",
+      description: `Glozin is a fully responsive e-commerce platform that simulates a real-world clothing store. Built with React and styled using Tailwind CSS, the project features dynamic state management using Context API and useReducer.
+
+                    Key functionalities include:
+
+                    -A shopping cart with add/remove items, quantity updates, and a detailed checkout process.
+                    -A live search feature that fetches products dynamically from an API.
+                    -A coupon system supporting multiple discount codes and automatic free shipping for eligible orders.
+                    -A wishlist system to save favorite products.
+                    -Integrated product reviews retrieved from the API.
+                    -Smooth UI animations powered by Framer Motion.
+                    This project strengthened my skills in React’s Context API, React Router for navigation, and API handling. Additionally, I built a custom modal component and tackled challenges related to dynamic state management and routing.`,
+      technologies: [
+        "React JS",
+        "Context-API",
+        "React-router",
+        "Tailwind CSS",
+        "Framer-Motion",
+      ],
+      challengeOvercome: `State Management with Context API & useReducer
+
+                    Managing global state efficiently was a challenge, especially handling complex cart operations. I overcame this by deepening my understanding of Context API and useReducer, applying best practices for state updates.
+                    Dynamic Routing & Navigation
+
+                    Implementing smooth navigation between pages using React Router required handling dynamic routes and passing state correctly. I solved this by exploring React Router documentation and refining my approach through practice.
+                    Fetching & Managing API Data
+
+                    The live search feature required fetching products from an API dynamically, handling debouncing for performance optimization. I overcame this by researching efficient API handling techniques and applying them successfully.
+                    Building a Custom Modal
+
+                    Initially, I built a custom modal for UI interactions, but I realized maintaining it required extra effort. I plan to replace it with a standard React modal component for better accessibility and maintainability.
+                    Debugging & Problem-Solving
+
+                    Throughout the project, I encountered various issues related to state updates, component re-renders, and data flow. I tackled these challenges by following tutorials, consulting documentation, and leveraging AI assistance to find optimal solutions.`,
+      category: ["web app"],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: true,
+      addToViewableCv: false,
+    },
+    {
       name: "Gleamy Agency",
       cvName: "Agency Website",
       image: gleamyAgency,
