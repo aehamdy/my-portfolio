@@ -14,9 +14,10 @@ import usePageLoader from "./hooks/usePageLoader";
 function App() {
   const { visibleSection, handleSectionChange } = useSectionVisibility();
   const contentRef = useRef(null);
+  const LOADING_DURATION = 3800;
 
   useSVGAnimation(); // Initialize SVG animation hook
-  const loading = usePageLoader(); // Initialize loading state
+  const loading = usePageLoader(LOADING_DURATION); // Initialize loading state
 
   // Scrolls the content container to the top whenever the visible section changes on large screens
   useEffect(() => {
@@ -27,6 +28,11 @@ function App() {
 
   useEffect(() => {
     document.title = "Ahmed's Portfolio | Creative Frontend Developer";
+
+    setTimeout(() => {
+      const svgElement = document.getElementById("cyberlines");
+      svgElement.style.display = "block";
+    }, LOADING_DURATION + 700);
   }, []);
 
   if (loading) {
@@ -34,6 +40,7 @@ function App() {
   }
 
   return (
+    // <></>
     <>
       <div className="grand-parent md:relative lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
         {/* Display on all screens excpet large screens and larger */}

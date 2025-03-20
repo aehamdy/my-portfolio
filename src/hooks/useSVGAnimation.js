@@ -3,7 +3,10 @@ import { useEffect } from "react";
 const useSVGAnimation = () => {
   useEffect(() => {
     const lights = document.querySelectorAll(".light");
-    const speeds = Array.from({ length: lights.length }, () => Math.random() * 5 + 2);
+    const speeds = Array.from(
+      { length: lights.length },
+      () => Math.random() * 5 + 2
+    );
 
     const moveLights = () => {
       lights.forEach((light, index) => {
