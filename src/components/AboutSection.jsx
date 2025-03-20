@@ -1,6 +1,6 @@
 import AboutMe from "./AboutMe";
 import MyServices from "./MyServices";
-import Pricing from "./Pricing";
+// import Pricing from "./Pricing";
 import Testimonials from "./Testimonials";
 
 function AboutSection() {
@@ -11,7 +11,7 @@ function AboutSection() {
     >
       <AboutMe />
       <MyServices />
-      <Pricing />
+      {/* <Pricing /> */}
       <Testimonials />
     </section>
   );
