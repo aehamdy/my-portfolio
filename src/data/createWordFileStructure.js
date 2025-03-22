@@ -1,18 +1,32 @@
-import { Document, ExternalHyperlink, Paragraph, TextRun } from "docx";
+import {
+  Document,
+  ExternalHyperlink,
+  Paragraph,
+  TextRun,
+  AlignmentType,
+} from "docx";
 import personalInfo from "./personalInfo";
 
 const createWordFileStructure = () => {
-  const headingFont = "Calibri (Headings)";
-  const bodyFont = "Cambria (Body)";
-
-  const nameFontSize = 26;
-  const headingFontSize = 14;
-  const bodyFontSize = 11;
-  const projectFontSize = 13;
-
-  const nameColor = "1F497D"; // Hex color for name
-  const headingColor = "365F91"; // Hex color for section headings
-  const projectColor = "4F81BD"; // Hex color for project names
+  const fontFamily = {
+    mainTitle: "Calibri (Headings)",
+    heading: "Calibri (Headings)",
+    body: "Cambria (Body)",
+  };
+  const fontSize = {
+    mainTitle: 56,
+    sectionTitle: 44,
+    heading: 36,
+    body: 22,
+    project: 13,
+  };
+  const fontColor = {
+    mainTitle: "000000",
+    heading: "121212",
+    // heading: "365F91", //blue color
+    project: "4F81BD",
+    hyperLink: "0563C1",
+  };
 
   const doc = new Document({
     sections: [
@@ -26,173 +40,255 @@ const createWordFileStructure = () => {
         children: [
           // Full Name Section
           new Paragraph({
+            alignment: AlignmentType.CENTER, // Centers text
             children: [
               new TextRun({
                 text: personalInfo.fullName(),
-                font: headingFont,
-                size: nameFontSize * 2, // Word uses half-points
-                color: nameColor,
-                // bold: true,
-              }),
-            ],
-          }),
-          new Paragraph({
-            border: {
-              bottom: {
-                style: "single",
-                size: 6, // Line thickness
-                space: 0, // Space above and below the line
-                color: nameColor,
-              },
-            },
-          }),
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
-          // Location, Phone, and Email in one line
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: `${personalInfo.location}`, // Location
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000", // Black
-              }),
-              new TextRun({
-                text: ` | `, // Separator
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-              }),
-              new TextRun({
-                text: `Phone: ${personalInfo.phoneNumber}`, // Phone Number
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-              }),
-              new TextRun({
-                text: ` | `, // Separator
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-              }),
-              new TextRun({
-                text: `Email: ${personalInfo.email}`, // Email
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-              }),
-            ],
-          }),
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
-          // Social Links (Portfolio, LinkedIn, GitHub)
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Portfolio: ", // Normal text for LinkedIn
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-                // Optionally, you can style this TextRun
-              }),
-              new ExternalHyperlink({
-                children: [
-                  new TextRun({
-                    text: personalInfo.social.portfolio, // URL text as clickable link
-                    style: "Hyperlink", // Applies the hyperlink style in Word
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                  }),
-                ],
-                link: personalInfo.social.portfolio, // Set the hyperlink URL here
-              }),
-            ],
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Github: ", // Normal text for LinkedIn
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-                // Optionally, you can style this TextRun
-              }),
-              new ExternalHyperlink({
-                children: [
-                  new TextRun({
-                    text: personalInfo.social.github, // URL text as clickable link
-                    style: "Hyperlink", // Applies the hyperlink style in Word
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                  }),
-                ],
-                link: personalInfo.social.github, // Set the hyperlink URL here
-              }),
-            ],
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "LinkedIn: ", // Normal text for LinkedIn
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
-                // Optionally, you can style this TextRun
-              }),
-              new ExternalHyperlink({
-                children: [
-                  new TextRun({
-                    text: personalInfo.social.linkedin, // URL text as clickable link
-                    style: "Hyperlink", // Applies the hyperlink style in Word
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                  }),
-                ],
-                link: personalInfo.social.linkedin, // Set the hyperlink URL here
-              }),
-            ],
-          }),
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
-          // Summary Section
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Summary",
-                heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.mainTitle,
+                size: fontSize.mainTitle,
+                color: fontColor.mainTitle,
                 bold: true,
               }),
             ],
-            style: "Heading1", // Added style for collapsibility
           }),
+          // new Paragraph({
+          //   border: {
+          //     bottom: {
+          //       style: "single",
+          //       size: 6, // Line thickness
+          //       space: 0, // Space above and below the line
+          //       color: nameColor,
+          //     },
+          //   },
+          // }),
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
+
+          // Location, Phone, and Email in one line
+          new Paragraph({
+            alignment: AlignmentType.CENTER, // Centers text
+            children: [
+              new TextRun({
+                text: `${personalInfo.location}`, // Location
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body, // Black
+              }),
+              new TextRun({
+                text: ` | `, // Separator
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
+              }),
+              new TextRun({
+                text: `${personalInfo.phoneNumber}`, // Phone Number
+                // text: `Phone: ${personalInfo.phoneNumber}`, // Phone Number
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
+              }),
+              new TextRun({
+                text: ` | `, // Separator
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
+              }),
+              new TextRun({
+                text: `${personalInfo.email}`, // Email
+                // text: `Email: ${personalInfo.email}`, // Email
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
+              }),
+            ],
+          }),
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
+
+          new Paragraph({
+            alignment: AlignmentType.CENTER,
+            children: [
+              new TextRun({
+                text: "Portfolio: ",
+                bold: true,
+              }),
+              new TextRun({
+                text: personalInfo.links.portfolio,
+                style: "Hyperlink",
+                color: fontColor.hyperLink,
+                underline: true,
+              }),
+
+              new TextRun(" • "), // Separator
+
+              new TextRun({
+                text: "GitHub: ",
+                bold: true,
+              }),
+              new TextRun({
+                text: personalInfo.links.github,
+                style: "Hyperlink",
+                color: fontColor.hyperLink,
+                underline: true,
+              }),
+
+              new TextRun(" • "), // Separator
+
+              new TextRun({
+                text: "LinkedIn: ",
+                bold: true,
+              }),
+              new TextRun({
+                text: personalInfo.links.linkedin,
+                style: "Hyperlink",
+                color: fontColor.hyperLink,
+                underline: true,
+              }),
+            ],
+          }),
+
+          // Social Links (Portfolio, LinkedIn, GitHub)
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "Portfolio: ", // Normal text for LinkedIn
+          //       font: bodyFont,
+          //       size: bodyFontSize * 2,
+          //       color: "000000",
+          //       // Optionally, you can style this TextRun
+          //     }),
+          //     new ExternalHyperlink({
+          //       children: [
+          //         new TextRun({
+          //           text: personalInfo.links.portfolio, // URL text as clickable link
+          //           style: "Hyperlink", // Applies the hyperlink style in Word
+          //           font: bodyFont,
+          //           size: bodyFontSize * 2,
+          //         }),
+          //       ],
+          //       link: personalInfo.links.portfolio, // Set the hyperlink URL here
+          //     }),
+          //   ],
+          // }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "Github: ", // Normal text for LinkedIn
+          //       font: bodyFont,
+          //       size: bodyFontSize * 2,
+          //       color: "000000",
+          //       // Optionally, you can style this TextRun
+          //     }),
+          //     new ExternalHyperlink({
+          //       children: [
+          //         new TextRun({
+          //           text: personalInfo.links.github, // URL text as clickable link
+          //           style: "Hyperlink", // Applies the hyperlink style in Word
+          //           font: bodyFont,
+          //           size: bodyFontSize * 2,
+          //         }),
+          //       ],
+          //       link: personalInfo.links.github, // Set the hyperlink URL here
+          //     }),
+          //   ],
+          // }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "LinkedIn: ", // Normal text for LinkedIn
+          //       font: bodyFont,
+          //       size: bodyFontSize * 2,
+          //       color: "000000",
+          //       // Optionally, you can style this TextRun
+          //     }),
+          //     new ExternalHyperlink({
+          //       children: [
+          //         new TextRun({
+          //           text: personalInfo.links.linkedin, // URL text as clickable link
+          //           style: "Hyperlink", // Applies the hyperlink style in Word
+          //           font: bodyFont,
+          //           size: bodyFontSize * 2,
+          //         }),
+          //       ],
+          //       link: personalInfo.links.linkedin, // Set the hyperlink URL here
+          //     }),
+          //   ],
+          // }),
+
+          // Horizontal Line (Text-Based)
+          // new Paragraph({
+          //   alignment: AlignmentType.CENTER,
+          //   children: [
+          //     new TextRun({
+          //       text: "________________________________________________________________________", // Creates a line
+          //       bold: true,
+          //       size: 24, // Adjust thickness by increasing size
+          //     }),
+          //   ],
+          // }),
+
+          // Horizontal rule using a TextRun with dashes
           new Paragraph({
             children: [
               new TextRun({
-                text: personalInfo.summary,
-                spacing: {
-                  line: 340, // Set line height to 240 points (1.5 spacing)
-                  before: 200, // Space before the paragraph
-                  after: 250, // Space after the paragraph
-                },
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
               }),
             ],
+            alignment: "center", // Optional: Center the horizontal rule
           }),
 
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
+
+          // Summary Section
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "Summary",
+          //       heading: "Heading1",
+          //       font: headingFont,
+          //       size: headingFontSize * 2,
+          //       color: headingColor,
+          //       bold: true,
+          //     }),
+          //   ],
+          //   style: "Heading1", // Added style for collapsibility
+          // }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: "Summary",
+                heading: "Heading1",
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
+                bold: true,
+              }),
+            ],
+            style: "Heading1", // Added style for collapsibility
+          }),
+
+          // Normal Text (Cambria, Black, 12pt)
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: personalInfo.summary,
+                // spacing: {
+                //   line: 340, // Set line height to 240 points (1.5 spacing)
+                //   before: 200, // Space before the paragraph
+                //   after: 250, // Space after the paragraph
+                // },
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
+              }),
+            ],
+          }),
+
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
@@ -203,9 +299,9 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "Technical Skills",
                 heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
@@ -217,18 +313,22 @@ const createWordFileStructure = () => {
             return new Paragraph({
               children: [
                 new TextRun({
-                  text: `- ${skillName}: ${skillValues}`,
-                  font: bodyFont,
-                  size: bodyFontSize * 2,
-                  color: "000000",
+                  text: `- ${skillName}: `, // Bold skill name
+                  font: fontFamily.body,
+                  size: fontSize.body,
+                  color: fontColor.body,
+                  bold: true, // Make skill name bold
+                }),
+                new TextRun({
+                  text: skillValues, // Normal skill values
+                  font: fontFamily.body,
+                  size: fontSize.body,
+                  color: fontColor.body,
                 }),
               ],
             });
           }),
 
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
@@ -239,17 +339,26 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "Projects",
                 heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
             style: "Heading1", // Style for collapsibility
           }),
+
+          // Horizontal rule using a TextRun with dashes
           new Paragraph({
-            children: [], // Empty paragraph for spacing
+            children: [
+              new TextRun({
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
           }),
+
           // Projects
           ...personalInfo.projects
             .filter((project) => project.addToDownloadableCv)
@@ -260,9 +369,9 @@ const createWordFileStructure = () => {
                   new TextRun({
                     text: project.cvName,
                     heading: "Heading2", // Set to Heading2 for project collapsibility
-                    font: headingFont,
-                    size: projectFontSize * 2,
-                    color: projectColor,
+                    font: fontFamily.heading,
+                    size: fontSize.heading,
+                    color: fontColor.heading,
                     bold: true,
                   }),
                 ],
@@ -272,9 +381,10 @@ const createWordFileStructure = () => {
                 children: [
                   new TextRun({
                     text: "Live Link: ", // Normal text for Live Link
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                    color: "000000",
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
+                    bold: true,
                   }),
                   ...(project.liveLink
                     ? [
@@ -283,9 +393,8 @@ const createWordFileStructure = () => {
                             new TextRun({
                               text: project.liveLink, // URL text as clickable link
                               style: "Hyperlink", // Applies the hyperlink style in Word
-                              font: bodyFont,
-                              size: bodyFontSize * 2,
-                              bold: true,
+                              font: fontFamily.body,
+                              size: fontSize.body * 0.9,
                             }),
                           ],
                           link: project.liveLink, // Set the hyperlink URL here
@@ -294,8 +403,8 @@ const createWordFileStructure = () => {
                     : [
                         new TextRun({
                           text: "Not Available", // Normal text if link is not available
-                          font: bodyFont,
-                          size: bodyFontSize * 2,
+                          font: fontFamily.body,
+                          size: fontSize.body,
                         }),
                       ]),
                 ],
@@ -304,9 +413,10 @@ const createWordFileStructure = () => {
                 children: [
                   new TextRun({
                     text: "Github Repo: ", // Normal text for Live Link
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                    color: "000000",
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
+                    bold: true,
                   }),
                   ...(project.githubRepo
                     ? [
@@ -315,9 +425,8 @@ const createWordFileStructure = () => {
                             new TextRun({
                               text: project.githubRepo, // URL text as clickable link
                               style: "Hyperlink", // Applies the hyperlink style in Word
-                              font: bodyFont,
-                              size: bodyFontSize * 2,
-                              bold: true,
+                              font: fontFamily.body,
+                              size: fontSize.body * 0.9,
                             }),
                           ],
                           link: project.githubRepo, // Set the hyperlink URL here
@@ -326,8 +435,8 @@ const createWordFileStructure = () => {
                     : [
                         new TextRun({
                           text: "Not Available", // Normal text if link is not available
-                          font: bodyFont,
-                          size: bodyFontSize * 2,
+                          font: fontFamily.body,
+                          size: fontSize.body,
                         }),
                       ]),
                 ],
@@ -339,52 +448,93 @@ const createWordFileStructure = () => {
                 children: [
                   new TextRun({
                     text: project.description,
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                    color: "000000",
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
                   }),
                 ],
               }),
-              new Paragraph({
-                children: [], // Empty paragraph for spacing
-              }),
+
+              // new Paragraph({
+              //   children: [], // Empty paragraph for spacing
+              // }),
+
+              // new Paragraph({
+              //   children: [
+              //     new TextRun({
+              //       text: `Technologies used: ${project.technologies.join(
+              //         ", "
+              //       )}`,
+              //       font: fontFamily.body,
+              //       size: fontSize.body,
+              //       color: fontColor.body,
+              //       bold: true,
+              //       italics: true,
+              //     }),
+              //   ],
+              // }),
               new Paragraph({
                 children: [
                   new TextRun({
-                    text: `Technologies used: ${project.technologies.join(
-                      ", "
-                    )}`,
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                    color: "000000",
-                    italic: true,
+                    text: "Technologies used: ",
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
+                    bold: true,
+                    // italics: true,
+                  }),
+                  // List of technologies (Regular)
+                  new TextRun({
+                    text: project.technologies.join(", "),
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
                   }),
                 ],
               }),
-              new Paragraph({
-                children: [], // Empty paragraph for spacing
-              }),
+
+              // new Paragraph({
+              //   children: [], // Empty paragraph for spacing
+              // }),
+
               new Paragraph({
                 children: [
                   new TextRun({
-                    text: `Challenge overcome: 
-                      ${project.challengeOvercome}`,
-                    font: bodyFont,
-                    size: bodyFontSize * 2,
-                    color: "000000",
+                    text: "Challenge overcome: ",
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
+                    bold: true,
+                    italics: true,
+                  }),
+                  // Challenge description (Regular)
+                  new TextRun({
+                    text: project.challengeOvercome,
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
                   }),
                 ],
               }),
+
               // Add a blank paragraph between projects for spacing
               new Paragraph({
                 children: [], // Empty paragraph for spacing
               }),
             ]),
 
-          // Additional spacing
+          // Horizontal rule using a TextRun with dashes
           new Paragraph({
-            children: [], // Empty paragraph for spacing
+            children: [
+              new TextRun({
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
           }),
+
+          // Additional spacing
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
@@ -395,9 +545,9 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "Education",
                 heading: "Heading1", // Use the same Heading1 for collapsibility
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
@@ -411,9 +561,9 @@ const createWordFileStructure = () => {
                   children: [
                     new TextRun({
                       text: `${education.universityName} - ${education.location}`,
-                      font: bodyFont,
-                      size: bodyFontSize * 2,
-                      color: "000000",
+                      font: fontFamily.body,
+                      size: fontSize.body,
+                      color: fontColor.body,
                     }),
                   ],
                 }),
@@ -421,9 +571,9 @@ const createWordFileStructure = () => {
                   children: [
                     new TextRun({
                       text: `${education.degree} - ${education.graduationYear}`,
-                      font: bodyFont,
-                      size: bodyFontSize * 2,
-                      color: "000000",
+                      font: fontFamily.body,
+                      size: fontSize.body,
+                      color: fontColor.body,
                     }),
                   ],
                 }),
@@ -433,6 +583,17 @@ const createWordFileStructure = () => {
               ];
             })
             .flat(),
+
+          // Horizontal rule using a TextRun with dashes
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
+          }),
 
           // Additional spacing
           new Paragraph({
@@ -445,9 +606,9 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "Certifications",
                 heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
@@ -458,18 +619,26 @@ const createWordFileStructure = () => {
               children: [
                 new TextRun({
                   text: certification,
-                  font: bodyFont,
-                  size: bodyFontSize * 2,
-                  color: "000000",
+                  font: fontFamily.body,
+                  size: fontSize.body,
+                  color: fontColor.body,
                 }),
               ],
             });
           }),
 
-          // Additional spacing
+          // Horizontal rule using a TextRun with dashes
           new Paragraph({
-            children: [], // Empty paragraph for spacing
+            children: [
+              new TextRun({
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
           }),
+
+          // Additional spacing
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
@@ -480,9 +649,9 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "Additional Information",
                 heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
@@ -492,17 +661,25 @@ const createWordFileStructure = () => {
             children: [
               new TextRun({
                 text: personalInfo.additionalInformation,
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
               }),
             ],
           }),
 
-          // Additional spacing
+          // Horizontal rule using a TextRun with dashes
           new Paragraph({
-            children: [], // Empty paragraph for spacing
+            children: [
+              new TextRun({
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
           }),
+
+          // Additional spacing
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
@@ -513,9 +690,9 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "Key Strengths",
                 heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
@@ -526,18 +703,26 @@ const createWordFileStructure = () => {
               children: [
                 new TextRun({
                   text: `- ${strength}`,
-                  font: bodyFont,
-                  size: bodyFontSize * 2,
-                  color: "000000",
+                  font: fontFamily.body,
+                  size: fontSize.body,
+                  color: fontColor.body,
                 }),
               ],
             });
           }),
 
-          // Additional spacing
+          // Horizontal rule using a TextRun with dashes
           new Paragraph({
-            children: [], // Empty paragraph for spacing
+            children: [
+              new TextRun({
+                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
           }),
+
+          // Additional spacing
           new Paragraph({
             children: [], // Empty paragraph for spacing
           }),
@@ -548,9 +733,9 @@ const createWordFileStructure = () => {
               new TextRun({
                 text: "References",
                 heading: "Heading1",
-                font: headingFont,
-                size: headingFontSize * 2,
-                color: headingColor,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
                 bold: true,
               }),
             ],
@@ -560,9 +745,9 @@ const createWordFileStructure = () => {
             children: [
               new TextRun({
                 text: "Available upon request.",
-                font: bodyFont,
-                size: bodyFontSize * 2,
-                color: "000000",
+                font: fontFamily.body,
+                size: fontSize.body,
+                color: fontColor.body,
               }),
             ],
           }),
