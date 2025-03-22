@@ -29,7 +29,7 @@ const personalInfo = {
   brief:
     "I'm a frontend developer skilled in React, JavaScript, CSS, and Tailwind CSS, focused on creating dynamic, user-centered web applications. I emphasize clean code, responsive design, and performance optimization for scalable and efficient projects. Collaborative and detail-oriented, I aim to refine my expertise in frontend frameworks and lead impactful development teams.",
   bio: "A passionate frontend developer with experience in building responsive and accessible web applications using React, Tailwind CSS, and more.",
-  social: {
+  links: {
     portfolio: "https://ahmedessam-portfolio.vercel.app",
     linkedin: "https://www.linkedin.com/in/aehamdy/",
     github: "https://github.com/aehamdy",
@@ -38,7 +38,7 @@ const personalInfo = {
     "Enthusiastic and self-driven Junior Front-End Developer with a passion for building interactive, user-friendly web applications. Proficient in HTML, CSS, JavaScript, React, and Tailwind CSS, with a strong focus on responsive design and seamless user experiences. Eager to apply creative ideas in real-world projects while continuously learning and growing in the fast-evolving web development landscape.",
 
   technicalSkills: [
-    { Languages: ["HTML", "CSS", "JavaScript"] },
+    { Languages: ["HTML", "CSS", "JavaScript (ES6+)"] },
     {
       "Frameworks & Libraries": [
         "React JS",
@@ -169,7 +169,7 @@ This project strengthened my skills in React’s Context API, React Router for n
     },
     {
       name: "GymTeam",
-      cvName: "Landing Pages (React JS + Tailwind CSS)",
+      cvName: "Landing Page",
       image: gymTeam,
       altText: "project's image",
       simpleDiscribtion: "GYM Landing Page",
@@ -202,7 +202,7 @@ This project strengthened my skills in React’s Context API, React Router for n
         "Simplified UI and organized structure for seamless note management.",
       category: [categories.webApp],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
@@ -220,7 +220,7 @@ This project strengthened my skills in React’s Context API, React Router for n
         "Simplified UI and organized structure for seamless note management.",
       category: [categories.webApp],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
@@ -238,7 +238,7 @@ This project strengthened my skills in React’s Context API, React Router for n
         "Improved web performance and user experience through optimized media queries and clean, maintainable code.",
       category: [categories.landingPage],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
