@@ -3,11 +3,11 @@ import personalInfo from "../data/personalInfo";
 
 const icons = [
   {
-    link: personalInfo.social.github,
+    link: personalInfo.links.github,
     icon: githubIcon,
   },
   {
-    link: personalInfo.social.linkedin,
+    link: personalInfo.links.linkedin,
     icon: linkedinIcon,
   },
 ];
