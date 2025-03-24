@@ -8,10 +8,15 @@ import {
 import personalInfo from "./personalInfo";
 
 const createWordFileStructure = () => {
+  const name = `${personalInfo.firstName} ${personalInfo.middleName}`;
+
   const fontFamily = {
-    mainTitle: "Calibri (Headings)",
-    heading: "Calibri (Headings)",
-    body: "Cambria (Body)",
+    // mainTitle: "Calibri (Headings)",
+    mainTitle: "Times New Roman (Headings)",
+    // heading: "Calibri (Headings)",
+    heading: "Times New Roman (Headings)",
+    // body: "Cambria (Body)",
+    body: "Arial MT (Body)",
   };
   const fontSize = {
     mainTitle: 56,
@@ -21,11 +26,15 @@ const createWordFileStructure = () => {
     project: 13,
   };
   const fontColor = {
-    mainTitle: "000000",
+    // mainTitle: "000000",
+    // mainTitle: "565555",
+    mainTitle: "242124",
     heading: "121212",
+    // heading: "565555",
     // heading: "365F91", //blue color
     project: "4F81BD",
     hyperLink: "0563C1",
+    border: "7F7F7F",
   };
 
   const doc = new Document({
@@ -35,6 +44,14 @@ const createWordFileStructure = () => {
           page: {
             spelling: false, //Disable spell check
             grammer: false, //Disable grammer check
+            margin: {
+              // top: 720, // 720 = 0.5 inch (each unit is 1/20th of a point)
+              top: 600,
+              bottom: 500,
+              // left: 1440, // 1 inch
+              left: 720,
+              right: 720,
+            },
           },
         },
         children: [
@@ -43,7 +60,7 @@ const createWordFileStructure = () => {
             alignment: AlignmentType.CENTER, // Centers text
             children: [
               new TextRun({
-                text: personalInfo.fullName(),
+                text: name.toUpperCase(),
                 font: fontFamily.mainTitle,
                 size: fontSize.mainTitle,
                 color: fontColor.mainTitle,
@@ -120,9 +137,12 @@ const createWordFileStructure = () => {
                 color: fontColor.hyperLink,
                 underline: true,
               }),
+            ],
+          }),
 
-              new TextRun(" • "), // Separator
-
+          new Paragraph({
+            alignment: AlignmentType.CENTER,
+            children: [
               new TextRun({
                 text: "GitHub: ",
                 bold: true,
@@ -233,7 +253,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
@@ -352,7 +373,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
@@ -441,9 +463,9 @@ const createWordFileStructure = () => {
                       ]),
                 ],
               }),
-              new Paragraph({
-                children: [], // Empty paragraph for spacing
-              }),
+              // new Paragraph({
+              //   children: [], // Empty paragraph for spacing
+              // }),
               new Paragraph({
                 children: [
                   new TextRun({
@@ -527,7 +549,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
@@ -588,7 +611,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
@@ -631,7 +655,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
@@ -672,7 +697,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
@@ -715,7 +741,8 @@ const createWordFileStructure = () => {
           new Paragraph({
             children: [
               new TextRun({
-                text: "__________________________________________________________________________________", // Simulate a horizontal rule
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
                 bold: true, // Optional: Make it bold for better visibility
               }),
             ],
