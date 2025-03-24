@@ -35,7 +35,7 @@ const personalInfo = {
     github: "https://github.com/aehamdy",
   },
   summary:
-    "Enthusiastic and self-driven Junior Front-End Developer with a passion for building interactive, user-friendly web applications. Proficient in HTML, CSS, JavaScript, React, and Tailwind CSS, with a strong focus on responsive design and seamless user experiences. Eager to apply creative ideas in real-world projects while continuously learning and growing in the fast-evolving web development landscape.",
+    "Enthusiastic and self-driven Junior Front-End Developer with a strong foundation in HTML, CSS, JavaScript, React, and Tailwind CSS. Passionate about creating responsive, user-friendly web applications with a focus on seamless user experiences. Committed to continuous learning and growth in the ever-evolving field of web development.",
 
   technicalSkills: [
     { Languages: ["HTML", "CSS", "JavaScript (ES6+)"] },
@@ -66,19 +66,7 @@ const personalInfo = {
       simpleDiscribtion: "E-commerce Website",
       liveLink: "https://glozin-store.vercel.app/",
       githubRepo: "https://github.com/aehamdy/glozin",
-      description: `Glozin is a fully responsive e-commerce platform that simulates a real-world clothing store. Built with React and styled using Tailwind CSS, the project features dynamic state management using Context API and useReducer.
-
-Key functionalities include:
-  -A shopping cart with add/remove items, quantity updates, and a detailed 
-    checkout process.
-  -A live search feature that fetches products dynamically from an API.
-  -A coupon system supporting multiple discount codes and automatic free 
-    shipping for eligible orders.
-  -A wishlist system to save favorite products.
-  -Integrated product reviews retrieved from the API.
-  -Smooth UI animations powered by Framer Motion.
-
-This project strengthened my skills in React’s Context API, React Router for navigation, and API handling. Additionally, I built a custom modal component and tackled challenges related to dynamic state management and routing.`,
+      description: `Built a responsive e-commerce platform using React, Tailwind CSS, and Framer Motion. It features a dynamic shopping cart, live search, discount system, wishlist, and product reviews. Smooth animations enhance the UI, providing a seamless and engaging shopping experience.`,
       technologies: [
         "React JS",
         "Context-API",
@@ -87,46 +75,8 @@ This project strengthened my skills in React’s Context API, React Router for n
         "Framer-Motion",
       ],
       challengeOvercome: `
-  -State Management with Context API & useReducer
-      Managing global state efficiently was a challenge, especially handling complex cart 
-      operations. 
-      I overcame this by deepening my understanding of Context API and useReducer, 
-      applying best practices for state updates.
-  -Dynamic Routing & Navigation
-      Implementing smooth navigation between pages using React Router required 
-      handling dynamic routes and passing state correctly. I solved this by exploring React 
-      Router documentation and refining my approach through practice.
-  -Fetching & Managing API Data
-      The live search feature required fetching products from an API dynamically, handling 
-      debouncing for performance optimization. I overcame this by researching efficient API 
-      handling techniques and applying them successfully.
-  -Building a Custom Modal
-      Initially, I built a custom modal for UI interactions, but I realized maintaining it 
-      required extra effort. I plan to replace it with a standard React modal component for
-      better accessibility and maintainability.
-  -Debugging & Problem-Solving
-      Throughout the project, I encountered various issues related to state updates, 
-      component re-renders, and data flow. I tackled these challenges by following tutorials, 
-      consulting documentation, and leveraging AI assistance to find optimal solutions.`,
+Optimized cart state with Context API and useReducer, refined routing with React Router, and improved live search with debouncing. Replaced a custom modal for better accessibility and enhanced performance through debugging.`,
       category: [categories.webApp, categories.api],
-      addToPortfolioProjects: true,
-      addToDownloadableCv: true,
-      addToViewableCv: false,
-    },
-    {
-      name: "Gleamy Agency",
-      cvName: "Agency Website",
-      image: gleamyAgency,
-      altText: "project's image",
-      simpleDiscribtion: "Multipage Website",
-      liveLink: "https://gleamy-agency.vercel.app",
-      githubRepo: "https://github.com/aehamdy/gleamy-agency",
-      description:
-        "This React JS web application for a digital agency delivers a seamless user experience with dynamic pages for Home, Services, About Us, and Portfolio. Built with react-router-dom for smooth navigation and Tailwind CSS for modern styling, it features active link highlighting via NavLink. A robust error page handles invalid routes with a clear message, Home navigation, and automatic redirection. A reusable PageLayout component ensures consistent structure, dynamically rendering content through Outlet for efficiency and scalability.",
-      technologies: ["React JS", "React-router-dom", "Tailwind CSS"],
-      challengeOvercome:
-        "I crafted dynamic active link styling, developed a user-friendly error page with redirection, designed a reusable layout for consistency, and delivered a fully responsive interface using Tailwind CSS.",
-      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
@@ -145,6 +95,28 @@ This project strengthened my skills in React’s Context API, React Router for n
       challengeOvercome:
         "Implementing dynamic themes using Tailwind CSS, creating localStorage-based persistence, and managing state across multiple components.",
       category: [categories.webApp],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: true,
+      addToViewableCv: false,
+    },
+    {
+      name: "Gleamy Agency",
+      cvName: "Agency Website",
+      image: gleamyAgency,
+      altText: "project's image",
+      simpleDiscribtion: "Multipage Website",
+      liveLink: "https://gleamy-agency.vercel.app",
+      githubRepo: "https://github.com/aehamdy/gleamy-agency",
+      description:
+        "Built a React-based agency website with smooth navigation, dynamic pages, and modern styling using Tailwind CSS. Implemented active link highlighting, a reusable layout, and an intuitive error page with redirection.",
+      // description:
+      //   "This React JS web application for a digital agency delivers a seamless user experience with dynamic pages for Home, Services, About Us, and Portfolio. Built with react-router-dom for smooth navigation and Tailwind CSS for modern styling, it features active link highlighting via NavLink. A robust error page handles invalid routes with a clear message, Home navigation, and automatic redirection. A reusable PageLayout component ensures consistent structure, dynamically rendering content through Outlet for efficiency and scalability.",
+      technologies: ["React JS", "React-router-dom", "Tailwind CSS"],
+      challengeOvercome:
+        "Refined active link styling, improved error handling, and ensured full responsiveness with Tailwind CSS.",
+      // challengeOvercome:
+      //   "I crafted dynamic active link styling, developed a user-friendly error page with redirection, designed a reusable layout for consistency, and delivered a fully responsive interface using Tailwind CSS.",
+      category: [categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
       addToViewableCv: false,
