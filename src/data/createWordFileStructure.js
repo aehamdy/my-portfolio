@@ -68,6 +68,22 @@ const createWordFileStructure = () => {
               }),
             ],
           }),
+          new Paragraph({
+            alignment: AlignmentType.CENTER, // Centers text
+            children: [
+              new TextRun({
+                text: personalInfo.title,
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
+                bold: true,
+              }),
+            ],
+          }),
+
+          new Paragraph({
+            children: [], // Empty paragraph for spacing
+          }),
           // new Paragraph({
           //   border: {
           //     bottom: {
