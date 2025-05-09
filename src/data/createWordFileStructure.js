@@ -6,7 +6,6 @@ import {
   AlignmentType,
 } from "docx";
 import personalInfo from "./personalInfo";
-import cvData from "./cvData";
 
 const createWordFileStructure = () => {
   const name = `${personalInfo.firstName} ${personalInfo.middleName}`;
@@ -333,16 +332,19 @@ const createWordFileStructure = () => {
             const skillName = Object.keys(skill)[0];
             const skillValues = skill[skillName].join(", ");
             return new Paragraph({
+              bullet: {
+                level: 0,
+              },
               children: [
                 new TextRun({
-                  text: `- ${skillName}: `, // Bold skill name
+                  text: `${skillName}: `,
+                  bold: true,
                   font: fontFamily.body,
                   size: fontSize.body,
                   color: fontColor.body,
-                  bold: true, // Make skill name bold
                 }),
                 new TextRun({
-                  text: skillValues, // Normal skill values
+                  text: skillValues,
                   font: fontFamily.body,
                   size: fontSize.body,
                   color: fontColor.body,
@@ -397,7 +399,7 @@ const createWordFileStructure = () => {
                 new Paragraph({
                   children: [
                     new TextRun({
-                      text: `• ${line}`,
+                      text: `${line}`,
                       font: fontFamily.body,
                       size: fontSize.body,
                       color: fontColor.body,
@@ -750,20 +752,22 @@ const createWordFileStructure = () => {
             ],
             style: "Heading1", // Added style for collapsibility
           }),
-          ...cvData.languages.map(
+          ...personalInfo.languages.map(
             (lang) =>
               new Paragraph({
+                bullet: {
+                  level: 0,
+                },
                 children: [
                   new TextRun({
-                    text: `- ${lang.name}: `,
+                    text: `${lang.name}: `,
                     bold: true,
                     font: fontFamily.body,
                     size: fontSize.body,
                     color: fontColor.body,
                   }),
                   new TextRun({
-                    text: lang.description,
-                    bold: false,
+                    text: lang.level,
                     font: fontFamily.body,
                     size: fontSize.body,
                     color: fontColor.body,
