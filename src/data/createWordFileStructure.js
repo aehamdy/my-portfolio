@@ -6,6 +6,7 @@ import {
   AlignmentType,
 } from "docx";
 import personalInfo from "./personalInfo";
+import cvData from "./cvData";
 
 const createWordFileStructure = () => {
   const name = `${personalInfo.firstName} ${personalInfo.middleName}`;
@@ -354,6 +355,81 @@ const createWordFileStructure = () => {
             children: [], // Empty paragraph for spacing
           }),
 
+          // Experience Section
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: "Experience",
+                heading: "Heading1",
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
+                bold: true,
+              }),
+            ],
+            style: "Heading1",
+          }),
+          ...personalInfo.experience.flatMap((exp) => [
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: `${exp.position} – ${exp.company}`,
+                  bold: true,
+                  font: fontFamily.body,
+                  size: fontSize.body,
+                  color: fontColor.body,
+                }),
+              ],
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: `${exp.startDate} – ${exp.endDate}`,
+                  italics: true,
+                  font: fontFamily.body,
+                  size: fontSize.body,
+                  color: fontColor.body,
+                }),
+              ],
+            }),
+            ...exp.description.map(
+              (line) =>
+                new Paragraph({
+                  children: [
+                    new TextRun({
+                      text: `• ${line}`,
+                      font: fontFamily.body,
+                      size: fontSize.body,
+                      color: fontColor.body,
+                    }),
+                  ],
+                  bullet: {
+                    level: 0,
+                  },
+                })
+            ),
+          ]),
+
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
+
+          // Horizontal rule using a TextRun with dashes
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+                color: fontColor.border,
+                bold: true, // Optional: Make it bold for better visibility
+              }),
+            ],
+            alignment: "center", // Optional: Center the horizontal rule
+          }),
+
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
+
           // Projects Section
           new Paragraph({
             children: [
@@ -369,16 +445,8 @@ const createWordFileStructure = () => {
             style: "Heading1", // Style for collapsibility
           }),
 
-          // Horizontal rule using a TextRun with dashes
           new Paragraph({
-            children: [
-              new TextRun({
-                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
-                color: fontColor.border,
-                bold: true, // Optional: Make it bold for better visibility
-              }),
-            ],
-            alignment: "center", // Optional: Center the horizontal rule
+            children: [], // Empty paragraph for spacing
           }),
 
           // Projects
@@ -540,9 +608,9 @@ const createWordFileStructure = () => {
               }),
 
               // Add a blank paragraph between projects for spacing
-              new Paragraph({
-                children: [], // Empty paragraph for spacing
-              }),
+              // new Paragraph({
+              //   children: [], // Empty paragraph for spacing
+              // }),
             ]),
 
           // Horizontal rule using a TextRun with dashes
@@ -558,9 +626,9 @@ const createWordFileStructure = () => {
           }),
 
           // Additional spacing
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
 
           // Education Section
           new Paragraph({
@@ -600,9 +668,9 @@ const createWordFileStructure = () => {
                     }),
                   ],
                 }),
-                new Paragraph({
-                  children: [], // Empty paragraph for spacing
-                }),
+                // new Paragraph({
+                //   children: [], // Empty paragraph for spacing
+                // }),
               ];
             })
             .flat(),
@@ -620,9 +688,9 @@ const createWordFileStructure = () => {
           }),
 
           // Additional spacing
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
 
           // Certification Section
           new Paragraph({
@@ -664,120 +732,156 @@ const createWordFileStructure = () => {
           }),
 
           // Additional spacing
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
+
+          // Languages Section
           new Paragraph({
-            children: [], // Empty paragraph for spacing
+            children: [
+              new TextRun({
+                text: "Languages",
+                heading: "Heading1",
+                font: fontFamily.heading,
+                size: fontSize.heading,
+                color: fontColor.heading,
+                bold: true,
+              }),
+            ],
+            style: "Heading1", // Added style for collapsibility
           }),
+          ...cvData.languages.map(
+            (lang) =>
+              new Paragraph({
+                children: [
+                  new TextRun({
+                    text: `- ${lang.name}: `,
+                    bold: true,
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
+                  }),
+                  new TextRun({
+                    text: lang.description,
+                    bold: false,
+                    font: fontFamily.body,
+                    size: fontSize.body,
+                    color: fontColor.body,
+                  }),
+                ],
+              })
+          ),
 
           // Additional Information Section
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Additional Information",
-                heading: "Heading1",
-                font: fontFamily.heading,
-                size: fontSize.heading,
-                color: fontColor.heading,
-                bold: true,
-              }),
-            ],
-            style: "Heading1", // Added style for collapsibility
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: personalInfo.additionalInformation,
-                font: fontFamily.body,
-                size: fontSize.body,
-                color: fontColor.body,
-              }),
-            ],
-          }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "Additional Information",
+          //       heading: "Heading1",
+          //       font: fontFamily.heading,
+          //       size: fontSize.heading,
+          //       color: fontColor.heading,
+          //       bold: true,
+          //     }),
+          //   ],
+          //   style: "Heading1", // Added style for collapsibility
+          // }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: personalInfo.additionalInformation,
+          //       font: fontFamily.body,
+          //       size: fontSize.body,
+          //       color: fontColor.body,
+          //     }),
+          //   ],
+          // }),
 
           // Horizontal rule using a TextRun with dashes
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
-                color: fontColor.border,
-                bold: true, // Optional: Make it bold for better visibility
-              }),
-            ],
-            alignment: "center", // Optional: Center the horizontal rule
-          }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+          //       color: fontColor.border,
+          //       bold: true, // Optional: Make it bold for better visibility
+          //     }),
+          //   ],
+          //   alignment: "center", // Optional: Center the horizontal rule
+          // }),
 
-          // Additional spacing
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
+          // // Additional spacing
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
 
           // Key Strengths Section
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Key Strengths",
-                heading: "Heading1",
-                font: fontFamily.heading,
-                size: fontSize.heading,
-                color: fontColor.heading,
-                bold: true,
-              }),
-            ],
-            style: "Heading1", // Added style for collapsibility
-          }),
-          ...personalInfo.keyStrengths.map((strength) => {
-            return new Paragraph({
-              children: [
-                new TextRun({
-                  text: `- ${strength}`,
-                  font: fontFamily.body,
-                  size: fontSize.body,
-                  color: fontColor.body,
-                }),
-              ],
-            });
-          }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "Key Strengths",
+          //       heading: "Heading1",
+          //       font: fontFamily.heading,
+          //       size: fontSize.heading,
+          //       color: fontColor.heading,
+          //       bold: true,
+          //     }),
+          //   ],
+          //   style: "Heading1", // Added style for collapsibility
+          // }),
+          // ...personalInfo.keyStrengths.map((strength) => {
+          //   return new Paragraph({
+          //     children: [
+          //       new TextRun({
+          //         text: `- ${strength}`,
+          //         font: fontFamily.body,
+          //         size: fontSize.body,
+          //         color: fontColor.body,
+          //       }),
+          //     ],
+          //   });
+          // }),
 
           // Horizontal rule using a TextRun with dashes
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
-                color: fontColor.border,
-                bold: true, // Optional: Make it bold for better visibility
-              }),
-            ],
-            alignment: "center", // Optional: Center the horizontal rule
-          }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "________________________________________________________________________________________________________", // Simulate a horizontal rule
+          //       color: fontColor.border,
+          //       bold: true, // Optional: Make it bold for better visibility
+          //     }),
+          //   ],
+          //   alignment: "center", // Optional: Center the horizontal rule
+          // }),
 
           // Additional spacing
-          new Paragraph({
-            children: [], // Empty paragraph for spacing
-          }),
+          // new Paragraph({
+          //   children: [], // Empty paragraph for spacing
+          // }),
 
           // References Section
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "References",
-                heading: "Heading1",
-                font: fontFamily.heading,
-                size: fontSize.heading,
-                color: fontColor.heading,
-                bold: true,
-              }),
-            ],
-            style: "Heading1", // Added style for collapsibility
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Available upon request.",
-                font: fontFamily.body,
-                size: fontSize.body,
-                color: fontColor.body,
-              }),
-            ],
-          }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "References",
+          //       heading: "Heading1",
+          //       font: fontFamily.heading,
+          //       size: fontSize.heading,
+          //       color: fontColor.heading,
+          //       bold: true,
+          //     }),
+          //   ],
+          //   style: "Heading1", // Added style for collapsibility
+          // }),
+          // new Paragraph({
+          //   children: [
+          //     new TextRun({
+          //       text: "Available upon request.",
+          //       font: fontFamily.body,
+          //       size: fontSize.body,
+          //       color: fontColor.body,
+          //     }),
+          //   ],
+          // }),
         ],
       },
     ],
