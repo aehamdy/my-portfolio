@@ -24,7 +24,10 @@ const personalInfo = {
   email: "ae.devverse@gmail.com",
   residence: "Egypt",
   location: "Cairo, Egypt",
-  languages: ["Arabic", "English"],
+  languages: [
+    { name: "Arabic", level: "Native" },
+    { name: "English", level: "Intermediate (spoken and written)" },
+  ],
   title: "Frontend Developer",
   brief:
     "I'm a frontend developer skilled in React, JavaScript, CSS, and Tailwind CSS, focused on creating dynamic, user-centered web applications. I emphasize clean code, responsive design, and performance optimization for scalable and efficient projects. Collaborative and detail-oriented, I aim to refine my expertise in frontend frameworks and lead impactful development teams.",
