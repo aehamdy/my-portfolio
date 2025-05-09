@@ -38,7 +38,8 @@ const personalInfo = {
     github: "https://github.com/aehamdy",
   },
   summary:
-    "Enthusiastic and self-driven Junior Front-End Developer with a strong foundation in HTML, CSS, JavaScript, React, and Tailwind CSS. Passionate about creating responsive, user-friendly web applications with a focus on seamless user experiences. Committed to continuous learning and growth in the ever-evolving field of web development.",
+    // "Enthusiastic and self-driven Junior Front-End Developer with a strong foundation in HTML, CSS, JavaScript, React, and Tailwind CSS. Passionate about creating responsive, user-friendly web applications with a focus on seamless user experiences. Committed to continuous learning and growth in the ever-evolving field of web development.",
+    "Self-taught and highly motivated Frontend Developer with strong knowledge of HTML, CSS, JavaScript (ES6+), and React. Experienced in building responsive and accessible web apps using Tailwind CSS, Context API, and React Router. Comfortable working in teams, using Git, and following Agile practices. Always learning and eager to grow through real-world challenges.",
 
   technicalSkills: [
     { Languages: ["HTML", "CSS", "JavaScript (ES6+)"] },
@@ -67,11 +68,15 @@ const personalInfo = {
       startDate: "April 2025",
       endDate: "May 2025",
       description: [
-        "Participated in a 4-week collaborative internship focused on building real-world web applications using React.js.",
-        "Week 1: Developed key UI components for a car rental web app alongside a small team (1 frontend & 1 backend developer).",
-        "Week 2: Contributed to the frontend of an e-commerce platform within a 6-person team of frontend and backend developers.",
-        "Weeks 3–4: Helped build a course platform (similar to Udemy) in a large-scale team (8 frontend, 4 backend). Implemented authentication and role-based routing.",
-        "Used Git, GitHub, and Agile-like coordination practices. While backend implementations were incomplete, the frontend features were largely finished and functional.",
+        // "Participated in a 4-week collaborative internship focused on building real-world web applications using React.js.",
+        // "Week 1: Developed key UI components for a car rental web app alongside a small team (1 frontend & 1 backend developer).",
+        // "Week 2: Contributed to the frontend of an e-commerce platform within a 6-person team of frontend and backend developers.",
+        // "Weeks 3–4: Helped build a course platform (similar to Udemy) in a large-scale team (8 frontend, 4 backend). Implemented authentication and role-based routing.",
+        // "Used Git, GitHub, and Agile-like coordination practices. While backend implementations were incomplete, the frontend features were largely finished and functional.",
+        "Built and styled key UI components for a car rental app using React and Tailwind CSS",
+        "Collaborated with 5+ developers on an e-commerce frontend; integrated dynamic routing and search features",
+        "Implemented authentication and role-based routing in a React-based course platform (similar to Udemy)",
+        "Used Git and GitHub for version control and practiced Agile-like workflows",
       ],
     },
     // Add more experience entries here in the future
