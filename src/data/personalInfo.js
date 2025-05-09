@@ -24,7 +24,7 @@ const personalInfo = {
   email: "ae.devverse@gmail.com",
   residence: "Egypt",
   location: "Cairo, Egypt",
-  languages: ["English", "Arabic"],
+  languages: ["Arabic", "English"],
   title: "Frontend Developer",
   brief:
     "I'm a frontend developer skilled in React, JavaScript, CSS, and Tailwind CSS, focused on creating dynamic, user-centered web applications. I emphasize clean code, responsive design, and performance optimization for scalable and efficient projects. Collaborative and detail-oriented, I aim to refine my expertise in frontend frameworks and lead impactful development teams.",
@@ -55,6 +55,23 @@ const personalInfo = {
         "Figma (basic)",
       ],
     },
+  ],
+
+  experience: [
+    {
+      company: "Tech-Cell",
+      position: "Frontend Developer Intern",
+      startDate: "April 2025",
+      endDate: "May 2025",
+      description: [
+        "Participated in a 4-week collaborative internship focused on building real-world web applications using React.js.",
+        "Week 1: Developed key UI components for a car rental web app alongside a small team (1 frontend & 1 backend developer).",
+        "Week 2: Contributed to the frontend of an e-commerce platform within a 6-person team of frontend and backend developers.",
+        "Weeks 3–4: Helped build a course platform (similar to Udemy) in a large-scale team (8 frontend, 4 backend). Implemented authentication and role-based routing.",
+        "Used Git, GitHub, and Agile-like coordination practices. While backend implementations were incomplete, the frontend features were largely finished and functional.",
+      ],
+    },
+    // Add more experience entries here in the future
   ],
 
   projects: [
@@ -96,7 +113,7 @@ Optimized cart state with Context API and useReducer, refined routing with React
         "Implementing dynamic themes using Tailwind CSS, creating localStorage-based persistence, and managing state across multiple components.",
       category: [categories.webApp],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
@@ -118,7 +135,7 @@ Optimized cart state with Context API and useReducer, refined routing with React
       //   "I crafted dynamic active link styling, developed a user-friendly error page with redirection, designed a reusable layout for consistency, and delivered a fully responsive interface using Tailwind CSS.",
       category: [categories.landingPage],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
@@ -136,7 +153,7 @@ Optimized cart state with Context API and useReducer, refined routing with React
         "Handling API responses efficiently, creating a clean UI for displaying large amounts of data.",
       category: [categories.webApp, categories.api],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
@@ -154,7 +171,7 @@ Optimized cart state with Context API and useReducer, refined routing with React
         "Improved web performance and user experience through optimized media queries and clean, maintainable code.",
       category: [categories.landingPage],
       addToPortfolioProjects: true,
-      addToDownloadableCv: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
