@@ -14,9 +14,10 @@ function AboutMe() {
       <div className="flex flex-col gap-4 mt-6 px-section-padding">
         <div className="flex flex-col text-start dark:text-white-55 text-medium-gray">
           <strong>
-            <span className="text-accent">Hello!</span> I’m{" "}
-            {`${personalInfo.firstName}`}.
+            Hello! I’m{" "}
+            <span className="text-accent">{`${personalInfo.firstName}`}</span>.
           </strong>
+
           <p>{personalInfo.brief}</p>
         </div>
         <div className="flex flex-col md:grid md:grid-cols-2 md:justify-between gap-5">
