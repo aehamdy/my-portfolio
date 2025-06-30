@@ -17,6 +17,11 @@ function ContactSection() {
       <div className="flex flex-col items-start gap-7 mt-section-margin px-section-padding">
         <Map />
         <GetInTouchList />
+
+        <p className="text-start text-sm text-medium-gray dark:text-white-55">
+          Need similar website or any help with your Web design and Development
+          ?
+        </p>
       </div>
 
       <div className="mt-section-margin">
