@@ -9,6 +9,7 @@ import {
   todomoroApp,
   weatherApp,
   glozin,
+  snowDashboard,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -104,6 +105,30 @@ Optimized cart state with Context API and useReducer, refined routing with React
       category: [categories.webApp, categories.api],
       addToPortfolioProjects: true,
       addToDownloadableCv: true,
+      addToViewableCv: false,
+    },
+    {
+      name: "SnowUI-Dashboard",
+      cvName: "Dashboard",
+      image: snowDashboard,
+      altText: "project's image",
+      simpleDiscribtion: "Dashboard UI",
+      liveLink: "https://snow-ui-dashboard.vercel.app/",
+      githubRepo: "https://github.com/aehamdy/snowui-dashboard",
+      description: `SnowUI Dashboard is a responsive React-based dashboard interface developed as part of a frontend technical assessment. The project demonstrates practical experience in building modern UIs, working with APIs, and implementing interactive features using React, TypeScript, and Tailwind CSS.
+Data fetching from jsonplaceholder.typicode.com/posts
+Search functionality by user and keyword
+Responsive layout for desktop and mobile views
+Light/Dark mode toggle
+Reusable components
+Custom search panel with keyboard shortcut activation
+      `,
+      technologies: ["React JS", "Context-API", "TypeScript", "Tailwind CSS"],
+      challengeOvercome: `
+Implementing a custom search panel that opens via both a UI button and a keyboard shortcut without disrupting the user experience. I handled this by managing the panel’s visibility through state and setting up keyboard event listeners with proper cleanup to ensure smooth and responsive behavior.`,
+      category: [categories.api],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: false,
       addToViewableCv: false,
     },
     {
