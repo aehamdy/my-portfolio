@@ -10,6 +10,7 @@ import {
   weatherApp,
   glozin,
   snowDashboard,
+  sawadPortfolio,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -127,6 +128,24 @@ Custom search panel with keyboard shortcut activation
       challengeOvercome: `
 Implementing a custom search panel that opens via both a UI button and a keyboard shortcut without disrupting the user experience. I handled this by managing the panel’s visibility through state and setting up keyboard event listeners with proper cleanup to ensure smooth and responsive behavior.`,
       category: [categories.api],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: false,
+      addToViewableCv: false,
+    },
+    {
+      name: "Sawad-Portfolio",
+      cvName: "Portfolio",
+      image: sawadPortfolio,
+      altText: "project's image",
+      simpleDiscribtion: "Portfolio",
+      liveLink: "https://sawad-webfolio.vercel.app/",
+      githubRepo: "https://github.com/aehamdy/sawad-portfolio",
+      description: `Personal Portfolio Website built with React, React Router, Tailwind CSS, and Motion (Framer Motion) to showcase my frontend development skills and projects.
+The website includes animated transitions, clean layout design, and dynamic routing for each section.`,
+      technologies: ["React JS", "React-Router-DOM", "Tailwind CSS", "Motion"],
+      challengeOvercome: `
+Optimized cart state with Context API and useReducer, refined routing with React Router, and improved live search with debouncing. Replaced a custom modal for better accessibility and enhanced performance through debugging.`,
+      category: [categories.portfolio, categories.landingPage],
       addToPortfolioProjects: true,
       addToDownloadableCv: false,
       addToViewableCv: false,
