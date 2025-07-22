@@ -9,8 +9,10 @@ import leonTemplate from "../assets/projects/Leon_Template.webp";
 import gleamyAgency from "../assets/projects/gleamy-agency.webp";
 import glozin from "../assets/projects/glozin.webp";
 import snowDashboard from "../assets/projects/snow-ui-dashboard.webp";
+import sawadPortfolio from "../assets/projects/sawad-portfolio.webp";
 
 export {
+  sawadPortfolio,
   snowDashboard,
   glozin,
   todomoroApp,
