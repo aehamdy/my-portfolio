@@ -11,6 +11,7 @@ import {
   glozin,
   snowDashboard,
   sawadPortfolio,
+  typeTally,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -146,6 +147,23 @@ The website includes animated transitions, clean layout design, and dynamic rout
       challengeOvercome: `
 Optimized cart state with Context API and useReducer, refined routing with React Router, and improved live search with debouncing. Replaced a custom modal for better accessibility and enhanced performance through debugging.`,
       category: [categories.portfolio, categories.landingPage],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: false,
+      addToViewableCv: false,
+    },
+    {
+      name: "TypeTally",
+      cvName: "Character counting app",
+      image: typeTally,
+      altText: "project's image",
+      simpleDiscribtion: "Real-time Character Counting App",
+      liveLink: "https://type-tally.vercel.app/",
+      githubRepo: "https://github.com/aehamdy/TypeTally",
+      description:
+        "A modern, intuitive character counting application built with React, TypeScript, and Tailwind CSS. TypeTally helps writers, developers, and content creators track their text length with real-time feedback and advanced features.",
+      technologies: ["React JS", "TypeScript", "Tailwind CSS"],
+      // challengeOvercome: "",
+      category: [categories.webApp],
       addToPortfolioProjects: true,
       addToDownloadableCv: false,
       addToViewableCv: false,
