@@ -33,6 +33,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { RxExternalLink } from "react-icons/rx";
 
 //MiniProfile Icons
 export const sunIcon = <IoSunnyOutline />;
@@ -63,12 +64,16 @@ export const framerMotionIcon = <TbBrandFramerMotion />;
 export const gitIcon = <DiGit />;
 export const githubIconTwo = <DiGithubBadge />;
 
+// export const externalLinkicon = <RxExternalLink />;
 //ServiceCard icons
 export const codeIcon = (
   <IoCodeSlash style={{ strokeWidth: "0.1", fontSize: "40px" }} />
 );
 export const pageIcon = (
   <LiaPagerSolid style={{ strokeWidth: "0.1", fontSize: "45px" }} />
+);
+export const externalLinkIcon = (
+  <RxExternalLink style={{ strokeWidth: "0.1", fontSize: "16px" }} />
 );
 export const responsiveIcon = (
   <DiResponsive style={{ strokeWidth: "0.9", fontSize: "60px" }} />
