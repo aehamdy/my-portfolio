@@ -10,6 +10,7 @@ import gleamyAgency from "../assets/projects/gleamy-agency.webp";
 import glozin from "../assets/projects/glozin.webp";
 import snowDashboard from "../assets/projects/snow-ui-dashboard.webp";
 import sawadPortfolio from "../assets/projects/sawad-portfolio.webp";
+import typeTally from "../assets/projects/type-tally.webp";
 
 export {
   sawadPortfolio,
@@ -24,4 +25,5 @@ export {
   kasperTemplate,
   leonTemplate,
   gleamyAgency,
+  typeTally,
 };
