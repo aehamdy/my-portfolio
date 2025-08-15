@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { externalLinkIcon } from "../data/icons";
+import { externalLinkIcon, githubIcon } from "../data/icons";
 
 function ProjectCard({ project }) {
   return (
@@ -26,6 +26,14 @@ function ProjectCard({ project }) {
           className="py-2 text-light-gray hover:text-accent flex justify-center items-center gap-2 flex-1"
         >
           {externalLinkIcon} Live Demo
+        </a>
+
+        <a
+          href={project.githubRepo}
+          target="_blank"
+          className="py-2 text-light-gray hover:text-accent flex justify-center items-center gap-2 flex-1"
+        >
+          {githubIcon} GitHub Repo
         </a>
       </div>
 
