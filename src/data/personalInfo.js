@@ -12,6 +12,7 @@ import {
   snowDashboard,
   sawadPortfolio,
   typeTally,
+  brewhaus,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -86,6 +87,38 @@ const personalInfo = {
   ],
 
   projects: [
+    //     {
+    //       name: "",
+    //       cvName: "",
+    //       image: ,
+    //       altText: "",
+    //       simpleDiscribtion: "",
+    //       liveLink: "",
+    //       githubRepo: "",
+    //       description: ``,
+    //       technologies: [],
+    //       challengeOvercome: ``,
+    //       category: [],
+    //       addToPortfolioProjects: true,
+    //       addToDownloadableCv: true,
+    //       addToViewableCv: false,
+    //     },
+    {
+      name: "Brewhaus",
+      cvName: "Coffeeshop Website",
+      image: brewhaus,
+      altText: "project's image",
+      simpleDiscribtion: "Coffeeshop Website",
+      liveLink: "https://thebrewhaus.netlify.app/",
+      githubRepo: "https://github.com/aehamdy/brewhaus",
+      description: ``,
+      technologies: ["Next JS", "Tailwind CSS", "GSAP"],
+      challengeOvercome: ``,
+      category: [categories.landingPage],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: false,
+      addToViewableCv: false,
+    },
     {
       name: "Glozin",
       cvName: "E-commerce Store",
