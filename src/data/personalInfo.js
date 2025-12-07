@@ -13,6 +13,7 @@ import {
   sawadPortfolio,
   typeTally,
   brewhaus,
+  klane,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -134,6 +135,22 @@ Optimized cart state with Context API and useReducer, refined routing with React
       simpleDiscribtion: "Coffeeshop Website",
       liveLink: "https://thebrewhaus.netlify.app/",
       githubRepo: "https://github.com/aehamdy/brewhaus",
+      description: ``,
+      technologies: ["Next JS", "Tailwind CSS", "GSAP"],
+      challengeOvercome: ``,
+      category: [categories.landingPage],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: false,
+      addToViewableCv: false,
+    },
+    {
+      name: "K-Lane",
+      cvName: "Coffeeshop Website",
+      image: klane,
+      altText: "project's image",
+      simpleDiscribtion: "Coffeeshop Website",
+      liveLink: "https://klane.netlify.app/",
+      githubRepo: "https://github.com/aehamdy/k-lane",
       description: ``,
       technologies: ["Next JS", "Tailwind CSS", "GSAP"],
       challengeOvercome: ``,
