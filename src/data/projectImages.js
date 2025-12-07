@@ -11,6 +11,7 @@ import glozin from "../assets/projects/glozin.webp";
 import snowDashboard from "../assets/projects/snow-ui-dashboard.webp";
 import sawadPortfolio from "../assets/projects/sawad-portfolio.webp";
 import typeTally from "../assets/projects/type-tally.webp";
+import brewhaus from "../assets/projects/brewhaus.webp";
 
 export {
   sawadPortfolio,
@@ -26,4 +27,5 @@ export {
   leonTemplate,
   gleamyAgency,
   typeTally,
+  brewhaus,
 };
