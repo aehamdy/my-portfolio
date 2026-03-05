@@ -14,6 +14,7 @@ import typeTally from "../assets/projects/type-tally.webp";
 import brewhaus from "../assets/projects/brewhaus.webp";
 import klane from "../assets/projects/k-lane.webp";
 import athloDashboard from "../assets/projects/athlo-image.webp";
+import athloStore from "../assets/projects/athlo-store.webp";
 
 export {
   sawadPortfolio,
@@ -32,4 +33,5 @@ export {
   brewhaus,
   klane,
   athloDashboard,
+  athloStore,
 };
