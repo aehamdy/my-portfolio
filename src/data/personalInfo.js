@@ -15,6 +15,7 @@ import {
   brewhaus,
   klane,
   athloDashboard,
+  athloStore,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -105,6 +106,34 @@ const personalInfo = {
     //       addToDownloadableCv: true,
     //       addToViewableCv: false,
     //     },
+    {
+      name: "Athletic Store",
+      cvName: "Athletic Store",
+      image: athloStore,
+      altText: "athlo store image",
+      simpleDiscribtion:
+        "Sportswear e-commerce store with full-stack integration",
+      liveLink: "",
+      githubRepo: "https://github.com/aehamdy/athlo-store",
+      description: `Full-stack e-commerce application designed to manage a comprehensive sportswear e-commerce platform. Features include product inventory management, order tracking, customer analytics, sales reporting, and user role-based access control. The dashboard integrates seamlessly with a backend server and database to provide real-time data synchronization and efficient business operations management.`,
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn",
+        "TanStack Query",
+        "TanStack Table",
+        "React Hook Form",
+        "Zod",
+        "Axios",
+      ],
+      challengeOvercome: ``,
+      category: [categories.webApp, categories.api],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: true,
+      addToViewableCv: false,
+      isInProgress: true,
+      isShippingSoon: false,
+    },
     {
       name: "Athletic Dashboard",
       cvName: "Athletic Dashboard",
