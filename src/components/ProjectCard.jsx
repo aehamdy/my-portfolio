@@ -3,30 +3,42 @@ import { externalLinkIcon, githubIcon } from "../data/icons";
 
 function ProjectCard({ project }) {
   return (
-    <article className="group w-full h-fit cursor-pointer">
-      <a
-        href={project.liveLink}
-        target="_blank"
-        className="flex flex-col gap-2"
-      >
-        <div className="relative w-full rounded-[25px] overflow-hidden">
+    <article className="group relative w-full h-fit cursor-pointer">
+      <div className="relative w-full rounded-[25px] overflow-hidden">
+        {project.isInProgress && (
+          <div className="absolute w-full h-full start-0 top-0 flex flex-col justify-center items-center font-semibold text-lg text-accent bg-black/50 backdrop-blur-sm z-10">
+            {project.isInProgress && !project.isShippingSoon && (
+              <p className="">Building the Next Feature…</p>
+            )}
+
+            {project.isShippingSoon && <p className="">Shipping Soon 🚀</p>}
+          </div>
+        )}
+
+        <a
+          href={project.liveLink}
+          target="_blank"
+          className="flex flex-col gap-2"
+        >
           <img
             src={project.image}
             alt={project.altText}
             style={{ width: "100%" }}
             className="group-hover:scale-110 duration-short"
           />
-        </div>
-      </a>
+        </a>
+      </div>
 
       <div className="flex items-center">
-        <a
-          href={project.liveLink}
-          target="_blank"
-          className="py-2 text-light-gray hover:text-accent flex justify-center items-center gap-2 flex-1"
-        >
-          {externalLinkIcon} Live Demo
-        </a>
+        {project.liveLink && (
+          <a
+            href={project.liveLink}
+            target="_blank"
+            className="py-2 text-light-gray hover:text-accent flex justify-center items-center gap-2 flex-1"
+          >
+            {externalLinkIcon} Live Demo
+          </a>
+        )}
 
         <a
           href={project.githubRepo}
