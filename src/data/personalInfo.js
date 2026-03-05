@@ -14,6 +14,7 @@ import {
   typeTally,
   brewhaus,
   klane,
+  athloDashboard,
 } from "./projectImages";
 import { categories } from "./categories";
 
@@ -104,6 +105,34 @@ const personalInfo = {
     //       addToDownloadableCv: true,
     //       addToViewableCv: false,
     //     },
+    {
+      name: "Athletic Dashboard",
+      cvName: "Athletic Dashboard",
+      image: athloDashboard,
+      altText: "athlo dashboard image",
+      simpleDiscribtion:
+        "Sportswear e-commerce dashboard with full-stack integration",
+      liveLink: "",
+      githubRepo: "https://github.com/aehamdy/athlo-dashboard",
+      description: `Full-stack dashboard application designed to manage a comprehensive sportswear e-commerce platform. Features include product inventory management, order tracking, customer analytics, sales reporting, and user role-based access control. The dashboard integrates seamlessly with a backend server and database to provide real-time data synchronization and efficient business operations management.`,
+      technologies: [
+        "React.js",
+        "TanStack Query",
+        "TanStack Table",
+        "React Hook Form",
+        "Zod",
+        "Axios",
+        "Tailwind CSS",
+        "Shadcn",
+      ],
+      challengeOvercome: ``,
+      category: [categories.webApp, categories.api],
+      addToPortfolioProjects: true,
+      addToDownloadableCv: false,
+      addToViewableCv: false,
+      isInProgress: true,
+      isShippingSoon: true,
+    },
     {
       name: "Glozin",
       cvName: "E-commerce Store",
